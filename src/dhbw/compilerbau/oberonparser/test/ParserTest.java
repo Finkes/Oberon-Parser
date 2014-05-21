@@ -3,11 +3,13 @@ package dhbw.compilerbau.oberonparser.test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.tree.CommonTree;
+import org.antlr.runtime.tree.DOTTreeGenerator;
 
 import dhbw.compilerbau.oberonparser.parser.OberonLexer;
 import dhbw.compilerbau.oberonparser.parser.OberonParser;
@@ -40,6 +42,15 @@ public class ParserTest
 			
 			//log tree to console
 			System.out.println(tree.toStringTree());
+			
+			DOTTreeGenerator genarator = new DOTTreeGenerator();
+			
+			PrintWriter writer = new PrintWriter(new File("graphviz/graph"));
+        	
+        	writer.write(genarator.toDOT(tree).toString());
+        	
+        	writer.close();
+			
 		}
 		catch(Exception e)
 		{

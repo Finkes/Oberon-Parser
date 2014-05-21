@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g 2014-05-21 17:26:57
+// $ANTLR 3.5.2 /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g 2014-05-21 17:46:50
 package dhbw.compilerbau.oberonparser.parser; 
 
 import org.antlr.runtime.*;
