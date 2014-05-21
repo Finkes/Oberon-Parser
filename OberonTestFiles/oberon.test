@@ -1,7 +1,9 @@
 MODULE HelloWorld;
  
-IMPORT Write;
+IMPORT Write, Read := Read2;
  
 BEGIN
+
+/* Kommentar */
 
 END HelloWorld.

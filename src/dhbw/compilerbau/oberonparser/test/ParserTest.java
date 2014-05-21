@@ -13,7 +13,7 @@ import org.antlr.runtime.tree.DOTTreeGenerator;
 
 import dhbw.compilerbau.oberonparser.parser.OberonLexer;
 import dhbw.compilerbau.oberonparser.parser.OberonParser;
-import dhbw.compilerbau.oberonparser.parser.OberonParser.program_return;
+import dhbw.compilerbau.oberonparser.parser.OberonParser.module_return;
 
 public class ParserTest 
 {
@@ -22,7 +22,7 @@ public class ParserTest
 		try
 		{
 			//load testfile from folder
-			FileInputStream fileInputStream = new FileInputStream(new File("OberonTestFiles/oberon.test"));
+			FileInputStream fileInputStream = new FileInputStream(new File("OberonTestFiles/oberon2.test"));
 			
 			//create ANTLR input stream
 			ANTLRInputStream inputStream = new ANTLRInputStream(fileInputStream);
@@ -37,7 +37,7 @@ public class ParserTest
 			OberonParser parser = new OberonParser(tokens);
 			
 			//start parser at it's first rule
-			program_return result = parser.program();
+			module_return result = parser.module();
 			CommonTree tree = (CommonTree)result.getTree();
 			
 			//log tree to console

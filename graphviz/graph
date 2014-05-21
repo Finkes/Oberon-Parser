@@ -6,29 +6,4 @@ digraph {
 		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
 	edge [arrowsize=.5, color="black", style="bold"]
 
-  n0 [label=""];
-  n1 [label="MODULE"];
-  n2 [label="HelloWorld"];
-  n3 [label=";"];
-  n4 [label="IMPORT"];
-  n5 [label="Write"];
-  n6 [label=";"];
-  n7 [label="BEGIN"];
-  n8 [label="END"];
-  n9 [label="HelloWorld"];
-  n10 [label="."];
-  n11 [label="<EOF>"];
-
-  n0 -> n1 // "" -> "MODULE"
-  n0 -> n2 // "" -> "HelloWorld"
-  n0 -> n3 // "" -> ";"
-  n0 -> n4 // "" -> "IMPORT"
-  n0 -> n5 // "" -> "Write"
-  n0 -> n6 // "" -> ";"
-  n0 -> n7 // "" -> "BEGIN"
-  n0 -> n8 // "" -> "END"
-  n0 -> n9 // "" -> "HelloWorld"
-  n0 -> n10 // "" -> "."
-  n0 -> n11 // "" -> "<EOF>"
-
 }
