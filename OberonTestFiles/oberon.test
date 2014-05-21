@@ -1,0 +1,7 @@
+MODULE HelloWorld;
+ 
+IMPORT Write;
+ 
+BEGIN
+
+END HelloWorld.
