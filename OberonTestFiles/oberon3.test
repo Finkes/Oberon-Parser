@@ -11,15 +11,19 @@
     Linie* = POINTER TO LinienBeschreibung;
     LinienBeschreibung= RECORD (GraphischesObjekt) xStart*, yStart*, xEnde*, yEnde*: LONGINT; END;
  
-
+PROCEDURE ReadInt(VAR x: INTEGER);
+   VAR i : INTEGER; ch: CHAR;
+	BEGIN 
+		i := 0; 
+		Read(ch);
+   		WHILE ("0" <= ch) & (ch <= "9") DO
+    	i := 10*i
+   	END ;
+   x := i
+END ReadInt;
  
  
  
-
- VAR
- 
-    punkt1: Punkt;
-    linie1: Linie;
  
  BEGIN
  

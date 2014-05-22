@@ -68,11 +68,13 @@ element               : expression ( '..' expression)?;
 
 actualParameters      : '(' expList? ')';
 
-statement             :  (options{backtrack=true;}:assignment|procedureCall|ifStatement|caseStatement|whileStatement|repeatStatement|loopStatement|withStatement| 'EXIT' | 'RETURN' expression? )?;
+statement             :  (statement2|ifStatement|caseStatement|whileStatement|repeatStatement|loopStatement|withStatement| 'EXIT' | 'RETURN' expression? )?;
 
-assignment            : designator ':=' expression;
+statement2            : designator ( assignment | procedureCall );
 
-procedureCall         : designator actualParameters?;
+assignment            :  ':=' expression;
+
+procedureCall         :  actualParameters?;
 
 statementSequence     : statement ( ';' statement)*;
 
@@ -100,9 +102,9 @@ procedureHeading      : 'PROCEDURE' '*'? identdef formalParameters?;
 
 procedureBody         : declarationSequence ('BEGIN' statementSequence)? 'END';
 
-forwardDeclaration    : 'PROCEDURE' '^'identdef formalParameters?;
+forwardDeclaration    : 'PROCEDURE' '^' identdef formalParameters?;
 
-declarationSequence    : ('CONST' (constantDeclaration ';')*  | type ( typeDeclaration ';')* | 'VAR' (variableDeclaration ';')* )* (procedureDeclaration ';' | forwardDeclaration ';')*;
+declarationSequence    : ('CONST' (constantDeclaration ';')*  | 'TYPE' ( typeDeclaration ';')* | 'VAR' (variableDeclaration ';')* )* (procedureDeclaration ';' | forwardDeclaration ';')*;
 
 formalParameters      : '(' (fpSection (';' fpSection)*)? ')' (':' qualident)?;
 
@@ -153,7 +155,7 @@ fragment SCALE_FACTOR : ('E' | 'D') ('+' | '-')? DIGIT DIGIT*;
 
 fragment LETTER       : 'a'..'z'|'A'..'Z';
 
-fragment CHARACTER    : LETTER|'!'|'?'|'.'|','; //TODO add more special characters
+fragment CHARACTER    : LETTER|'!'|'?'|'.'|','|DIGIT; //TODO add more special characters
 
 
 /* Ignore WS */
