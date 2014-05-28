@@ -22,7 +22,7 @@ public class ParserTest
 		try
 		{
 			//load testfile from folder
-			FileInputStream fileInputStream = new FileInputStream(new File("OberonTestFiles/test2.oberon"));
+			FileInputStream fileInputStream = new FileInputStream(new File("OberonTestFiles/test3.oberon"));
 			
 			//create ANTLR input stream
 			ANTLRInputStream inputStream = new ANTLRInputStream(fileInputStream);
