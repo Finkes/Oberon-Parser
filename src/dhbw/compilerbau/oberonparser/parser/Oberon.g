@@ -5,22 +5,24 @@ options {
   output=AST;
 }
 
+tokens{ASSIGN;}
+
 @lexer::header  {package dhbw.compilerbau.oberonparser.parser; }
 @parser::header {package dhbw.compilerbau.oberonparser.parser; }
+
+
 
 /* rules */
 
 number                : INTEGER | REAL;
 
-qualident             : (IDENT '.')? IDENT ;
-
 identdef              : IDENT '*'?;
 
-constantDeclaration   : identdef '=' constExpression;
+constantDeclaration   : identdef '=' constExpression      -> ^( '=' identdef constExpression);
 
 constExpression       : expression;
 
-typeDeclaration       : identdef '=' type;
+typeDeclaration       : identdef '=' type                 -> ^( '=' identdef type);
 
 type                  : qualident | arrayType | recordType | pointerType | procedureType;
 
@@ -38,17 +40,19 @@ fieldList             : (identList ':' type)?;
 
 identList             : identdef (',' identdef)*;
 
-pointerType           : 'POINTER TO' type;
+pointerType           : 'POINTER TO'^ type;
 
 procedureType         : 'PROCEDURE' formalParameters?;
 
 variableDeclaration   : identList ':' type;
 
+qualident             : (options{ greedy=true;}:IDENT '.')? IDENT ;
+
 designator            : qualident ('.' IDENT | '[' expList ']' | '(' qualident ')' | '^')*;
 
 expList               : expression (',' expression)*;
 
-expression            : simpleExpression (relation simpleExpression)?;
+expression            : simpleExpression (relation^ simpleExpression)?;// -> ^(simpleExpression (relation simpleExpression)?);
 
 relation              : '=' | '#'|'<'|'<='|'>'|'>='|'IN'|'IS';
 
@@ -70,17 +74,17 @@ actualParameters      : '(' expList? ')';
 
 statement             :  (statement2|ifStatement|caseStatement|whileStatement|repeatStatement|loopStatement|withStatement| 'EXIT' | 'RETURN' expression? )?;
 
-statement2            : designator ( assignment | procedureCall );
+statement2            : aaaa=designator ( aaaa=assignment | b=procedureCall ); //->  {$aaaa == null}? ^(ASSIGN designator assignment) -> ^(ASSIGN designator procedureCall) ;
 
-assignment            :  ':=' expression;
+assignment            :  ':=' expression -> ^(ASSIGN  ':=' expression);
 
 procedureCall         :  actualParameters?;
 
-statementSequence     : statement ( ';' statement)*;
+statementSequence     : statement ( ';' statement)* -> ^(statement ( statement)*);
 
-ifStatement           : 'IF' expression 'THEN' statementSequence ('ELSEIF' expression 'THEN' statementSequence)* ('ELSE' statementSequence)? 'END';
+ifStatement           : 'IF' expression 'THEN' statementSequence ('ELSIF' expression 'THEN' statementSequence)* ('ELSE' statementSequence)? 'END';// ->^('IF' expression 'THEN' statementSequence ('ELSIF' expression 'THEN' statementSequence)* ('ELSE' statementSequence)? 'END');
 
-caseStatement         : 'case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END';
+caseStatement         : 'case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END' -> ^('case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END');
 
 casE                  : (caseLabelList ':' statementSequence)?;
 
@@ -88,35 +92,42 @@ caseLabelList         : caseLabels (',' caseLabels)*;
 
 caseLabels            : constExpression ('..' constExpression);
 
-whileStatement        : 'WHILE' expression 'DO' statementSequence 'END';
+whileStatement        : 'WHILE'^ expression 'DO'! statementSequence 'END'!;
 
-repeatStatement       : 'REPEAT' statementSequence 'UNTIL' expression;
+repeatStatement       : 'REPEAT'^ statementSequence 'UNTIL'! expression;
 
-loopStatement         : 'LOOP' statementSequence 'END';
+loopStatement         : 'LOOP'^ statementSequence 'END'!;
 
-withStatement         : 'WITH' qualident ':' qualident 'DO' statementSequence 'END';
+withStatement         : 'WITH'^ qualident ':' qualident 'DO'! statementSequence 'END'!;
 
-procedureDeclaration  : procedureHeading ';' procedureBody IDENT;
+procedureDeclaration  : procedureHeading ';' procedureBody IDENT                -> ^(procedureHeading  procedureBody IDENT);
 
-procedureHeading      : 'PROCEDURE' '*'? identdef formalParameters?;
+procedureHeading      : 'PROCEDURE'^ '*'? identdef formalParameters?;
 
-procedureBody         : declarationSequence ('BEGIN' statementSequence)? 'END';
+procedureBody         : declarationSequence ('BEGIN' statementSequence)? 'END'  ;// -> ^(declarationSequence ( statementSequence)? );
 
 forwardDeclaration    : 'PROCEDURE' '^' identdef formalParameters?;
 
-declarationSequence    : ('CONST' (constantDeclaration ';')*  | 'TYPE' ( typeDeclaration ';')* | 'VAR' (variableDeclaration ';')* )* (procedureDeclaration ';' | forwardDeclaration ';')*;
+declarationSequence    : (constdeclarationSequence | typedeclarationSequence |vardeclarationSequence  )* (procedureDeclaration ';'! | forwardDeclaration ';')*;
+
+constdeclarationSequence : 'CONST' (constantDeclaration ';')*     ;//  -> ^('CONST' (constantDeclaration ';')*);
+
+typedeclarationSequence : 'TYPE' ( typeDeclaration ';')*          ;//  -> ^('TYPE' ( typeDeclaration ';')*);
+
+vardeclarationSequence :  'VAR' (variableDeclaration ';')*        ;//  -> ^('VAR' (variableDeclaration ';')*);
+
 
 formalParameters      : '(' (fpSection (';' fpSection)*)? ')' (':' qualident)?;
 
 fpSection             : 'VAR'? IDENT (',' IDENT)*  ':' formalType;
 
-formalType            : ('ARRAY OF')* qualident | procedureType;
+formalType            : ('ARRAY' 'OF')* qualident | procedureType;
 
-module                : 'MODULE' IDENT ';' importList? declarationSequence ('BEGIN' statementSequence)? 'END' IDENT '.' EOF;
+module                : 'MODULE'^ IDENT ';'! importList? declarationSequence ('BEGIN' statementSequence)? 'END' IDENT '.'! EOF;
 
-importList            : 'IMPORT' importDeclaration (',' importDeclaration)* ';' ;
+importList            : 'IMPORT' importDeclaration (',' importDeclaration)* ';'     -> ^('IMPORT' importDeclaration ( importDeclaration)* ) ;
 
-importDeclaration     :  IDENT (':=' IDENT)?;
+importDeclaration     :  IDENT (':=' IDENT)?                                        -> ^(IDENT (':=' IDENT)?);
 
 
 

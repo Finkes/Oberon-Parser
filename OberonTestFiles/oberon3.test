@@ -1,5 +1,7 @@
  MODULE Vererbung1;
  
+ IMPORT Write, Read := Read2;
+ 
  TYPE
  
     GraphischesObjekt* = POINTER TO GraphischesObjektBeschreibung;
@@ -37,6 +39,6 @@ END ReadInt;
     linie1.yStart := 1;
     linie1.xEnde  := 2;
     linie1.yEnde  := 2;
-    linie1.Zeichne ();
+    linie1.Zeichne ()
  
  END Vererbung1.

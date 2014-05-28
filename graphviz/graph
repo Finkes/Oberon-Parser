@@ -6,4 +6,463 @@ digraph {
 		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
 	edge [arrowsize=.5, color="black", style="bold"]
 
+  n0 [label="MODULE"];
+  n1 [label="List"];
+  n2 [label="TYPE"];
+  n3 [label="="];
+  n3 [label="="];
+  n4 [label="List"];
+  n5 [label="POINTER TO"];
+  n5 [label="POINTER TO"];
+  n6 [label="ListDesc"];
+  n7 [label=";"];
+  n8 [label="="];
+  n8 [label="="];
+  n9 [label="ListDesc"];
+  n10 [label="RECORD"];
+  n11 [label="key"];
+  n12 [label=":"];
+  n13 [label="ARRAY"];
+  n14 [label="64"];
+  n15 [label="OF"];
+  n16 [label="CHAR"];
+  n17 [label=";"];
+  n18 [label="next"];
+  n19 [label=":"];
+  n20 [label="List"];
+  n21 [label=";"];
+  n22 [label="END"];
+  n23 [label=";"];
+  n24 [label="VAR"];
+  n25 [label="root"];
+  n26 [label=":"];
+  n27 [label="List"];
+  n28 [label=";"];
+  n29 [label="PROCEDURE"];
+  n29 [label="PROCEDURE"];
+  n30 [label="VAR"];
+  n31 [label="p"];
+  n32 [label=":"];
+  n33 [label="List"];
+  n34 [label=";"];
+  n35 [label="BEGIN"];
+  n36 [label="WHILE"];
+  n36 [label="WHILE"];
+  n37 [label="("];
+  n38 [label="#"];
+  n38 [label="#"];
+  n39 [label="p"];
+  n40 [label="NIL"];
+  n41 [label=")"];
+  n42 [label="&"];
+  n43 [label="("];
+  n44 [label="<"];
+  n44 [label="<"];
+  n45 [label="p"];
+  n46 [label="."];
+  n47 [label="key"];
+  n48 [label="key"];
+  n49 [label=")"];
+  n50 [label="IF"];
+  n51 [label="("];
+  n52 [label="="];
+  n52 [label="="];
+  n53 [label="p"];
+  n54 [label="NIL"];
+  n55 [label=")"];
+  n56 [label="OR"];
+  n57 [label="("];
+  n58 [label=">"];
+  n58 [label=">"];
+  n59 [label="p"];
+  n60 [label="."];
+  n61 [label="key"];
+  n62 [label="key"];
+  n63 [label=")"];
+  n64 [label="THEN"];
+  n65 [label="ELSE"];
+  n66 [label="END"];
+  n67 [label="END"];
+  n68 [label="Find"];
+  n69 [label="PROCEDURE"];
+  n69 [label="PROCEDURE"];
+  n70 [label="VAR"];
+  n71 [label="p"];
+  n72 [label=","];
+  n73 [label="q"];
+  n74 [label=":"];
+  n75 [label="List"];
+  n76 [label=";"];
+  n77 [label="BEGIN"];
+  n78 [label="WHILE"];
+  n78 [label="WHILE"];
+  n79 [label="("];
+  n80 [label="#"];
+  n80 [label="#"];
+  n81 [label="p"];
+  n82 [label="."];
+  n83 [label="next"];
+  n84 [label="NIL"];
+  n85 [label=")"];
+  n86 [label="&"];
+  n87 [label="("];
+  n88 [label="<"];
+  n88 [label="<"];
+  n89 [label="p"];
+  n90 [label="."];
+  n91 [label="next"];
+  n92 [label="."];
+  n93 [label="key"];
+  n94 [label="key"];
+  n95 [label=")"];
+  n96 [label="IF"];
+  n97 [label="unique"];
+  n98 [label="&"];
+  n99 [label="("];
+  n100 [label="#"];
+  n100 [label="#"];
+  n101 [label="p"];
+  n102 [label="."];
+  n103 [label="next"];
+  n104 [label="NIL"];
+  n105 [label=")"];
+  n106 [label="&"];
+  n107 [label="("];
+  n108 [label="="];
+  n108 [label="="];
+  n109 [label="p"];
+  n110 [label="."];
+  n111 [label="next"];
+  n112 [label="."];
+  n113 [label="key"];
+  n114 [label="key"];
+  n115 [label=")"];
+  n116 [label="THEN"];
+  n117 [label="END"];
+  n118 [label="NEW"];
+  n119 [label="("];
+  n120 [label="q"];
+  n121 [label=")"];
+  n122 [label="COPY"];
+  n123 [label="("];
+  n124 [label="key"];
+  n125 [label=","];
+  n126 [label="q"];
+  n127 [label="."];
+  n128 [label="key"];
+  n129 [label=")"];
+  n130 [label="q"];
+  n131 [label="."];
+  n132 [label="next"];
+  n133 [label="ASSIGN"];
+  n133 [label="ASSIGN"];
+  n134 [label=":="];
+  n135 [label="p"];
+  n136 [label="."];
+  n137 [label="next"];
+  n138 [label="p"];
+  n139 [label="."];
+  n140 [label="next"];
+  n141 [label="ASSIGN"];
+  n141 [label="ASSIGN"];
+  n142 [label=":="];
+  n143 [label="q"];
+  n144 [label="END"];
+  n145 [label="Insert"];
+  n146 [label="PROCEDURE"];
+  n146 [label="PROCEDURE"];
+  n147 [label="VAR"];
+  n148 [label="p"];
+  n149 [label=":"];
+  n150 [label="List"];
+  n151 [label=";"];
+  n152 [label="BEGIN"];
+  n153 [label="x"];
+  n154 [label="ASSIGN"];
+  n154 [label="ASSIGN"];
+  n155 [label=":="];
+  n156 [label="3"];
+  n157 [label="*"];
+  n158 [label="4"];
+  n159 [label="+"];
+  n160 [label="3"];
+  n161 [label="*"];
+  n162 [label="3"];
+  n163 [label="WHILE"];
+  n163 [label="WHILE"];
+  n164 [label="("];
+  n165 [label="#"];
+  n165 [label="#"];
+  n166 [label="p"];
+  n167 [label="."];
+  n168 [label="next"];
+  n169 [label="NIL"];
+  n170 [label=")"];
+  n171 [label="&"];
+  n172 [label="("];
+  n173 [label="<"];
+  n173 [label="<"];
+  n174 [label="p"];
+  n175 [label="."];
+  n176 [label="next"];
+  n177 [label="."];
+  n178 [label="key"];
+  n179 [label="key"];
+  n180 [label=")"];
+  n181 [label="IF"];
+  n182 [label="("];
+  n183 [label="#"];
+  n183 [label="#"];
+  n184 [label="p"];
+  n185 [label="."];
+  n186 [label="next"];
+  n187 [label="NIL"];
+  n188 [label=")"];
+  n189 [label="&"];
+  n190 [label="("];
+  n191 [label="="];
+  n191 [label="="];
+  n192 [label="p"];
+  n193 [label="."];
+  n194 [label="next"];
+  n195 [label="."];
+  n196 [label="key"];
+  n197 [label="key"];
+  n198 [label=")"];
+  n199 [label="THEN"];
+  n200 [label="END"];
+  n201 [label="END"];
+  n202 [label="Delete"];
+  n203 [label="PROCEDURE"];
+  n203 [label="PROCEDURE"];
+  n204 [label="BEGIN"];
+  n205 [label="root"];
+  n206 [label="."];
+  n207 [label="next"];
+  n208 [label="ASSIGN"];
+  n208 [label="ASSIGN"];
+  n209 [label=":="];
+  n210 [label="NIL"];
+  n211 [label="END"];
+  n212 [label="InitList"];
+  n213 [label="END"];
+  n214 [label="List"];
+  n215 [label="<EOF>"];
+
+  n0 -> n1 // "MODULE" -> "List"
+  n0 -> n2 // "MODULE" -> "TYPE"
+  n0 -> n3 // "MODULE" -> "="
+  n3 -> n4 // "=" -> "List"
+  n3 -> n5 // "=" -> "POINTER TO"
+  n5 -> n6 // "POINTER TO" -> "ListDesc"
+  n0 -> n7 // "MODULE" -> ";"
+  n0 -> n8 // "MODULE" -> "="
+  n8 -> n9 // "=" -> "ListDesc"
+  n8 -> n10 // "=" -> "RECORD"
+  n8 -> n11 // "=" -> "key"
+  n8 -> n12 // "=" -> ":"
+  n8 -> n13 // "=" -> "ARRAY"
+  n8 -> n14 // "=" -> "64"
+  n8 -> n15 // "=" -> "OF"
+  n8 -> n16 // "=" -> "CHAR"
+  n8 -> n17 // "=" -> ";"
+  n8 -> n18 // "=" -> "next"
+  n8 -> n19 // "=" -> ":"
+  n8 -> n20 // "=" -> "List"
+  n8 -> n21 // "=" -> ";"
+  n8 -> n22 // "=" -> "END"
+  n0 -> n23 // "MODULE" -> ";"
+  n0 -> n24 // "MODULE" -> "VAR"
+  n0 -> n25 // "MODULE" -> "root"
+  n0 -> n26 // "MODULE" -> ":"
+  n0 -> n27 // "MODULE" -> "List"
+  n0 -> n28 // "MODULE" -> ";"
+  n0 -> n29 // "MODULE" -> "PROCEDURE"
+  n29 -> n30 // "PROCEDURE" -> "VAR"
+  n29 -> n31 // "PROCEDURE" -> "p"
+  n29 -> n32 // "PROCEDURE" -> ":"
+  n29 -> n33 // "PROCEDURE" -> "List"
+  n29 -> n34 // "PROCEDURE" -> ";"
+  n29 -> n35 // "PROCEDURE" -> "BEGIN"
+  n29 -> n36 // "PROCEDURE" -> "WHILE"
+  n36 -> n37 // "WHILE" -> "("
+  n36 -> n38 // "WHILE" -> "#"
+  n38 -> n39 // "#" -> "p"
+  n38 -> n40 // "#" -> "NIL"
+  n36 -> n41 // "WHILE" -> ")"
+  n36 -> n42 // "WHILE" -> "&"
+  n36 -> n43 // "WHILE" -> "("
+  n36 -> n44 // "WHILE" -> "<"
+  n44 -> n45 // "<" -> "p"
+  n44 -> n46 // "<" -> "."
+  n44 -> n47 // "<" -> "key"
+  n44 -> n48 // "<" -> "key"
+  n36 -> n49 // "WHILE" -> ")"
+  n29 -> n50 // "PROCEDURE" -> "IF"
+  n29 -> n51 // "PROCEDURE" -> "("
+  n29 -> n52 // "PROCEDURE" -> "="
+  n52 -> n53 // "=" -> "p"
+  n52 -> n54 // "=" -> "NIL"
+  n29 -> n55 // "PROCEDURE" -> ")"
+  n29 -> n56 // "PROCEDURE" -> "OR"
+  n29 -> n57 // "PROCEDURE" -> "("
+  n29 -> n58 // "PROCEDURE" -> ">"
+  n58 -> n59 // ">" -> "p"
+  n58 -> n60 // ">" -> "."
+  n58 -> n61 // ">" -> "key"
+  n58 -> n62 // ">" -> "key"
+  n29 -> n63 // "PROCEDURE" -> ")"
+  n29 -> n64 // "PROCEDURE" -> "THEN"
+  n29 -> n65 // "PROCEDURE" -> "ELSE"
+  n29 -> n66 // "PROCEDURE" -> "END"
+  n29 -> n67 // "PROCEDURE" -> "END"
+  n29 -> n68 // "PROCEDURE" -> "Find"
+  n0 -> n69 // "MODULE" -> "PROCEDURE"
+  n69 -> n70 // "PROCEDURE" -> "VAR"
+  n69 -> n71 // "PROCEDURE" -> "p"
+  n69 -> n72 // "PROCEDURE" -> ","
+  n69 -> n73 // "PROCEDURE" -> "q"
+  n69 -> n74 // "PROCEDURE" -> ":"
+  n69 -> n75 // "PROCEDURE" -> "List"
+  n69 -> n76 // "PROCEDURE" -> ";"
+  n69 -> n77 // "PROCEDURE" -> "BEGIN"
+  n69 -> n78 // "PROCEDURE" -> "WHILE"
+  n78 -> n79 // "WHILE" -> "("
+  n78 -> n80 // "WHILE" -> "#"
+  n80 -> n81 // "#" -> "p"
+  n80 -> n82 // "#" -> "."
+  n80 -> n83 // "#" -> "next"
+  n80 -> n84 // "#" -> "NIL"
+  n78 -> n85 // "WHILE" -> ")"
+  n78 -> n86 // "WHILE" -> "&"
+  n78 -> n87 // "WHILE" -> "("
+  n78 -> n88 // "WHILE" -> "<"
+  n88 -> n89 // "<" -> "p"
+  n88 -> n90 // "<" -> "."
+  n88 -> n91 // "<" -> "next"
+  n88 -> n92 // "<" -> "."
+  n88 -> n93 // "<" -> "key"
+  n88 -> n94 // "<" -> "key"
+  n78 -> n95 // "WHILE" -> ")"
+  n69 -> n96 // "PROCEDURE" -> "IF"
+  n69 -> n97 // "PROCEDURE" -> "unique"
+  n69 -> n98 // "PROCEDURE" -> "&"
+  n69 -> n99 // "PROCEDURE" -> "("
+  n69 -> n100 // "PROCEDURE" -> "#"
+  n100 -> n101 // "#" -> "p"
+  n100 -> n102 // "#" -> "."
+  n100 -> n103 // "#" -> "next"
+  n100 -> n104 // "#" -> "NIL"
+  n69 -> n105 // "PROCEDURE" -> ")"
+  n69 -> n106 // "PROCEDURE" -> "&"
+  n69 -> n107 // "PROCEDURE" -> "("
+  n69 -> n108 // "PROCEDURE" -> "="
+  n108 -> n109 // "=" -> "p"
+  n108 -> n110 // "=" -> "."
+  n108 -> n111 // "=" -> "next"
+  n108 -> n112 // "=" -> "."
+  n108 -> n113 // "=" -> "key"
+  n108 -> n114 // "=" -> "key"
+  n69 -> n115 // "PROCEDURE" -> ")"
+  n69 -> n116 // "PROCEDURE" -> "THEN"
+  n69 -> n117 // "PROCEDURE" -> "END"
+  n69 -> n118 // "PROCEDURE" -> "NEW"
+  n69 -> n119 // "PROCEDURE" -> "("
+  n69 -> n120 // "PROCEDURE" -> "q"
+  n69 -> n121 // "PROCEDURE" -> ")"
+  n69 -> n122 // "PROCEDURE" -> "COPY"
+  n69 -> n123 // "PROCEDURE" -> "("
+  n69 -> n124 // "PROCEDURE" -> "key"
+  n69 -> n125 // "PROCEDURE" -> ","
+  n69 -> n126 // "PROCEDURE" -> "q"
+  n69 -> n127 // "PROCEDURE" -> "."
+  n69 -> n128 // "PROCEDURE" -> "key"
+  n69 -> n129 // "PROCEDURE" -> ")"
+  n69 -> n130 // "PROCEDURE" -> "q"
+  n69 -> n131 // "PROCEDURE" -> "."
+  n69 -> n132 // "PROCEDURE" -> "next"
+  n69 -> n133 // "PROCEDURE" -> "ASSIGN"
+  n133 -> n134 // "ASSIGN" -> ":="
+  n133 -> n135 // "ASSIGN" -> "p"
+  n133 -> n136 // "ASSIGN" -> "."
+  n133 -> n137 // "ASSIGN" -> "next"
+  n69 -> n138 // "PROCEDURE" -> "p"
+  n69 -> n139 // "PROCEDURE" -> "."
+  n69 -> n140 // "PROCEDURE" -> "next"
+  n69 -> n141 // "PROCEDURE" -> "ASSIGN"
+  n141 -> n142 // "ASSIGN" -> ":="
+  n141 -> n143 // "ASSIGN" -> "q"
+  n69 -> n144 // "PROCEDURE" -> "END"
+  n69 -> n145 // "PROCEDURE" -> "Insert"
+  n0 -> n146 // "MODULE" -> "PROCEDURE"
+  n146 -> n147 // "PROCEDURE" -> "VAR"
+  n146 -> n148 // "PROCEDURE" -> "p"
+  n146 -> n149 // "PROCEDURE" -> ":"
+  n146 -> n150 // "PROCEDURE" -> "List"
+  n146 -> n151 // "PROCEDURE" -> ";"
+  n146 -> n152 // "PROCEDURE" -> "BEGIN"
+  n146 -> n153 // "PROCEDURE" -> "x"
+  n146 -> n154 // "PROCEDURE" -> "ASSIGN"
+  n154 -> n155 // "ASSIGN" -> ":="
+  n154 -> n156 // "ASSIGN" -> "3"
+  n154 -> n157 // "ASSIGN" -> "*"
+  n154 -> n158 // "ASSIGN" -> "4"
+  n154 -> n159 // "ASSIGN" -> "+"
+  n154 -> n160 // "ASSIGN" -> "3"
+  n154 -> n161 // "ASSIGN" -> "*"
+  n154 -> n162 // "ASSIGN" -> "3"
+  n146 -> n163 // "PROCEDURE" -> "WHILE"
+  n163 -> n164 // "WHILE" -> "("
+  n163 -> n165 // "WHILE" -> "#"
+  n165 -> n166 // "#" -> "p"
+  n165 -> n167 // "#" -> "."
+  n165 -> n168 // "#" -> "next"
+  n165 -> n169 // "#" -> "NIL"
+  n163 -> n170 // "WHILE" -> ")"
+  n163 -> n171 // "WHILE" -> "&"
+  n163 -> n172 // "WHILE" -> "("
+  n163 -> n173 // "WHILE" -> "<"
+  n173 -> n174 // "<" -> "p"
+  n173 -> n175 // "<" -> "."
+  n173 -> n176 // "<" -> "next"
+  n173 -> n177 // "<" -> "."
+  n173 -> n178 // "<" -> "key"
+  n173 -> n179 // "<" -> "key"
+  n163 -> n180 // "WHILE" -> ")"
+  n146 -> n181 // "PROCEDURE" -> "IF"
+  n146 -> n182 // "PROCEDURE" -> "("
+  n146 -> n183 // "PROCEDURE" -> "#"
+  n183 -> n184 // "#" -> "p"
+  n183 -> n185 // "#" -> "."
+  n183 -> n186 // "#" -> "next"
+  n183 -> n187 // "#" -> "NIL"
+  n146 -> n188 // "PROCEDURE" -> ")"
+  n146 -> n189 // "PROCEDURE" -> "&"
+  n146 -> n190 // "PROCEDURE" -> "("
+  n146 -> n191 // "PROCEDURE" -> "="
+  n191 -> n192 // "=" -> "p"
+  n191 -> n193 // "=" -> "."
+  n191 -> n194 // "=" -> "next"
+  n191 -> n195 // "=" -> "."
+  n191 -> n196 // "=" -> "key"
+  n191 -> n197 // "=" -> "key"
+  n146 -> n198 // "PROCEDURE" -> ")"
+  n146 -> n199 // "PROCEDURE" -> "THEN"
+  n146 -> n200 // "PROCEDURE" -> "END"
+  n146 -> n201 // "PROCEDURE" -> "END"
+  n146 -> n202 // "PROCEDURE" -> "Delete"
+  n0 -> n203 // "MODULE" -> "PROCEDURE"
+  n203 -> n204 // "PROCEDURE" -> "BEGIN"
+  n203 -> n205 // "PROCEDURE" -> "root"
+  n203 -> n206 // "PROCEDURE" -> "."
+  n203 -> n207 // "PROCEDURE" -> "next"
+  n203 -> n208 // "PROCEDURE" -> "ASSIGN"
+  n208 -> n209 // "ASSIGN" -> ":="
+  n208 -> n210 // "ASSIGN" -> "NIL"
+  n203 -> n211 // "PROCEDURE" -> "END"
+  n203 -> n212 // "PROCEDURE" -> "InitList"
+  n0 -> n213 // "MODULE" -> "END"
+  n0 -> n214 // "MODULE" -> "List"
+  n0 -> n215 // "MODULE" -> "<EOF>"
+
 }
