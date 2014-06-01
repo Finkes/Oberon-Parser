@@ -5,7 +5,7 @@ options {
   output=AST;
 }
 
-tokens{ASSIGN;DECLARE;BLOCK;PROCEDURE_BODY;FORMAL_PARAMETERS;PROCEDURE;TYPE_DECL;ID;}
+tokens{ASSIGN;DECLARE;BLOCK;PROCEDURE_BODY;F_PARAMS;F_PARAM;PROCEDURE;TYPE_DECL;ID;LENGTH;}
 
 @lexer::header  {package dhbw.compilerbau.oberonparser.parser; }
 @parser::header {package dhbw.compilerbau.oberonparser.parser; }
@@ -45,7 +45,7 @@ typeDeclaration       : identdef '=' type                 -> ^( TYPE_DECL identd
 
 type                  : qualident | arrayType | recordType | pointerType | procedureType;
 
-arrayType             : 'ARRAY' length (',' length)* 'OF' type;
+arrayType             : 'ARRAY' length (',' length)* 'OF' type -> ^('ARRAY' ^(LENGTH length*) type );
 
 length                : constExpression;
 
@@ -67,7 +67,7 @@ variableDeclaration   : identList ':' type -> ^(DECLARE identList type);
 
 qualident             : (options{ greedy=true;}:IDENT '.')? IDENT -> ^(ID IDENT*);
 
-designator            : qualident (options{ greedy=true;}:'.' IDENT | '['! expList ']'! | '('! qualident ')'! | '^')*;
+designator            : qualident (options{ greedy=true;}:'.'! IDENT | '['! expList ']'! | '('! qualident ')'! | '^')*;
 
 expList               : expression (',' expression)*;
 
@@ -136,9 +136,9 @@ typedeclarationSequence : 'TYPE' ( typeDeclaration ';')*            -> ^('TYPE' 
 vardeclarationSequence :  'VAR' (variableDeclaration ';')*          -> ^('VAR' (variableDeclaration )*);
 
 
-formalParameters      : '(' (fpSection (';' fpSection)*)? ')' (':' qualident)? -> ^(FORMAL_PARAMETERS fpSection* qualident?);
+formalParameters      : '(' (fpSection (';' fpSection)*)? ')' (':' qualident)? -> ^(F_PARAMS fpSection* qualident?);
 
-fpSection             : 'VAR'? IDENT (',' IDENT)*  ':' formalType;
+fpSection             : 'VAR'? IDENT (',' IDENT)*  ':' formalType -> ^(F_PARAM ^(ID IDENT*) formalType);
 
 formalType            : ('ARRAY'^ 'OF'!)* qualident | procedureType;
 

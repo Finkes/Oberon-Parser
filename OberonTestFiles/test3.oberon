@@ -1,6 +1,6 @@
 
 MODULE List;
-(*
+
 TYPE
 	List = POINTER TO ListDesc;
 	ListDesc = RECORD
@@ -19,7 +19,7 @@ BEGIN
 	ELSE RETURN p
 	END
 END Find;
-*)
+
 PROCEDURE Insert (key: ARRAY OF CHAR; unique: BOOLEAN);
 	VAR p, q: List;
 BEGIN

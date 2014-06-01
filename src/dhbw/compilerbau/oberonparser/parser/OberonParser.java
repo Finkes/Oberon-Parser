@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g 2014-06-01 15:44:44
+// $ANTLR 3.5.2 /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g 2014-06-01 16:24:29
 package dhbw.compilerbau.oberonparser.parser; 
 
 import org.antlr.runtime.*;
@@ -13,22 +13,20 @@ import org.antlr.runtime.tree.*;
 public class OberonParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ASSIGN", "BLOCK", "CHARACTER", 
-		"CHARCONST", "COMMENT", "DECLARE", "DIGIT", "FORMAL_PARAMETERS", "HEX_DIGIT", 
-		"ID", "IDENT", "INTEGER", "LETTER", "PROCEDURE", "PROCEDURE_BODY", "REAL", 
-		"SCALE_FACTOR", "STRING", "TYPE_DECL", "WS", "'#'", "'&'", "'('", "')'", 
-		"'*'", "'+'", "','", "'-'", "'.'", "'..'", "'/'", "':'", "':='", "';'", 
-		"'<'", "'<='", "'='", "'>'", "'>='", "'ABS'", "'ARRAY'", "'ASH'", "'BEGIN'", 
-		"'CAP'", "'CONST'", "'COPY'", "'DEC'", "'DIV'", "'DO'", "'ELSE'", "'ELSIF'", 
-		"'END'", "'EXCL'", "'EXIT'", "'HALT'", "'IF'", "'IMPORT'", "'IN'", "'INC'", 
-		"'INCL'", "'IS'", "'LEN'", "'LOOP'", "'MAX'", "'MIN'", "'MOD'", "'MODULE'", 
-		"'NEW'", "'NIL'", "'ODD'", "'OF'", "'OR'", "'POINTER TO'", "'PROCEDURE'", 
-		"'RECORD'", "'REPEAT'", "'RETURN'", "'SIZE'", "'THEN'", "'TYPE'", "'UNTIL'", 
-		"'VAR'", "'WHILE'", "'WITH'", "'['", "']'", "'^'", "'case'", "'{'", "'|'", 
-		"'}'", "'~'"
+		"CHARCONST", "COMMENT", "DECLARE", "DIGIT", "F_PARAM", "F_PARAMS", "HEX_DIGIT", 
+		"ID", "IDENT", "INTEGER", "LENGTH", "LETTER", "PROCEDURE", "PROCEDURE_BODY", 
+		"REAL", "SCALE_FACTOR", "STRING", "TYPE_DECL", "WS", "'#'", "'&'", "'('", 
+		"')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'/'", "':'", "':='", 
+		"';'", "'<'", "'<='", "'='", "'>'", "'>='", "'ABS'", "'ARRAY'", "'ASH'", 
+		"'BEGIN'", "'CAP'", "'CONST'", "'COPY'", "'DEC'", "'DIV'", "'DO'", "'ELSE'", 
+		"'ELSIF'", "'END'", "'EXCL'", "'EXIT'", "'HALT'", "'IF'", "'IMPORT'", 
+		"'IN'", "'INC'", "'INCL'", "'IS'", "'LEN'", "'LOOP'", "'MAX'", "'MIN'", 
+		"'MOD'", "'MODULE'", "'NEW'", "'NIL'", "'ODD'", "'OF'", "'OR'", "'POINTER TO'", 
+		"'PROCEDURE'", "'RECORD'", "'REPEAT'", "'RETURN'", "'SIZE'", "'THEN'", 
+		"'TYPE'", "'UNTIL'", "'VAR'", "'WHILE'", "'WITH'", "'['", "']'", "'^'", 
+		"'case'", "'{'", "'|'", "'}'", "'~'"
 	};
 	public static final int EOF=-1;
-	public static final int T__24=24;
-	public static final int T__25=25;
 	public static final int T__26=26;
 	public static final int T__27=27;
 	public static final int T__28=28;
@@ -99,6 +97,8 @@ public class OberonParser extends Parser {
 	public static final int T__93=93;
 	public static final int T__94=94;
 	public static final int T__95=95;
+	public static final int T__96=96;
+	public static final int T__97=97;
 	public static final int ASSIGN=4;
 	public static final int BLOCK=5;
 	public static final int CHARACTER=6;
@@ -106,19 +106,21 @@ public class OberonParser extends Parser {
 	public static final int COMMENT=8;
 	public static final int DECLARE=9;
 	public static final int DIGIT=10;
-	public static final int FORMAL_PARAMETERS=11;
-	public static final int HEX_DIGIT=12;
-	public static final int ID=13;
-	public static final int IDENT=14;
-	public static final int INTEGER=15;
-	public static final int LETTER=16;
-	public static final int PROCEDURE=17;
-	public static final int PROCEDURE_BODY=18;
-	public static final int REAL=19;
-	public static final int SCALE_FACTOR=20;
-	public static final int STRING=21;
-	public static final int TYPE_DECL=22;
-	public static final int WS=23;
+	public static final int F_PARAM=11;
+	public static final int F_PARAMS=12;
+	public static final int HEX_DIGIT=13;
+	public static final int ID=14;
+	public static final int IDENT=15;
+	public static final int INTEGER=16;
+	public static final int LENGTH=17;
+	public static final int LETTER=18;
+	public static final int PROCEDURE=19;
+	public static final int PROCEDURE_BODY=20;
+	public static final int REAL=21;
+	public static final int SCALE_FACTOR=22;
+	public static final int STRING=23;
+	public static final int TYPE_DECL=24;
+	public static final int WS=25;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -178,18 +180,18 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal1=(Token)match(input,43,FOLLOW_43_in_abs89); 
+			string_literal1=(Token)match(input,45,FOLLOW_45_in_abs93); 
 			string_literal1_tree = (Object)adaptor.create(string_literal1);
 			root_0 = (Object)adaptor.becomeRoot(string_literal1_tree, root_0);
 
-			char_literal2=(Token)match(input,26,FOLLOW_26_in_abs92); 
-			pushFollow(FOLLOW_number_in_abs95);
+			char_literal2=(Token)match(input,28,FOLLOW_28_in_abs96); 
+			pushFollow(FOLLOW_number_in_abs99);
 			number3=number();
 			state._fsp--;
 
 			adaptor.addChild(root_0, number3.getTree());
 
-			char_literal4=(Token)match(input,27,FOLLOW_27_in_abs97); 
+			char_literal4=(Token)match(input,29,FOLLOW_29_in_abs101); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -243,16 +245,16 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal5=(Token)match(input,73,FOLLOW_73_in_odd123); 
+			string_literal5=(Token)match(input,75,FOLLOW_75_in_odd127); 
 			string_literal5_tree = (Object)adaptor.create(string_literal5);
 			root_0 = (Object)adaptor.becomeRoot(string_literal5_tree, root_0);
 
-			char_literal6=(Token)match(input,26,FOLLOW_26_in_odd126); 
-			INTEGER7=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_odd129); 
+			char_literal6=(Token)match(input,28,FOLLOW_28_in_odd130); 
+			INTEGER7=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_odd133); 
 			INTEGER7_tree = (Object)adaptor.create(INTEGER7);
 			adaptor.addChild(root_0, INTEGER7_tree);
 
-			char_literal8=(Token)match(input,27,FOLLOW_27_in_odd131); 
+			char_literal8=(Token)match(input,29,FOLLOW_29_in_odd135); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -306,16 +308,16 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal9=(Token)match(input,47,FOLLOW_47_in_cap173); 
+			string_literal9=(Token)match(input,49,FOLLOW_49_in_cap177); 
 			string_literal9_tree = (Object)adaptor.create(string_literal9);
 			root_0 = (Object)adaptor.becomeRoot(string_literal9_tree, root_0);
 
-			char_literal10=(Token)match(input,26,FOLLOW_26_in_cap176); 
-			CHARACTER11=(Token)match(input,CHARACTER,FOLLOW_CHARACTER_in_cap179); 
+			char_literal10=(Token)match(input,28,FOLLOW_28_in_cap180); 
+			CHARACTER11=(Token)match(input,CHARACTER,FOLLOW_CHARACTER_in_cap183); 
 			CHARACTER11_tree = (Object)adaptor.create(CHARACTER11);
 			adaptor.addChild(root_0, CHARACTER11_tree);
 
-			char_literal12=(Token)match(input,27,FOLLOW_27_in_cap181); 
+			char_literal12=(Token)match(input,29,FOLLOW_29_in_cap185); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -369,16 +371,16 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal13=(Token)match(input,45,FOLLOW_45_in_ash207); 
+			string_literal13=(Token)match(input,47,FOLLOW_47_in_ash211); 
 			string_literal13_tree = (Object)adaptor.create(string_literal13);
 			root_0 = (Object)adaptor.becomeRoot(string_literal13_tree, root_0);
 
-			char_literal14=(Token)match(input,26,FOLLOW_26_in_ash210); 
-			INTEGER15=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_ash213); 
+			char_literal14=(Token)match(input,28,FOLLOW_28_in_ash214); 
+			INTEGER15=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_ash217); 
 			INTEGER15_tree = (Object)adaptor.create(INTEGER15);
 			adaptor.addChild(root_0, INTEGER15_tree);
 
-			char_literal16=(Token)match(input,27,FOLLOW_27_in_ash215); 
+			char_literal16=(Token)match(input,29,FOLLOW_29_in_ash219); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -435,12 +437,12 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal17=(Token)match(input,65,FOLLOW_65_in_len241); 
+			string_literal17=(Token)match(input,67,FOLLOW_67_in_len245); 
 			string_literal17_tree = (Object)adaptor.create(string_literal17);
 			root_0 = (Object)adaptor.becomeRoot(string_literal17_tree, root_0);
 
-			char_literal18=(Token)match(input,26,FOLLOW_26_in_len244); 
-			pushFollow(FOLLOW_qualident_in_len247);
+			char_literal18=(Token)match(input,28,FOLLOW_28_in_len248); 
+			pushFollow(FOLLOW_qualident_in_len251);
 			qualident19=qualident();
 			state._fsp--;
 
@@ -449,18 +451,18 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:19:47: ( ',' INTEGER )?
 			int alt1=2;
 			int LA1_0 = input.LA(1);
-			if ( (LA1_0==30) ) {
+			if ( (LA1_0==32) ) {
 				alt1=1;
 			}
 			switch (alt1) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:19:48: ',' INTEGER
 					{
-					char_literal20=(Token)match(input,30,FOLLOW_30_in_len250); 
+					char_literal20=(Token)match(input,32,FOLLOW_32_in_len254); 
 					char_literal20_tree = (Object)adaptor.create(char_literal20);
 					adaptor.addChild(root_0, char_literal20_tree);
 
-					INTEGER21=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_len252); 
+					INTEGER21=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_len256); 
 					INTEGER21_tree = (Object)adaptor.create(INTEGER21);
 					adaptor.addChild(root_0, INTEGER21_tree);
 
@@ -469,7 +471,7 @@ public class OberonParser extends Parser {
 
 			}
 
-			char_literal22=(Token)match(input,27,FOLLOW_27_in_len256); 
+			char_literal22=(Token)match(input,29,FOLLOW_29_in_len260); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -522,10 +524,10 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:20:23: ( ( 'MAX' ^| 'MIN' ^) '(' ! qualident | set ')' !)
 			int alt3=2;
 			int LA3_0 = input.LA(1);
-			if ( ((LA3_0 >= 67 && LA3_0 <= 68)) ) {
+			if ( ((LA3_0 >= 69 && LA3_0 <= 70)) ) {
 				alt3=1;
 			}
-			else if ( (LA3_0==92) ) {
+			else if ( (LA3_0==94) ) {
 				alt3=2;
 			}
 
@@ -545,10 +547,10 @@ public class OberonParser extends Parser {
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:20:25: ( 'MAX' ^| 'MIN' ^)
 					int alt2=2;
 					int LA2_0 = input.LA(1);
-					if ( (LA2_0==67) ) {
+					if ( (LA2_0==69) ) {
 						alt2=1;
 					}
-					else if ( (LA2_0==68) ) {
+					else if ( (LA2_0==70) ) {
 						alt2=2;
 					}
 
@@ -562,7 +564,7 @@ public class OberonParser extends Parser {
 						case 1 :
 							// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:20:26: 'MAX' ^
 							{
-							string_literal23=(Token)match(input,67,FOLLOW_67_in_maxMin280); 
+							string_literal23=(Token)match(input,69,FOLLOW_69_in_maxMin284); 
 							string_literal23_tree = (Object)adaptor.create(string_literal23);
 							root_0 = (Object)adaptor.becomeRoot(string_literal23_tree, root_0);
 
@@ -571,7 +573,7 @@ public class OberonParser extends Parser {
 						case 2 :
 							// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:20:33: 'MIN' ^
 							{
-							string_literal24=(Token)match(input,68,FOLLOW_68_in_maxMin283); 
+							string_literal24=(Token)match(input,70,FOLLOW_70_in_maxMin287); 
 							string_literal24_tree = (Object)adaptor.create(string_literal24);
 							root_0 = (Object)adaptor.becomeRoot(string_literal24_tree, root_0);
 
@@ -580,8 +582,8 @@ public class OberonParser extends Parser {
 
 					}
 
-					char_literal25=(Token)match(input,26,FOLLOW_26_in_maxMin287); 
-					pushFollow(FOLLOW_qualident_in_maxMin290);
+					char_literal25=(Token)match(input,28,FOLLOW_28_in_maxMin291); 
+					pushFollow(FOLLOW_qualident_in_maxMin294);
 					qualident26=qualident();
 					state._fsp--;
 
@@ -595,13 +597,13 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_set_in_maxMin292);
+					pushFollow(FOLLOW_set_in_maxMin296);
 					set27=set();
 					state._fsp--;
 
 					adaptor.addChild(root_0, set27.getTree());
 
-					char_literal28=(Token)match(input,27,FOLLOW_27_in_maxMin294); 
+					char_literal28=(Token)match(input,29,FOLLOW_29_in_maxMin298); 
 					}
 					break;
 
@@ -656,18 +658,18 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal29=(Token)match(input,81,FOLLOW_81_in_size320); 
+			string_literal29=(Token)match(input,83,FOLLOW_83_in_size324); 
 			string_literal29_tree = (Object)adaptor.create(string_literal29);
 			root_0 = (Object)adaptor.becomeRoot(string_literal29_tree, root_0);
 
-			char_literal30=(Token)match(input,26,FOLLOW_26_in_size323); 
-			pushFollow(FOLLOW_qualident_in_size326);
+			char_literal30=(Token)match(input,28,FOLLOW_28_in_size327); 
+			pushFollow(FOLLOW_qualident_in_size330);
 			qualident31=qualident();
 			state._fsp--;
 
 			adaptor.addChild(root_0, qualident31.getTree());
 
-			char_literal32=(Token)match(input,27,FOLLOW_27_in_size328); 
+			char_literal32=(Token)match(input,29,FOLLOW_29_in_size332); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -725,27 +727,27 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal33=(Token)match(input,62,FOLLOW_62_in_inc355); 
+			string_literal33=(Token)match(input,64,FOLLOW_64_in_inc359); 
 			string_literal33_tree = (Object)adaptor.create(string_literal33);
 			root_0 = (Object)adaptor.becomeRoot(string_literal33_tree, root_0);
 
-			char_literal34=(Token)match(input,26,FOLLOW_26_in_inc358); 
-			INTEGER35=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_inc361); 
+			char_literal34=(Token)match(input,28,FOLLOW_28_in_inc362); 
+			INTEGER35=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_inc365); 
 			INTEGER35_tree = (Object)adaptor.create(INTEGER35);
 			adaptor.addChild(root_0, INTEGER35_tree);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:24:45: ( ',' ! INTEGER )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
-			if ( (LA4_0==30) ) {
+			if ( (LA4_0==32) ) {
 				alt4=1;
 			}
 			switch (alt4) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:24:46: ',' ! INTEGER
 					{
-					char_literal36=(Token)match(input,30,FOLLOW_30_in_inc364); 
-					INTEGER37=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_inc367); 
+					char_literal36=(Token)match(input,32,FOLLOW_32_in_inc368); 
+					INTEGER37=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_inc371); 
 					INTEGER37_tree = (Object)adaptor.create(INTEGER37);
 					adaptor.addChild(root_0, INTEGER37_tree);
 
@@ -754,7 +756,7 @@ public class OberonParser extends Parser {
 
 			}
 
-			char_literal38=(Token)match(input,27,FOLLOW_27_in_inc371); 
+			char_literal38=(Token)match(input,29,FOLLOW_29_in_inc375); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -812,27 +814,27 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal39=(Token)match(input,50,FOLLOW_50_in_dec397); 
+			string_literal39=(Token)match(input,52,FOLLOW_52_in_dec401); 
 			string_literal39_tree = (Object)adaptor.create(string_literal39);
 			root_0 = (Object)adaptor.becomeRoot(string_literal39_tree, root_0);
 
-			char_literal40=(Token)match(input,26,FOLLOW_26_in_dec400); 
-			INTEGER41=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_dec403); 
+			char_literal40=(Token)match(input,28,FOLLOW_28_in_dec404); 
+			INTEGER41=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_dec407); 
 			INTEGER41_tree = (Object)adaptor.create(INTEGER41);
 			adaptor.addChild(root_0, INTEGER41_tree);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:25:45: ( ',' ! INTEGER )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
-			if ( (LA5_0==30) ) {
+			if ( (LA5_0==32) ) {
 				alt5=1;
 			}
 			switch (alt5) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:25:46: ',' ! INTEGER
 					{
-					char_literal42=(Token)match(input,30,FOLLOW_30_in_dec406); 
-					INTEGER43=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_dec409); 
+					char_literal42=(Token)match(input,32,FOLLOW_32_in_dec410); 
+					INTEGER43=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_dec413); 
 					INTEGER43_tree = (Object)adaptor.create(INTEGER43);
 					adaptor.addChild(root_0, INTEGER43_tree);
 
@@ -841,7 +843,7 @@ public class OberonParser extends Parser {
 
 			}
 
-			char_literal44=(Token)match(input,27,FOLLOW_27_in_dec413); 
+			char_literal44=(Token)match(input,29,FOLLOW_29_in_dec417); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -898,23 +900,23 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal45=(Token)match(input,63,FOLLOW_63_in_incl438); 
+			string_literal45=(Token)match(input,65,FOLLOW_65_in_incl442); 
 			string_literal45_tree = (Object)adaptor.create(string_literal45);
 			root_0 = (Object)adaptor.becomeRoot(string_literal45_tree, root_0);
 
-			char_literal46=(Token)match(input,26,FOLLOW_26_in_incl441); 
-			pushFollow(FOLLOW_set_in_incl444);
+			char_literal46=(Token)match(input,28,FOLLOW_28_in_incl445); 
+			pushFollow(FOLLOW_set_in_incl448);
 			set47=set();
 			state._fsp--;
 
 			adaptor.addChild(root_0, set47.getTree());
 
-			char_literal48=(Token)match(input,30,FOLLOW_30_in_incl446); 
-			INTEGER49=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_incl449); 
+			char_literal48=(Token)match(input,32,FOLLOW_32_in_incl450); 
+			INTEGER49=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_incl453); 
 			INTEGER49_tree = (Object)adaptor.create(INTEGER49);
 			adaptor.addChild(root_0, INTEGER49_tree);
 
-			char_literal50=(Token)match(input,27,FOLLOW_27_in_incl451); 
+			char_literal50=(Token)match(input,29,FOLLOW_29_in_incl455); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -971,23 +973,23 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal51=(Token)match(input,56,FOLLOW_56_in_excl476); 
+			string_literal51=(Token)match(input,58,FOLLOW_58_in_excl480); 
 			string_literal51_tree = (Object)adaptor.create(string_literal51);
 			root_0 = (Object)adaptor.becomeRoot(string_literal51_tree, root_0);
 
-			char_literal52=(Token)match(input,26,FOLLOW_26_in_excl479); 
-			pushFollow(FOLLOW_set_in_excl482);
+			char_literal52=(Token)match(input,28,FOLLOW_28_in_excl483); 
+			pushFollow(FOLLOW_set_in_excl486);
 			set53=set();
 			state._fsp--;
 
 			adaptor.addChild(root_0, set53.getTree());
 
-			char_literal54=(Token)match(input,30,FOLLOW_30_in_excl484); 
-			INTEGER55=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_excl487); 
+			char_literal54=(Token)match(input,32,FOLLOW_32_in_excl488); 
+			INTEGER55=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_excl491); 
 			INTEGER55_tree = (Object)adaptor.create(INTEGER55);
 			adaptor.addChild(root_0, INTEGER55_tree);
 
-			char_literal56=(Token)match(input,27,FOLLOW_27_in_excl489); 
+			char_literal56=(Token)match(input,29,FOLLOW_29_in_excl493); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -1043,25 +1045,25 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal57=(Token)match(input,49,FOLLOW_49_in_copy514); 
+			string_literal57=(Token)match(input,51,FOLLOW_51_in_copy518); 
 			string_literal57_tree = (Object)adaptor.create(string_literal57);
 			root_0 = (Object)adaptor.becomeRoot(string_literal57_tree, root_0);
 
-			char_literal58=(Token)match(input,26,FOLLOW_26_in_copy517); 
-			pushFollow(FOLLOW_qualident_in_copy520);
+			char_literal58=(Token)match(input,28,FOLLOW_28_in_copy521); 
+			pushFollow(FOLLOW_qualident_in_copy524);
 			qualident59=qualident();
 			state._fsp--;
 
 			adaptor.addChild(root_0, qualident59.getTree());
 
-			char_literal60=(Token)match(input,30,FOLLOW_30_in_copy522); 
-			pushFollow(FOLLOW_qualident_in_copy525);
+			char_literal60=(Token)match(input,32,FOLLOW_32_in_copy526); 
+			pushFollow(FOLLOW_qualident_in_copy529);
 			qualident61=qualident();
 			state._fsp--;
 
 			adaptor.addChild(root_0, qualident61.getTree());
 
-			char_literal62=(Token)match(input,27,FOLLOW_27_in_copy527); 
+			char_literal62=(Token)match(input,29,FOLLOW_29_in_copy531); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -1114,18 +1116,18 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal63=(Token)match(input,71,FOLLOW_71_in_neW553); 
+			string_literal63=(Token)match(input,73,FOLLOW_73_in_neW557); 
 			string_literal63_tree = (Object)adaptor.create(string_literal63);
 			root_0 = (Object)adaptor.becomeRoot(string_literal63_tree, root_0);
 
-			char_literal64=(Token)match(input,26,FOLLOW_26_in_neW556); 
-			pushFollow(FOLLOW_qualident_in_neW559);
+			char_literal64=(Token)match(input,28,FOLLOW_28_in_neW560); 
+			pushFollow(FOLLOW_qualident_in_neW563);
 			qualident65=qualident();
 			state._fsp--;
 
 			adaptor.addChild(root_0, qualident65.getTree());
 
-			char_literal66=(Token)match(input,27,FOLLOW_27_in_neW561); 
+			char_literal66=(Token)match(input,29,FOLLOW_29_in_neW565); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -1179,16 +1181,16 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal67=(Token)match(input,58,FOLLOW_58_in_halt587); 
+			string_literal67=(Token)match(input,60,FOLLOW_60_in_halt591); 
 			string_literal67_tree = (Object)adaptor.create(string_literal67);
 			root_0 = (Object)adaptor.becomeRoot(string_literal67_tree, root_0);
 
-			char_literal68=(Token)match(input,26,FOLLOW_26_in_halt590); 
-			INTEGER69=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_halt593); 
+			char_literal68=(Token)match(input,28,FOLLOW_28_in_halt594); 
+			INTEGER69=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_halt597); 
 			INTEGER69_tree = (Object)adaptor.create(INTEGER69);
 			adaptor.addChild(root_0, INTEGER69_tree);
 
-			char_literal70=(Token)match(input,27,FOLLOW_27_in_halt595); 
+			char_literal70=(Token)match(input,29,FOLLOW_29_in_halt599); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -1251,74 +1253,74 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:25: ( abs | odd | cap | ash | len | maxMin | size | inc | dec | incl | excl | copy | neW | halt )
 			int alt6=14;
 			switch ( input.LA(1) ) {
-			case 43:
+			case 45:
 				{
 				alt6=1;
 				}
 				break;
-			case 73:
+			case 75:
 				{
 				alt6=2;
 				}
 				break;
-			case 47:
+			case 49:
 				{
 				alt6=3;
 				}
 				break;
-			case 45:
+			case 47:
 				{
 				alt6=4;
 				}
 				break;
-			case 65:
+			case 67:
 				{
 				alt6=5;
 				}
 				break;
-			case 67:
-			case 68:
-			case 92:
+			case 69:
+			case 70:
+			case 94:
 				{
 				alt6=6;
 				}
 				break;
-			case 81:
+			case 83:
 				{
 				alt6=7;
 				}
 				break;
-			case 62:
+			case 64:
 				{
 				alt6=8;
 				}
 				break;
-			case 50:
+			case 52:
 				{
 				alt6=9;
 				}
 				break;
-			case 63:
+			case 65:
 				{
 				alt6=10;
 				}
 				break;
-			case 56:
+			case 58:
 				{
 				alt6=11;
 				}
 				break;
-			case 49:
+			case 51:
 				{
 				alt6=12;
 				}
 				break;
-			case 71:
+			case 73:
 				{
 				alt6=13;
 				}
 				break;
-			case 58:
+			case 60:
 				{
 				alt6=14;
 				}
@@ -1332,7 +1334,7 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:26: abs
 					{
-					pushFollow(FOLLOW_abs_in_predefined616);
+					pushFollow(FOLLOW_abs_in_predefined620);
 					abs71=abs();
 					state._fsp--;
 
@@ -1343,7 +1345,7 @@ public class OberonParser extends Parser {
 				case 2 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:30: odd
 					{
-					pushFollow(FOLLOW_odd_in_predefined618);
+					pushFollow(FOLLOW_odd_in_predefined622);
 					odd72=odd();
 					state._fsp--;
 
@@ -1354,7 +1356,7 @@ public class OberonParser extends Parser {
 				case 3 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:34: cap
 					{
-					pushFollow(FOLLOW_cap_in_predefined620);
+					pushFollow(FOLLOW_cap_in_predefined624);
 					cap73=cap();
 					state._fsp--;
 
@@ -1365,7 +1367,7 @@ public class OberonParser extends Parser {
 				case 4 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:38: ash
 					{
-					pushFollow(FOLLOW_ash_in_predefined622);
+					pushFollow(FOLLOW_ash_in_predefined626);
 					ash74=ash();
 					state._fsp--;
 
@@ -1376,7 +1378,7 @@ public class OberonParser extends Parser {
 				case 5 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:42: len
 					{
-					pushFollow(FOLLOW_len_in_predefined624);
+					pushFollow(FOLLOW_len_in_predefined628);
 					len75=len();
 					state._fsp--;
 
@@ -1387,7 +1389,7 @@ public class OberonParser extends Parser {
 				case 6 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:46: maxMin
 					{
-					pushFollow(FOLLOW_maxMin_in_predefined626);
+					pushFollow(FOLLOW_maxMin_in_predefined630);
 					maxMin76=maxMin();
 					state._fsp--;
 
@@ -1398,7 +1400,7 @@ public class OberonParser extends Parser {
 				case 7 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:53: size
 					{
-					pushFollow(FOLLOW_size_in_predefined628);
+					pushFollow(FOLLOW_size_in_predefined632);
 					size77=size();
 					state._fsp--;
 
@@ -1409,7 +1411,7 @@ public class OberonParser extends Parser {
 				case 8 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:58: inc
 					{
-					pushFollow(FOLLOW_inc_in_predefined630);
+					pushFollow(FOLLOW_inc_in_predefined634);
 					inc78=inc();
 					state._fsp--;
 
@@ -1420,7 +1422,7 @@ public class OberonParser extends Parser {
 				case 9 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:62: dec
 					{
-					pushFollow(FOLLOW_dec_in_predefined632);
+					pushFollow(FOLLOW_dec_in_predefined636);
 					dec79=dec();
 					state._fsp--;
 
@@ -1431,7 +1433,7 @@ public class OberonParser extends Parser {
 				case 10 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:66: incl
 					{
-					pushFollow(FOLLOW_incl_in_predefined634);
+					pushFollow(FOLLOW_incl_in_predefined638);
 					incl80=incl();
 					state._fsp--;
 
@@ -1442,7 +1444,7 @@ public class OberonParser extends Parser {
 				case 11 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:71: excl
 					{
-					pushFollow(FOLLOW_excl_in_predefined636);
+					pushFollow(FOLLOW_excl_in_predefined640);
 					excl81=excl();
 					state._fsp--;
 
@@ -1453,7 +1455,7 @@ public class OberonParser extends Parser {
 				case 12 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:76: copy
 					{
-					pushFollow(FOLLOW_copy_in_predefined638);
+					pushFollow(FOLLOW_copy_in_predefined642);
 					copy82=copy();
 					state._fsp--;
 
@@ -1464,7 +1466,7 @@ public class OberonParser extends Parser {
 				case 13 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:81: neW
 					{
-					pushFollow(FOLLOW_neW_in_predefined640);
+					pushFollow(FOLLOW_neW_in_predefined644);
 					neW83=neW();
 					state._fsp--;
 
@@ -1475,7 +1477,7 @@ public class OberonParser extends Parser {
 				case 14 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:85: halt
 					{
-					pushFollow(FOLLOW_halt_in_predefined642);
+					pushFollow(FOLLOW_halt_in_predefined646);
 					halt84=halt();
 					state._fsp--;
 
@@ -1592,21 +1594,21 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			IDENT86=(Token)match(input,IDENT,FOLLOW_IDENT_in_identdef694); 
+			IDENT86=(Token)match(input,IDENT,FOLLOW_IDENT_in_identdef698); 
 			IDENT86_tree = (Object)adaptor.create(IDENT86);
 			adaptor.addChild(root_0, IDENT86_tree);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:38:31: ( '*' )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
-			if ( (LA7_0==28) ) {
+			if ( (LA7_0==30) ) {
 				alt7=1;
 			}
 			switch (alt7) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:38:31: '*'
 					{
-					char_literal87=(Token)match(input,28,FOLLOW_28_in_identdef696); 
+					char_literal87=(Token)match(input,30,FOLLOW_30_in_identdef700); 
 					char_literal87_tree = (Object)adaptor.create(char_literal87);
 					adaptor.addChild(root_0, char_literal87_tree);
 
@@ -1656,7 +1658,7 @@ public class OberonParser extends Parser {
 		ParserRuleReturnScope constExpression90 =null;
 
 		Object char_literal89_tree=null;
-		RewriteRuleTokenStream stream_40=new RewriteRuleTokenStream(adaptor,"token 40");
+		RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
 		RewriteRuleSubtreeStream stream_constExpression=new RewriteRuleSubtreeStream(adaptor,"rule constExpression");
 		RewriteRuleSubtreeStream stream_identdef=new RewriteRuleSubtreeStream(adaptor,"rule identdef");
 
@@ -1664,21 +1666,21 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:40:23: ( identdef '=' constExpression -> ^( '=' identdef constExpression ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:40:25: identdef '=' constExpression
 			{
-			pushFollow(FOLLOW_identdef_in_constantDeclaration707);
+			pushFollow(FOLLOW_identdef_in_constantDeclaration711);
 			identdef88=identdef();
 			state._fsp--;
 
 			stream_identdef.add(identdef88.getTree());
-			char_literal89=(Token)match(input,40,FOLLOW_40_in_constantDeclaration709);  
-			stream_40.add(char_literal89);
+			char_literal89=(Token)match(input,42,FOLLOW_42_in_constantDeclaration713);  
+			stream_42.add(char_literal89);
 
-			pushFollow(FOLLOW_constExpression_in_constantDeclaration711);
+			pushFollow(FOLLOW_constExpression_in_constantDeclaration715);
 			constExpression90=constExpression();
 			state._fsp--;
 
 			stream_constExpression.add(constExpression90.getTree());
 			// AST REWRITE
-			// elements: constExpression, identdef, 40
+			// elements: constExpression, identdef, 42
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1693,7 +1695,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:40:62: ^( '=' identdef constExpression )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_40.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_42.nextNode(), root_1);
 				adaptor.addChild(root_1, stream_identdef.nextTree());
 				adaptor.addChild(root_1, stream_constExpression.nextTree());
 				adaptor.addChild(root_0, root_1);
@@ -1750,7 +1752,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_expression_in_constExpression741);
+			pushFollow(FOLLOW_expression_in_constExpression745);
 			expression91=expression();
 			state._fsp--;
 
@@ -1797,7 +1799,7 @@ public class OberonParser extends Parser {
 		ParserRuleReturnScope type94 =null;
 
 		Object char_literal93_tree=null;
-		RewriteRuleTokenStream stream_40=new RewriteRuleTokenStream(adaptor,"token 40");
+		RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
 		RewriteRuleSubtreeStream stream_identdef=new RewriteRuleSubtreeStream(adaptor,"rule identdef");
 		RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
 
@@ -1805,15 +1807,15 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:44:23: ( identdef '=' type -> ^( TYPE_DECL identdef type ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:44:25: identdef '=' type
 			{
-			pushFollow(FOLLOW_identdef_in_typeDeclaration755);
+			pushFollow(FOLLOW_identdef_in_typeDeclaration759);
 			identdef92=identdef();
 			state._fsp--;
 
 			stream_identdef.add(identdef92.getTree());
-			char_literal93=(Token)match(input,40,FOLLOW_40_in_typeDeclaration757);  
-			stream_40.add(char_literal93);
+			char_literal93=(Token)match(input,42,FOLLOW_42_in_typeDeclaration761);  
+			stream_42.add(char_literal93);
 
-			pushFollow(FOLLOW_type_in_typeDeclaration759);
+			pushFollow(FOLLOW_type_in_typeDeclaration763);
 			type94=type();
 			state._fsp--;
 
@@ -1897,22 +1899,22 @@ public class OberonParser extends Parser {
 				alt8=1;
 				}
 				break;
-			case 44:
+			case 46:
 				{
 				alt8=2;
 				}
 				break;
-			case 78:
+			case 80:
 				{
 				alt8=3;
 				}
 				break;
-			case 76:
+			case 78:
 				{
 				alt8=4;
 				}
 				break;
-			case 77:
+			case 79:
 				{
 				alt8=5;
 				}
@@ -1929,7 +1931,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_qualident_in_type811);
+					pushFollow(FOLLOW_qualident_in_type815);
 					qualident95=qualident();
 					state._fsp--;
 
@@ -1943,7 +1945,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_arrayType_in_type815);
+					pushFollow(FOLLOW_arrayType_in_type819);
 					arrayType96=arrayType();
 					state._fsp--;
 
@@ -1957,7 +1959,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_recordType_in_type819);
+					pushFollow(FOLLOW_recordType_in_type823);
 					recordType97=recordType();
 					state._fsp--;
 
@@ -1971,7 +1973,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_pointerType_in_type823);
+					pushFollow(FOLLOW_pointerType_in_type827);
 					pointerType98=pointerType();
 					state._fsp--;
 
@@ -1985,7 +1987,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_procedureType_in_type827);
+					pushFollow(FOLLOW_procedureType_in_type831);
 					procedureType99=procedureType();
 					state._fsp--;
 
@@ -2022,7 +2024,7 @@ public class OberonParser extends Parser {
 
 
 	// $ANTLR start "arrayType"
-	// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:1: arrayType : 'ARRAY' length ( ',' length )* 'OF' type ;
+	// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:1: arrayType : 'ARRAY' length ( ',' length )* 'OF' type -> ^( 'ARRAY' ^( LENGTH ( length )* ) type ) ;
 	public final OberonParser.arrayType_return arrayType() throws RecognitionException {
 		OberonParser.arrayType_return retval = new OberonParser.arrayType_return();
 		retval.start = input.LT(1);
@@ -2039,30 +2041,30 @@ public class OberonParser extends Parser {
 		Object string_literal100_tree=null;
 		Object char_literal102_tree=null;
 		Object string_literal104_tree=null;
+		RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
+		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
+		RewriteRuleTokenStream stream_76=new RewriteRuleTokenStream(adaptor,"token 76");
+		RewriteRuleSubtreeStream stream_length=new RewriteRuleSubtreeStream(adaptor,"rule length");
+		RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
 
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:23: ( 'ARRAY' length ( ',' length )* 'OF' type )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:23: ( 'ARRAY' length ( ',' length )* 'OF' type -> ^( 'ARRAY' ^( LENGTH ( length )* ) type ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:25: 'ARRAY' length ( ',' length )* 'OF' type
 			{
-			root_0 = (Object)adaptor.nil();
+			string_literal100=(Token)match(input,46,FOLLOW_46_in_arrayType851);  
+			stream_46.add(string_literal100);
 
-
-			string_literal100=(Token)match(input,44,FOLLOW_44_in_arrayType847); 
-			string_literal100_tree = (Object)adaptor.create(string_literal100);
-			adaptor.addChild(root_0, string_literal100_tree);
-
-			pushFollow(FOLLOW_length_in_arrayType849);
+			pushFollow(FOLLOW_length_in_arrayType853);
 			length101=length();
 			state._fsp--;
 
-			adaptor.addChild(root_0, length101.getTree());
-
+			stream_length.add(length101.getTree());
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:40: ( ',' length )*
 			loop9:
 			while (true) {
 				int alt9=2;
 				int LA9_0 = input.LA(1);
-				if ( (LA9_0==30) ) {
+				if ( (LA9_0==32) ) {
 					alt9=1;
 				}
 
@@ -2070,16 +2072,14 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:41: ',' length
 					{
-					char_literal102=(Token)match(input,30,FOLLOW_30_in_arrayType852); 
-					char_literal102_tree = (Object)adaptor.create(char_literal102);
-					adaptor.addChild(root_0, char_literal102_tree);
+					char_literal102=(Token)match(input,32,FOLLOW_32_in_arrayType856);  
+					stream_32.add(char_literal102);
 
-					pushFollow(FOLLOW_length_in_arrayType854);
+					pushFollow(FOLLOW_length_in_arrayType858);
 					length103=length();
 					state._fsp--;
 
-					adaptor.addChild(root_0, length103.getTree());
-
+					stream_length.add(length103.getTree());
 					}
 					break;
 
@@ -2088,15 +2088,52 @@ public class OberonParser extends Parser {
 				}
 			}
 
-			string_literal104=(Token)match(input,74,FOLLOW_74_in_arrayType858); 
-			string_literal104_tree = (Object)adaptor.create(string_literal104);
-			adaptor.addChild(root_0, string_literal104_tree);
+			string_literal104=(Token)match(input,76,FOLLOW_76_in_arrayType862);  
+			stream_76.add(string_literal104);
 
-			pushFollow(FOLLOW_type_in_arrayType860);
+			pushFollow(FOLLOW_type_in_arrayType864);
 			type105=type();
 			state._fsp--;
 
-			adaptor.addChild(root_0, type105.getTree());
+			stream_type.add(type105.getTree());
+			// AST REWRITE
+			// elements: 46, length, type
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
+
+			root_0 = (Object)adaptor.nil();
+			// 48:64: -> ^( 'ARRAY' ^( LENGTH ( length )* ) type )
+			{
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:67: ^( 'ARRAY' ^( LENGTH ( length )* ) type )
+				{
+				Object root_1 = (Object)adaptor.nil();
+				root_1 = (Object)adaptor.becomeRoot(stream_46.nextNode(), root_1);
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:77: ^( LENGTH ( length )* )
+				{
+				Object root_2 = (Object)adaptor.nil();
+				root_2 = (Object)adaptor.becomeRoot((Object)adaptor.create(LENGTH, "LENGTH"), root_2);
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:86: ( length )*
+				while ( stream_length.hasNext() ) {
+					adaptor.addChild(root_2, stream_length.nextTree());
+				}
+				stream_length.reset();
+
+				adaptor.addChild(root_1, root_2);
+				}
+
+				adaptor.addChild(root_1, stream_type.nextTree());
+				adaptor.addChild(root_0, root_1);
+				}
+
+			}
+
+
+			retval.tree = root_0;
 
 			}
 
@@ -2144,7 +2181,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_constExpression_in_length883);
+			pushFollow(FOLLOW_constExpression_in_length903);
 			constExpression106=constExpression();
 			state._fsp--;
 
@@ -2197,10 +2234,10 @@ public class OberonParser extends Parser {
 		Object char_literal108_tree=null;
 		Object char_literal110_tree=null;
 		Object string_literal112_tree=null;
-		RewriteRuleTokenStream stream_78=new RewriteRuleTokenStream(adaptor,"token 78");
-		RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
-		RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
-		RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
+		RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
+		RewriteRuleTokenStream stream_80=new RewriteRuleTokenStream(adaptor,"token 80");
+		RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
+		RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
 		RewriteRuleSubtreeStream stream_baseType=new RewriteRuleSubtreeStream(adaptor,"rule baseType");
 		RewriteRuleSubtreeStream stream_fieldListSequence=new RewriteRuleSubtreeStream(adaptor,"rule fieldListSequence");
 
@@ -2208,45 +2245,45 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:23: ( 'RECORD' ( '(' baseType ')' )? fieldListSequence 'END' -> ^( 'RECORD' ( baseType )? fieldListSequence ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:25: 'RECORD' ( '(' baseType ')' )? fieldListSequence 'END'
 			{
-			string_literal107=(Token)match(input,78,FOLLOW_78_in_recordType902);  
-			stream_78.add(string_literal107);
+			string_literal107=(Token)match(input,80,FOLLOW_80_in_recordType922);  
+			stream_80.add(string_literal107);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:34: ( '(' baseType ')' )?
 			int alt10=2;
 			int LA10_0 = input.LA(1);
-			if ( (LA10_0==26) ) {
+			if ( (LA10_0==28) ) {
 				alt10=1;
 			}
 			switch (alt10) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:35: '(' baseType ')'
 					{
-					char_literal108=(Token)match(input,26,FOLLOW_26_in_recordType905);  
-					stream_26.add(char_literal108);
+					char_literal108=(Token)match(input,28,FOLLOW_28_in_recordType925);  
+					stream_28.add(char_literal108);
 
-					pushFollow(FOLLOW_baseType_in_recordType907);
+					pushFollow(FOLLOW_baseType_in_recordType927);
 					baseType109=baseType();
 					state._fsp--;
 
 					stream_baseType.add(baseType109.getTree());
-					char_literal110=(Token)match(input,27,FOLLOW_27_in_recordType909);  
-					stream_27.add(char_literal110);
+					char_literal110=(Token)match(input,29,FOLLOW_29_in_recordType929);  
+					stream_29.add(char_literal110);
 
 					}
 					break;
 
 			}
 
-			pushFollow(FOLLOW_fieldListSequence_in_recordType913);
+			pushFollow(FOLLOW_fieldListSequence_in_recordType933);
 			fieldListSequence111=fieldListSequence();
 			state._fsp--;
 
 			stream_fieldListSequence.add(fieldListSequence111.getTree());
-			string_literal112=(Token)match(input,55,FOLLOW_55_in_recordType915);  
-			stream_55.add(string_literal112);
+			string_literal112=(Token)match(input,57,FOLLOW_57_in_recordType935);  
+			stream_57.add(string_literal112);
 
 			// AST REWRITE
-			// elements: fieldListSequence, 78, baseType
+			// elements: baseType, fieldListSequence, 80
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -2261,7 +2298,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:81: ^( 'RECORD' ( baseType )? fieldListSequence )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_78.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_80.nextNode(), root_1);
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:92: ( baseType )?
 				if ( stream_baseType.hasNext() ) {
 					adaptor.addChild(root_1, stream_baseType.nextTree());
@@ -2323,7 +2360,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_qualident_in_baseType947);
+			pushFollow(FOLLOW_qualident_in_baseType967);
 			qualident113=qualident();
 			state._fsp--;
 
@@ -2378,7 +2415,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_fieldList_in_fieldListSequence959);
+			pushFollow(FOLLOW_fieldList_in_fieldListSequence979);
 			fieldList114=fieldList();
 			state._fsp--;
 
@@ -2389,7 +2426,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt11=2;
 				int LA11_0 = input.LA(1);
-				if ( (LA11_0==37) ) {
+				if ( (LA11_0==39) ) {
 					alt11=1;
 				}
 
@@ -2397,8 +2434,8 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:56:36: ';' ! fieldList
 					{
-					char_literal115=(Token)match(input,37,FOLLOW_37_in_fieldListSequence962); 
-					pushFollow(FOLLOW_fieldList_in_fieldListSequence965);
+					char_literal115=(Token)match(input,39,FOLLOW_39_in_fieldListSequence982); 
+					pushFollow(FOLLOW_fieldList_in_fieldListSequence985);
 					fieldList116=fieldList();
 					state._fsp--;
 
@@ -2471,17 +2508,17 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:58:26: identList ':' ^ type
 					{
-					pushFollow(FOLLOW_identList_in_fieldList989);
+					pushFollow(FOLLOW_identList_in_fieldList1009);
 					identList117=identList();
 					state._fsp--;
 
 					adaptor.addChild(root_0, identList117.getTree());
 
-					char_literal118=(Token)match(input,35,FOLLOW_35_in_fieldList991); 
+					char_literal118=(Token)match(input,37,FOLLOW_37_in_fieldList1011); 
 					char_literal118_tree = (Object)adaptor.create(char_literal118);
 					root_0 = (Object)adaptor.becomeRoot(char_literal118_tree, root_0);
 
-					pushFollow(FOLLOW_type_in_fieldList994);
+					pushFollow(FOLLOW_type_in_fieldList1014);
 					type119=type();
 					state._fsp--;
 
@@ -2541,7 +2578,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_identdef_in_identList1016);
+			pushFollow(FOLLOW_identdef_in_identList1036);
 			identdef120=identdef();
 			state._fsp--;
 
@@ -2552,7 +2589,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt13=2;
 				int LA13_0 = input.LA(1);
-				if ( (LA13_0==30) ) {
+				if ( (LA13_0==32) ) {
 					alt13=1;
 				}
 
@@ -2560,11 +2597,11 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:60:35: ',' identdef
 					{
-					char_literal121=(Token)match(input,30,FOLLOW_30_in_identList1019); 
+					char_literal121=(Token)match(input,32,FOLLOW_32_in_identList1039); 
 					char_literal121_tree = (Object)adaptor.create(char_literal121);
 					adaptor.addChild(root_0, char_literal121_tree);
 
-					pushFollow(FOLLOW_identdef_in_identList1021);
+					pushFollow(FOLLOW_identdef_in_identList1041);
 					identdef122=identdef();
 					state._fsp--;
 
@@ -2626,11 +2663,11 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal123=(Token)match(input,76,FOLLOW_76_in_pointerType1041); 
+			string_literal123=(Token)match(input,78,FOLLOW_78_in_pointerType1061); 
 			string_literal123_tree = (Object)adaptor.create(string_literal123);
 			root_0 = (Object)adaptor.becomeRoot(string_literal123_tree, root_0);
 
-			pushFollow(FOLLOW_type_in_pointerType1044);
+			pushFollow(FOLLOW_type_in_pointerType1064);
 			type124=type();
 			state._fsp--;
 
@@ -2684,21 +2721,21 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal125=(Token)match(input,77,FOLLOW_77_in_procedureType1060); 
+			string_literal125=(Token)match(input,79,FOLLOW_79_in_procedureType1080); 
 			string_literal125_tree = (Object)adaptor.create(string_literal125);
 			root_0 = (Object)adaptor.becomeRoot(string_literal125_tree, root_0);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:64:38: ( formalParameters )?
 			int alt14=2;
 			int LA14_0 = input.LA(1);
-			if ( (LA14_0==26) ) {
+			if ( (LA14_0==28) ) {
 				alt14=1;
 			}
 			switch (alt14) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:64:38: formalParameters
 					{
-					pushFollow(FOLLOW_formalParameters_in_procedureType1063);
+					pushFollow(FOLLOW_formalParameters_in_procedureType1083);
 					formalParameters126=formalParameters();
 					state._fsp--;
 
@@ -2750,7 +2787,7 @@ public class OberonParser extends Parser {
 		ParserRuleReturnScope type129 =null;
 
 		Object char_literal128_tree=null;
-		RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
+		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
 		RewriteRuleSubtreeStream stream_identList=new RewriteRuleSubtreeStream(adaptor,"rule identList");
 		RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
 
@@ -2758,15 +2795,15 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:66:23: ( identList ':' type -> ^( DECLARE identList type ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:66:25: identList ':' type
 			{
-			pushFollow(FOLLOW_identList_in_variableDeclaration1074);
+			pushFollow(FOLLOW_identList_in_variableDeclaration1094);
 			identList127=identList();
 			state._fsp--;
 
 			stream_identList.add(identList127.getTree());
-			char_literal128=(Token)match(input,35,FOLLOW_35_in_variableDeclaration1076);  
-			stream_35.add(char_literal128);
+			char_literal128=(Token)match(input,37,FOLLOW_37_in_variableDeclaration1096);  
+			stream_37.add(char_literal128);
 
-			pushFollow(FOLLOW_type_in_variableDeclaration1078);
+			pushFollow(FOLLOW_type_in_variableDeclaration1098);
 			type129=type();
 			state._fsp--;
 
@@ -2842,7 +2879,7 @@ public class OberonParser extends Parser {
 		Object char_literal131_tree=null;
 		Object IDENT132_tree=null;
 		RewriteRuleTokenStream stream_IDENT=new RewriteRuleTokenStream(adaptor,"token IDENT");
-		RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
+		RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
 
 		try {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:68:23: ( ( options {greedy=true; } : IDENT '.' )? IDENT -> ^( ID ( IDENT )* ) )
@@ -2853,7 +2890,7 @@ public class OberonParser extends Parser {
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0==IDENT) ) {
 				int LA15_1 = input.LA(2);
-				if ( (LA15_1==32) ) {
+				if ( (LA15_1==34) ) {
 					int LA15_2 = input.LA(3);
 					if ( (LA15_2==IDENT) ) {
 						alt15=1;
@@ -2864,18 +2901,18 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:68:49: IDENT '.'
 					{
-					IDENT130=(Token)match(input,IDENT,FOLLOW_IDENT_in_qualident1117);  
+					IDENT130=(Token)match(input,IDENT,FOLLOW_IDENT_in_qualident1137);  
 					stream_IDENT.add(IDENT130);
 
-					char_literal131=(Token)match(input,32,FOLLOW_32_in_qualident1119);  
-					stream_32.add(char_literal131);
+					char_literal131=(Token)match(input,34,FOLLOW_34_in_qualident1139);  
+					stream_34.add(char_literal131);
 
 					}
 					break;
 
 			}
 
-			IDENT132=(Token)match(input,IDENT,FOLLOW_IDENT_in_qualident1123);  
+			IDENT132=(Token)match(input,IDENT,FOLLOW_IDENT_in_qualident1143);  
 			stream_IDENT.add(IDENT132);
 
 			// AST REWRITE
@@ -2938,7 +2975,7 @@ public class OberonParser extends Parser {
 
 
 	// $ANTLR start "designator"
-	// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:1: designator : qualident ( options {greedy=true; } : '.' IDENT | '[' ! expList ']' !| '(' ! qualident ')' !| '^' )* ;
+	// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:1: designator : qualident ( options {greedy=true; } : '.' ! IDENT | '[' ! expList ']' !| '(' ! qualident ')' !| '^' )* ;
 	public final OberonParser.designator_return designator() throws RecognitionException {
 		OberonParser.designator_return retval = new OberonParser.designator_return();
 		retval.start = input.LT(1);
@@ -2965,40 +3002,40 @@ public class OberonParser extends Parser {
 		Object char_literal142_tree=null;
 
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:23: ( qualident ( options {greedy=true; } : '.' IDENT | '[' ! expList ']' !| '(' ! qualident ')' !| '^' )* )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:25: qualident ( options {greedy=true; } : '.' IDENT | '[' ! expList ']' !| '(' ! qualident ')' !| '^' )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:23: ( qualident ( options {greedy=true; } : '.' ! IDENT | '[' ! expList ']' !| '(' ! qualident ')' !| '^' )* )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:25: qualident ( options {greedy=true; } : '.' ! IDENT | '[' ! expList ']' !| '(' ! qualident ')' !| '^' )*
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_qualident_in_designator1151);
+			pushFollow(FOLLOW_qualident_in_designator1171);
 			qualident133=qualident();
 			state._fsp--;
 
 			adaptor.addChild(root_0, qualident133.getTree());
 
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:35: ( options {greedy=true; } : '.' IDENT | '[' ! expList ']' !| '(' ! qualident ')' !| '^' )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:35: ( options {greedy=true; } : '.' ! IDENT | '[' ! expList ']' !| '(' ! qualident ')' !| '^' )*
 			loop16:
 			while (true) {
 				int alt16=5;
 				switch ( input.LA(1) ) {
-				case 26:
+				case 28:
 					{
 					int LA16_1 = input.LA(2);
 					if ( (LA16_1==IDENT) ) {
 						int LA16_6 = input.LA(3);
-						if ( (LA16_6==32) ) {
+						if ( (LA16_6==34) ) {
 							int LA16_7 = input.LA(4);
 							if ( (LA16_7==IDENT) ) {
 								int LA16_9 = input.LA(5);
-								if ( (LA16_9==27) ) {
+								if ( (LA16_9==29) ) {
 									alt16=3;
 								}
 
 							}
 
 						}
-						else if ( (LA16_6==27) ) {
+						else if ( (LA16_6==29) ) {
 							alt16=3;
 						}
 
@@ -3006,17 +3043,17 @@ public class OberonParser extends Parser {
 
 					}
 					break;
-				case 32:
+				case 34:
 					{
 					alt16=1;
 					}
 					break;
-				case 88:
+				case 90:
 					{
 					alt16=2;
 					}
 					break;
-				case 90:
+				case 92:
 					{
 					alt16=4;
 					}
@@ -3024,48 +3061,45 @@ public class OberonParser extends Parser {
 				}
 				switch (alt16) {
 				case 1 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:59: '.' IDENT
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:59: '.' ! IDENT
 					{
-					char_literal134=(Token)match(input,32,FOLLOW_32_in_designator1162); 
-					char_literal134_tree = (Object)adaptor.create(char_literal134);
-					adaptor.addChild(root_0, char_literal134_tree);
-
-					IDENT135=(Token)match(input,IDENT,FOLLOW_IDENT_in_designator1164); 
+					char_literal134=(Token)match(input,34,FOLLOW_34_in_designator1182); 
+					IDENT135=(Token)match(input,IDENT,FOLLOW_IDENT_in_designator1185); 
 					IDENT135_tree = (Object)adaptor.create(IDENT135);
 					adaptor.addChild(root_0, IDENT135_tree);
 
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:71: '[' ! expList ']' !
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:72: '[' ! expList ']' !
 					{
-					char_literal136=(Token)match(input,88,FOLLOW_88_in_designator1168); 
-					pushFollow(FOLLOW_expList_in_designator1171);
+					char_literal136=(Token)match(input,90,FOLLOW_90_in_designator1189); 
+					pushFollow(FOLLOW_expList_in_designator1192);
 					expList137=expList();
 					state._fsp--;
 
 					adaptor.addChild(root_0, expList137.getTree());
 
-					char_literal138=(Token)match(input,89,FOLLOW_89_in_designator1173); 
+					char_literal138=(Token)match(input,91,FOLLOW_91_in_designator1194); 
 					}
 					break;
 				case 3 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:91: '(' ! qualident ')' !
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:92: '(' ! qualident ')' !
 					{
-					char_literal139=(Token)match(input,26,FOLLOW_26_in_designator1178); 
-					pushFollow(FOLLOW_qualident_in_designator1181);
+					char_literal139=(Token)match(input,28,FOLLOW_28_in_designator1199); 
+					pushFollow(FOLLOW_qualident_in_designator1202);
 					qualident140=qualident();
 					state._fsp--;
 
 					adaptor.addChild(root_0, qualident140.getTree());
 
-					char_literal141=(Token)match(input,27,FOLLOW_27_in_designator1183); 
+					char_literal141=(Token)match(input,29,FOLLOW_29_in_designator1204); 
 					}
 					break;
 				case 4 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:113: '^'
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:114: '^'
 					{
-					char_literal142=(Token)match(input,90,FOLLOW_90_in_designator1188); 
+					char_literal142=(Token)match(input,92,FOLLOW_92_in_designator1209); 
 					char_literal142_tree = (Object)adaptor.create(char_literal142);
 					adaptor.addChild(root_0, char_literal142_tree);
 
@@ -3126,7 +3160,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_expression_in_expList1212);
+			pushFollow(FOLLOW_expression_in_expList1233);
 			expression143=expression();
 			state._fsp--;
 
@@ -3137,7 +3171,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt17=2;
 				int LA17_0 = input.LA(1);
-				if ( (LA17_0==30) ) {
+				if ( (LA17_0==32) ) {
 					alt17=1;
 				}
 
@@ -3145,11 +3179,11 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:72:37: ',' expression
 					{
-					char_literal144=(Token)match(input,30,FOLLOW_30_in_expList1215); 
+					char_literal144=(Token)match(input,32,FOLLOW_32_in_expList1236); 
 					char_literal144_tree = (Object)adaptor.create(char_literal144);
 					adaptor.addChild(root_0, char_literal144_tree);
 
-					pushFollow(FOLLOW_expression_in_expList1217);
+					pushFollow(FOLLOW_expression_in_expList1238);
 					expression145=expression();
 					state._fsp--;
 
@@ -3211,7 +3245,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_simpleExpression_in_expression1238);
+			pushFollow(FOLLOW_simpleExpression_in_expression1259);
 			simpleExpression146=simpleExpression();
 			state._fsp--;
 
@@ -3220,19 +3254,19 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:74:42: ( relation ^ simpleExpression )?
 			int alt18=2;
 			int LA18_0 = input.LA(1);
-			if ( (LA18_0==24||(LA18_0 >= 38 && LA18_0 <= 42)||LA18_0==61||LA18_0==64) ) {
+			if ( (LA18_0==26||(LA18_0 >= 40 && LA18_0 <= 44)||LA18_0==63||LA18_0==66) ) {
 				alt18=1;
 			}
 			switch (alt18) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:74:43: relation ^ simpleExpression
 					{
-					pushFollow(FOLLOW_relation_in_expression1241);
+					pushFollow(FOLLOW_relation_in_expression1262);
 					relation147=relation();
 					state._fsp--;
 
 					root_0 = (Object)adaptor.becomeRoot(relation147.getTree(), root_0);
-					pushFollow(FOLLOW_simpleExpression_in_expression1244);
+					pushFollow(FOLLOW_simpleExpression_in_expression1265);
 					simpleExpression148=simpleExpression();
 					state._fsp--;
 
@@ -3291,7 +3325,7 @@ public class OberonParser extends Parser {
 
 
 			set149=input.LT(1);
-			if ( input.LA(1)==24||(input.LA(1) >= 38 && input.LA(1) <= 42)||input.LA(1)==61||input.LA(1)==64 ) {
+			if ( input.LA(1)==26||(input.LA(1) >= 40 && input.LA(1) <= 44)||input.LA(1)==63||input.LA(1)==66 ) {
 				input.consume();
 				adaptor.addChild(root_0, (Object)adaptor.create(set149));
 				state.errorRecovery=false;
@@ -3353,7 +3387,7 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:78:25: ( '+' | '-' )?
 			int alt19=2;
 			int LA19_0 = input.LA(1);
-			if ( (LA19_0==29||LA19_0==31) ) {
+			if ( (LA19_0==31||LA19_0==33) ) {
 				alt19=1;
 			}
 			switch (alt19) {
@@ -3361,7 +3395,7 @@ public class OberonParser extends Parser {
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:
 					{
 					set150=input.LT(1);
-					if ( input.LA(1)==29||input.LA(1)==31 ) {
+					if ( input.LA(1)==31||input.LA(1)==33 ) {
 						input.consume();
 						adaptor.addChild(root_0, (Object)adaptor.create(set150));
 						state.errorRecovery=false;
@@ -3375,7 +3409,7 @@ public class OberonParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_term_in_simpleExpression1303);
+			pushFollow(FOLLOW_term_in_simpleExpression1324);
 			term151=term();
 			state._fsp--;
 
@@ -3386,7 +3420,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt20=2;
 				int LA20_0 = input.LA(1);
-				if ( (LA20_0==29||LA20_0==31||LA20_0==75) ) {
+				if ( (LA20_0==31||LA20_0==33||LA20_0==77) ) {
 					alt20=1;
 				}
 
@@ -3394,12 +3428,12 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:78:42: addOperator ^ term
 					{
-					pushFollow(FOLLOW_addOperator_in_simpleExpression1306);
+					pushFollow(FOLLOW_addOperator_in_simpleExpression1327);
 					addOperator152=addOperator();
 					state._fsp--;
 
 					root_0 = (Object)adaptor.becomeRoot(addOperator152.getTree(), root_0);
-					pushFollow(FOLLOW_term_in_simpleExpression1309);
+					pushFollow(FOLLOW_term_in_simpleExpression1330);
 					term153=term();
 					state._fsp--;
 
@@ -3461,7 +3495,7 @@ public class OberonParser extends Parser {
 
 
 			set154=input.LT(1);
-			if ( input.LA(1)==29||input.LA(1)==31||input.LA(1)==75 ) {
+			if ( input.LA(1)==31||input.LA(1)==33||input.LA(1)==77 ) {
 				input.consume();
 				adaptor.addChild(root_0, (Object)adaptor.create(set154));
 				state.errorRecovery=false;
@@ -3518,7 +3552,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_factor_in_term1362);
+			pushFollow(FOLLOW_factor_in_term1383);
 			factor155=factor();
 			state._fsp--;
 
@@ -3529,7 +3563,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt21=2;
 				int LA21_0 = input.LA(1);
-				if ( (LA21_0==25||LA21_0==28||LA21_0==34||LA21_0==51||LA21_0==69) ) {
+				if ( (LA21_0==27||LA21_0==30||LA21_0==36||LA21_0==53||LA21_0==71) ) {
 					alt21=1;
 				}
 
@@ -3537,12 +3571,12 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:82:33: mulOperator ^ factor
 					{
-					pushFollow(FOLLOW_mulOperator_in_term1365);
+					pushFollow(FOLLOW_mulOperator_in_term1386);
 					mulOperator156=mulOperator();
 					state._fsp--;
 
 					root_0 = (Object)adaptor.becomeRoot(mulOperator156.getTree(), root_0);
-					pushFollow(FOLLOW_factor_in_term1368);
+					pushFollow(FOLLOW_factor_in_term1389);
 					factor157=factor();
 					state._fsp--;
 
@@ -3604,7 +3638,7 @@ public class OberonParser extends Parser {
 
 
 			set158=input.LT(1);
-			if ( input.LA(1)==25||input.LA(1)==28||input.LA(1)==34||input.LA(1)==51||input.LA(1)==69 ) {
+			if ( input.LA(1)==27||input.LA(1)==30||input.LA(1)==36||input.LA(1)==53||input.LA(1)==71 ) {
 				input.consume();
 				adaptor.addChild(root_0, (Object)adaptor.create(set158));
 				state.errorRecovery=false;
@@ -3689,12 +3723,12 @@ public class OberonParser extends Parser {
 				alt23=3;
 				}
 				break;
-			case 72:
+			case 74:
 				{
 				alt23=4;
 				}
 				break;
-			case 92:
+			case 94:
 				{
 				alt23=5;
 				}
@@ -3704,12 +3738,12 @@ public class OberonParser extends Parser {
 				alt23=6;
 				}
 				break;
-			case 26:
+			case 28:
 				{
 				alt23=7;
 				}
 				break;
-			case 95:
+			case 97:
 				{
 				alt23=8;
 				}
@@ -3726,7 +3760,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_number_in_factor1419);
+					pushFollow(FOLLOW_number_in_factor1440);
 					number159=number();
 					state._fsp--;
 
@@ -3740,7 +3774,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					CHARCONST160=(Token)match(input,CHARCONST,FOLLOW_CHARCONST_in_factor1423); 
+					CHARCONST160=(Token)match(input,CHARCONST,FOLLOW_CHARCONST_in_factor1444); 
 					CHARCONST160_tree = (Object)adaptor.create(CHARCONST160);
 					adaptor.addChild(root_0, CHARCONST160_tree);
 
@@ -3752,7 +3786,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					STRING161=(Token)match(input,STRING,FOLLOW_STRING_in_factor1427); 
+					STRING161=(Token)match(input,STRING,FOLLOW_STRING_in_factor1448); 
 					STRING161_tree = (Object)adaptor.create(STRING161);
 					adaptor.addChild(root_0, STRING161_tree);
 
@@ -3764,7 +3798,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					string_literal162=(Token)match(input,72,FOLLOW_72_in_factor1431); 
+					string_literal162=(Token)match(input,74,FOLLOW_74_in_factor1452); 
 					string_literal162_tree = (Object)adaptor.create(string_literal162);
 					adaptor.addChild(root_0, string_literal162_tree);
 
@@ -3776,7 +3810,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_set_in_factor1435);
+					pushFollow(FOLLOW_set_in_factor1456);
 					set163=set();
 					state._fsp--;
 
@@ -3790,7 +3824,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_designator_in_factor1439);
+					pushFollow(FOLLOW_designator_in_factor1460);
 					designator164=designator();
 					state._fsp--;
 
@@ -3799,14 +3833,14 @@ public class OberonParser extends Parser {
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:86:80: ( actualParameters )?
 					int alt22=2;
 					int LA22_0 = input.LA(1);
-					if ( (LA22_0==26) ) {
+					if ( (LA22_0==28) ) {
 						alt22=1;
 					}
 					switch (alt22) {
 						case 1 :
 							// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:86:80: actualParameters
 							{
-							pushFollow(FOLLOW_actualParameters_in_factor1441);
+							pushFollow(FOLLOW_actualParameters_in_factor1462);
 							actualParameters165=actualParameters();
 							state._fsp--;
 
@@ -3825,13 +3859,13 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					char_literal166=(Token)match(input,26,FOLLOW_26_in_factor1446); 
-					pushFollow(FOLLOW_expression_in_factor1449);
+					char_literal166=(Token)match(input,28,FOLLOW_28_in_factor1467); 
+					pushFollow(FOLLOW_expression_in_factor1470);
 					expression167=expression();
 					state._fsp--;
 
 					root_0 = (Object)adaptor.becomeRoot(expression167.getTree(), root_0);
-					char_literal168=(Token)match(input,27,FOLLOW_27_in_factor1452); 
+					char_literal168=(Token)match(input,29,FOLLOW_29_in_factor1473); 
 					}
 					break;
 				case 8 :
@@ -3840,11 +3874,11 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					char_literal169=(Token)match(input,95,FOLLOW_95_in_factor1457); 
+					char_literal169=(Token)match(input,97,FOLLOW_97_in_factor1478); 
 					char_literal169_tree = (Object)adaptor.create(char_literal169);
 					adaptor.addChild(root_0, char_literal169_tree);
 
-					pushFollow(FOLLOW_factor_in_factor1459);
+					pushFollow(FOLLOW_factor_in_factor1480);
 					factor170=factor();
 					state._fsp--;
 
@@ -3905,21 +3939,21 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			char_literal171=(Token)match(input,92,FOLLOW_92_in_set1485); 
+			char_literal171=(Token)match(input,94,FOLLOW_94_in_set1506); 
 			char_literal171_tree = (Object)adaptor.create(char_literal171);
 			adaptor.addChild(root_0, char_literal171_tree);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:88:29: ( element ( ',' element )* )?
 			int alt25=2;
 			int LA25_0 = input.LA(1);
-			if ( (LA25_0==CHARCONST||(LA25_0 >= IDENT && LA25_0 <= INTEGER)||LA25_0==REAL||LA25_0==STRING||LA25_0==26||LA25_0==29||LA25_0==31||LA25_0==72||LA25_0==92||LA25_0==95) ) {
+			if ( (LA25_0==CHARCONST||(LA25_0 >= IDENT && LA25_0 <= INTEGER)||LA25_0==REAL||LA25_0==STRING||LA25_0==28||LA25_0==31||LA25_0==33||LA25_0==74||LA25_0==94||LA25_0==97) ) {
 				alt25=1;
 			}
 			switch (alt25) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:88:30: element ( ',' element )*
 					{
-					pushFollow(FOLLOW_element_in_set1488);
+					pushFollow(FOLLOW_element_in_set1509);
 					element172=element();
 					state._fsp--;
 
@@ -3930,7 +3964,7 @@ public class OberonParser extends Parser {
 					while (true) {
 						int alt24=2;
 						int LA24_0 = input.LA(1);
-						if ( (LA24_0==30) ) {
+						if ( (LA24_0==32) ) {
 							alt24=1;
 						}
 
@@ -3938,11 +3972,11 @@ public class OberonParser extends Parser {
 						case 1 :
 							// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:88:39: ',' element
 							{
-							char_literal173=(Token)match(input,30,FOLLOW_30_in_set1491); 
+							char_literal173=(Token)match(input,32,FOLLOW_32_in_set1512); 
 							char_literal173_tree = (Object)adaptor.create(char_literal173);
 							adaptor.addChild(root_0, char_literal173_tree);
 
-							pushFollow(FOLLOW_element_in_set1493);
+							pushFollow(FOLLOW_element_in_set1514);
 							element174=element();
 							state._fsp--;
 
@@ -3961,7 +3995,7 @@ public class OberonParser extends Parser {
 
 			}
 
-			char_literal175=(Token)match(input,94,FOLLOW_94_in_set1500); 
+			char_literal175=(Token)match(input,96,FOLLOW_96_in_set1521); 
 			char_literal175_tree = (Object)adaptor.create(char_literal175);
 			adaptor.addChild(root_0, char_literal175_tree);
 
@@ -4014,7 +4048,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_expression_in_element1522);
+			pushFollow(FOLLOW_expression_in_element1543);
 			expression176=expression();
 			state._fsp--;
 
@@ -4023,18 +4057,18 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:90:36: ( '..' expression )?
 			int alt26=2;
 			int LA26_0 = input.LA(1);
-			if ( (LA26_0==33) ) {
+			if ( (LA26_0==35) ) {
 				alt26=1;
 			}
 			switch (alt26) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:90:38: '..' expression
 					{
-					string_literal177=(Token)match(input,33,FOLLOW_33_in_element1526); 
+					string_literal177=(Token)match(input,35,FOLLOW_35_in_element1547); 
 					string_literal177_tree = (Object)adaptor.create(string_literal177);
 					adaptor.addChild(root_0, string_literal177_tree);
 
-					pushFollow(FOLLOW_expression_in_element1528);
+					pushFollow(FOLLOW_expression_in_element1549);
 					expression178=expression();
 					state._fsp--;
 
@@ -4095,18 +4129,18 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			char_literal179=(Token)match(input,26,FOLLOW_26_in_actualParameters1543); 
+			char_literal179=(Token)match(input,28,FOLLOW_28_in_actualParameters1564); 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:92:30: ( expList )?
 			int alt27=2;
 			int LA27_0 = input.LA(1);
-			if ( (LA27_0==CHARCONST||(LA27_0 >= IDENT && LA27_0 <= INTEGER)||LA27_0==REAL||LA27_0==STRING||LA27_0==26||LA27_0==29||LA27_0==31||LA27_0==72||LA27_0==92||LA27_0==95) ) {
+			if ( (LA27_0==CHARCONST||(LA27_0 >= IDENT && LA27_0 <= INTEGER)||LA27_0==REAL||LA27_0==STRING||LA27_0==28||LA27_0==31||LA27_0==33||LA27_0==74||LA27_0==94||LA27_0==97) ) {
 				alt27=1;
 			}
 			switch (alt27) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:92:30: expList
 					{
-					pushFollow(FOLLOW_expList_in_actualParameters1546);
+					pushFollow(FOLLOW_expList_in_actualParameters1567);
 					expList180=expList();
 					state._fsp--;
 
@@ -4117,7 +4151,7 @@ public class OberonParser extends Parser {
 
 			}
 
-			char_literal181=(Token)match(input,27,FOLLOW_27_in_actualParameters1549); 
+			char_literal181=(Token)match(input,29,FOLLOW_29_in_actualParameters1570); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -4179,22 +4213,22 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:26: ( predefined | statement2 | ifStatement | caseStatement | whileStatement | repeatStatement | loopStatement | withStatement | 'EXIT' | 'RETURN' ( expression )? )?
 			int alt29=11;
 			switch ( input.LA(1) ) {
-				case 43:
 				case 45:
 				case 47:
 				case 49:
-				case 50:
-				case 56:
+				case 51:
+				case 52:
 				case 58:
-				case 62:
-				case 63:
+				case 60:
+				case 64:
 				case 65:
 				case 67:
-				case 68:
-				case 71:
+				case 69:
+				case 70:
 				case 73:
-				case 81:
-				case 92:
+				case 75:
+				case 83:
+				case 94:
 					{
 					alt29=1;
 					}
@@ -4204,42 +4238,42 @@ public class OberonParser extends Parser {
 					alt29=2;
 					}
 					break;
-				case 59:
+				case 61:
 					{
 					alt29=3;
 					}
 					break;
-				case 91:
+				case 93:
 					{
 					alt29=4;
 					}
 					break;
-				case 86:
+				case 88:
 					{
 					alt29=5;
 					}
 					break;
-				case 79:
+				case 81:
 					{
 					alt29=6;
 					}
 					break;
-				case 66:
+				case 68:
 					{
 					alt29=7;
 					}
 					break;
-				case 87:
+				case 89:
 					{
 					alt29=8;
 					}
 					break;
-				case 57:
+				case 59:
 					{
 					alt29=9;
 					}
 					break;
-				case 80:
+				case 82:
 					{
 					alt29=10;
 					}
@@ -4249,7 +4283,7 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:27: predefined
 					{
-					pushFollow(FOLLOW_predefined_in_statement1572);
+					pushFollow(FOLLOW_predefined_in_statement1593);
 					predefined182=predefined();
 					state._fsp--;
 
@@ -4260,7 +4294,7 @@ public class OberonParser extends Parser {
 				case 2 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:38: statement2
 					{
-					pushFollow(FOLLOW_statement2_in_statement1574);
+					pushFollow(FOLLOW_statement2_in_statement1595);
 					statement2183=statement2();
 					state._fsp--;
 
@@ -4271,7 +4305,7 @@ public class OberonParser extends Parser {
 				case 3 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:49: ifStatement
 					{
-					pushFollow(FOLLOW_ifStatement_in_statement1576);
+					pushFollow(FOLLOW_ifStatement_in_statement1597);
 					ifStatement184=ifStatement();
 					state._fsp--;
 
@@ -4282,7 +4316,7 @@ public class OberonParser extends Parser {
 				case 4 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:61: caseStatement
 					{
-					pushFollow(FOLLOW_caseStatement_in_statement1578);
+					pushFollow(FOLLOW_caseStatement_in_statement1599);
 					caseStatement185=caseStatement();
 					state._fsp--;
 
@@ -4293,7 +4327,7 @@ public class OberonParser extends Parser {
 				case 5 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:75: whileStatement
 					{
-					pushFollow(FOLLOW_whileStatement_in_statement1580);
+					pushFollow(FOLLOW_whileStatement_in_statement1601);
 					whileStatement186=whileStatement();
 					state._fsp--;
 
@@ -4304,7 +4338,7 @@ public class OberonParser extends Parser {
 				case 6 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:90: repeatStatement
 					{
-					pushFollow(FOLLOW_repeatStatement_in_statement1582);
+					pushFollow(FOLLOW_repeatStatement_in_statement1603);
 					repeatStatement187=repeatStatement();
 					state._fsp--;
 
@@ -4315,7 +4349,7 @@ public class OberonParser extends Parser {
 				case 7 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:106: loopStatement
 					{
-					pushFollow(FOLLOW_loopStatement_in_statement1584);
+					pushFollow(FOLLOW_loopStatement_in_statement1605);
 					loopStatement188=loopStatement();
 					state._fsp--;
 
@@ -4326,7 +4360,7 @@ public class OberonParser extends Parser {
 				case 8 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:120: withStatement
 					{
-					pushFollow(FOLLOW_withStatement_in_statement1586);
+					pushFollow(FOLLOW_withStatement_in_statement1607);
 					withStatement189=withStatement();
 					state._fsp--;
 
@@ -4337,7 +4371,7 @@ public class OberonParser extends Parser {
 				case 9 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:135: 'EXIT'
 					{
-					string_literal190=(Token)match(input,57,FOLLOW_57_in_statement1589); 
+					string_literal190=(Token)match(input,59,FOLLOW_59_in_statement1610); 
 					string_literal190_tree = (Object)adaptor.create(string_literal190);
 					adaptor.addChild(root_0, string_literal190_tree);
 
@@ -4346,21 +4380,21 @@ public class OberonParser extends Parser {
 				case 10 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:144: 'RETURN' ( expression )?
 					{
-					string_literal191=(Token)match(input,80,FOLLOW_80_in_statement1593); 
+					string_literal191=(Token)match(input,82,FOLLOW_82_in_statement1614); 
 					string_literal191_tree = (Object)adaptor.create(string_literal191);
 					adaptor.addChild(root_0, string_literal191_tree);
 
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:153: ( expression )?
 					int alt28=2;
 					int LA28_0 = input.LA(1);
-					if ( (LA28_0==CHARCONST||(LA28_0 >= IDENT && LA28_0 <= INTEGER)||LA28_0==REAL||LA28_0==STRING||LA28_0==26||LA28_0==29||LA28_0==31||LA28_0==72||LA28_0==92||LA28_0==95) ) {
+					if ( (LA28_0==CHARCONST||(LA28_0 >= IDENT && LA28_0 <= INTEGER)||LA28_0==REAL||LA28_0==STRING||LA28_0==28||LA28_0==31||LA28_0==33||LA28_0==74||LA28_0==94||LA28_0==97) ) {
 						alt28=1;
 					}
 					switch (alt28) {
 						case 1 :
 							// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:94:153: expression
 							{
-							pushFollow(FOLLOW_expression_in_statement1595);
+							pushFollow(FOLLOW_expression_in_statement1616);
 							expression192=expression();
 							state._fsp--;
 
@@ -4418,7 +4452,7 @@ public class OberonParser extends Parser {
 		ParserRuleReturnScope procedureCall196 =null;
 
 		Object string_literal194_tree=null;
-		RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
+		RewriteRuleTokenStream stream_38=new RewriteRuleTokenStream(adaptor,"token 38");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 		RewriteRuleSubtreeStream stream_designator=new RewriteRuleSubtreeStream(adaptor,"rule designator");
 		RewriteRuleSubtreeStream stream_procedureCall=new RewriteRuleSubtreeStream(adaptor,"rule procedureCall");
@@ -4427,7 +4461,7 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:96:23: ( designator ( ( ':=' expression ) | procedureCall ) -> ^( ASSIGN designator ( expression )? ( procedureCall )? ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:96:25: designator ( ( ':=' expression ) | procedureCall )
 			{
-			pushFollow(FOLLOW_designator_in_statement21618);
+			pushFollow(FOLLOW_designator_in_statement21639);
 			designator193=designator();
 			state._fsp--;
 
@@ -4435,10 +4469,10 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:96:37: ( ( ':=' expression ) | procedureCall )
 			int alt30=2;
 			int LA30_0 = input.LA(1);
-			if ( (LA30_0==36) ) {
+			if ( (LA30_0==38) ) {
 				alt30=1;
 			}
-			else if ( (LA30_0==26||LA30_0==37||(LA30_0 >= 53 && LA30_0 <= 55)||LA30_0==84||LA30_0==93) ) {
+			else if ( (LA30_0==28||LA30_0==39||(LA30_0 >= 55 && LA30_0 <= 57)||LA30_0==86||LA30_0==95) ) {
 				alt30=2;
 			}
 
@@ -4455,10 +4489,10 @@ public class OberonParser extends Parser {
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:96:38: ( ':=' expression )
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:96:39: ':=' expression
 					{
-					string_literal194=(Token)match(input,36,FOLLOW_36_in_statement21623);  
-					stream_36.add(string_literal194);
+					string_literal194=(Token)match(input,38,FOLLOW_38_in_statement21644);  
+					stream_38.add(string_literal194);
 
-					pushFollow(FOLLOW_expression_in_statement21625);
+					pushFollow(FOLLOW_expression_in_statement21646);
 					expression195=expression();
 					state._fsp--;
 
@@ -4470,7 +4504,7 @@ public class OberonParser extends Parser {
 				case 2 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:96:58: procedureCall
 					{
-					pushFollow(FOLLOW_procedureCall_in_statement21630);
+					pushFollow(FOLLOW_procedureCall_in_statement21651);
 					procedureCall196=procedureCall();
 					state._fsp--;
 
@@ -4481,7 +4515,7 @@ public class OberonParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: designator, expression, procedureCall
+			// elements: procedureCall, expression, designator
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -4567,14 +4601,14 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:98:26: ( actualParameters )?
 			int alt31=2;
 			int LA31_0 = input.LA(1);
-			if ( (LA31_0==26) ) {
+			if ( (LA31_0==28) ) {
 				alt31=1;
 			}
 			switch (alt31) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:98:26: actualParameters
 					{
-					pushFollow(FOLLOW_actualParameters_in_procedureCall1664);
+					pushFollow(FOLLOW_actualParameters_in_procedureCall1685);
 					actualParameters197=actualParameters();
 					state._fsp--;
 
@@ -4626,14 +4660,14 @@ public class OberonParser extends Parser {
 		ParserRuleReturnScope statement200 =null;
 
 		Object char_literal199_tree=null;
-		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+		RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
 		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
 
 		try {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:100:23: ( statement ( ';' statement )* -> ^( BLOCK statement ( statement )* ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:100:25: statement ( ';' statement )*
 			{
-			pushFollow(FOLLOW_statement_in_statementSequence1677);
+			pushFollow(FOLLOW_statement_in_statementSequence1698);
 			statement198=statement();
 			state._fsp--;
 
@@ -4643,7 +4677,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt32=2;
 				int LA32_0 = input.LA(1);
-				if ( (LA32_0==37) ) {
+				if ( (LA32_0==39) ) {
 					alt32=1;
 				}
 
@@ -4651,10 +4685,10 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:100:37: ';' statement
 					{
-					char_literal199=(Token)match(input,37,FOLLOW_37_in_statementSequence1681);  
-					stream_37.add(char_literal199);
+					char_literal199=(Token)match(input,39,FOLLOW_39_in_statementSequence1702);  
+					stream_39.add(char_literal199);
 
-					pushFollow(FOLLOW_statement_in_statementSequence1683);
+					pushFollow(FOLLOW_statement_in_statementSequence1704);
 					statement200=statement();
 					state._fsp--;
 
@@ -4753,11 +4787,11 @@ public class OberonParser extends Parser {
 		Object string_literal206_tree=null;
 		Object string_literal207_tree=null;
 		Object string_literal208_tree=null;
-		RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
+		RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
+		RewriteRuleTokenStream stream_56=new RewriteRuleTokenStream(adaptor,"token 56");
 		RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
-		RewriteRuleTokenStream stream_82=new RewriteRuleTokenStream(adaptor,"token 82");
-		RewriteRuleTokenStream stream_53=new RewriteRuleTokenStream(adaptor,"token 53");
-		RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
+		RewriteRuleTokenStream stream_61=new RewriteRuleTokenStream(adaptor,"token 61");
+		RewriteRuleTokenStream stream_84=new RewriteRuleTokenStream(adaptor,"token 84");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 		RewriteRuleSubtreeStream stream_statementSequence=new RewriteRuleSubtreeStream(adaptor,"rule statementSequence");
 
@@ -4765,18 +4799,18 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:102:23: ( 'IF' expression 'THEN' s1= statementSequence ( 'ELSIF' expression 'THEN' s2= statementSequence )* ( 'ELSE' s3= statementSequence )? 'END' -> ^( 'IF' ( expression )? ( $s1)? ( ^( 'ELSIF' ( expression )? ( $s2)? ) )* ( 'ELSE' ( $s3)? )? ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:102:25: 'IF' expression 'THEN' s1= statementSequence ( 'ELSIF' expression 'THEN' s2= statementSequence )* ( 'ELSE' s3= statementSequence )? 'END'
 			{
-			string_literal201=(Token)match(input,59,FOLLOW_59_in_ifStatement1718);  
-			stream_59.add(string_literal201);
+			string_literal201=(Token)match(input,61,FOLLOW_61_in_ifStatement1739);  
+			stream_61.add(string_literal201);
 
-			pushFollow(FOLLOW_expression_in_ifStatement1720);
+			pushFollow(FOLLOW_expression_in_ifStatement1741);
 			expression202=expression();
 			state._fsp--;
 
 			stream_expression.add(expression202.getTree());
-			string_literal203=(Token)match(input,82,FOLLOW_82_in_ifStatement1722);  
-			stream_82.add(string_literal203);
+			string_literal203=(Token)match(input,84,FOLLOW_84_in_ifStatement1743);  
+			stream_84.add(string_literal203);
 
-			pushFollow(FOLLOW_statementSequence_in_ifStatement1726);
+			pushFollow(FOLLOW_statementSequence_in_ifStatement1747);
 			s1=statementSequence();
 			state._fsp--;
 
@@ -4786,7 +4820,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt33=2;
 				int LA33_0 = input.LA(1);
-				if ( (LA33_0==54) ) {
+				if ( (LA33_0==56) ) {
 					alt33=1;
 				}
 
@@ -4794,18 +4828,18 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:102:70: 'ELSIF' expression 'THEN' s2= statementSequence
 					{
-					string_literal204=(Token)match(input,54,FOLLOW_54_in_ifStatement1729);  
-					stream_54.add(string_literal204);
+					string_literal204=(Token)match(input,56,FOLLOW_56_in_ifStatement1750);  
+					stream_56.add(string_literal204);
 
-					pushFollow(FOLLOW_expression_in_ifStatement1731);
+					pushFollow(FOLLOW_expression_in_ifStatement1752);
 					expression205=expression();
 					state._fsp--;
 
 					stream_expression.add(expression205.getTree());
-					string_literal206=(Token)match(input,82,FOLLOW_82_in_ifStatement1733);  
-					stream_82.add(string_literal206);
+					string_literal206=(Token)match(input,84,FOLLOW_84_in_ifStatement1754);  
+					stream_84.add(string_literal206);
 
-					pushFollow(FOLLOW_statementSequence_in_ifStatement1737);
+					pushFollow(FOLLOW_statementSequence_in_ifStatement1758);
 					s2=statementSequence();
 					state._fsp--;
 
@@ -4821,17 +4855,17 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:102:119: ( 'ELSE' s3= statementSequence )?
 			int alt34=2;
 			int LA34_0 = input.LA(1);
-			if ( (LA34_0==53) ) {
+			if ( (LA34_0==55) ) {
 				alt34=1;
 			}
 			switch (alt34) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:102:120: 'ELSE' s3= statementSequence
 					{
-					string_literal207=(Token)match(input,53,FOLLOW_53_in_ifStatement1742);  
-					stream_53.add(string_literal207);
+					string_literal207=(Token)match(input,55,FOLLOW_55_in_ifStatement1763);  
+					stream_55.add(string_literal207);
 
-					pushFollow(FOLLOW_statementSequence_in_ifStatement1746);
+					pushFollow(FOLLOW_statementSequence_in_ifStatement1767);
 					s3=statementSequence();
 					state._fsp--;
 
@@ -4841,11 +4875,11 @@ public class OberonParser extends Parser {
 
 			}
 
-			string_literal208=(Token)match(input,55,FOLLOW_55_in_ifStatement1750);  
-			stream_55.add(string_literal208);
+			string_literal208=(Token)match(input,57,FOLLOW_57_in_ifStatement1771);  
+			stream_57.add(string_literal208);
 
 			// AST REWRITE
-			// elements: s3, 59, 54, expression, 53, s1, s2, expression
+			// elements: 55, expression, s3, s2, 61, expression, 56, s1
 			// token labels: 
 			// rule labels: retval, s2, s1, s3
 			// token list labels: 
@@ -4863,7 +4897,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:103:26: ^( 'IF' ( expression )? ( $s1)? ( ^( 'ELSIF' ( expression )? ( $s2)? ) )* ( 'ELSE' ( $s3)? )? )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_59.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_61.nextNode(), root_1);
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:103:33: ( expression )?
 				if ( stream_expression.hasNext() ) {
 					adaptor.addChild(root_1, stream_expression.nextTree());
@@ -4877,11 +4911,11 @@ public class OberonParser extends Parser {
 				stream_s1.reset();
 
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:103:50: ( ^( 'ELSIF' ( expression )? ( $s2)? ) )*
-				while ( stream_54.hasNext() ) {
+				while ( stream_56.hasNext() ) {
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:103:50: ^( 'ELSIF' ( expression )? ( $s2)? )
 					{
 					Object root_2 = (Object)adaptor.nil();
-					root_2 = (Object)adaptor.becomeRoot(stream_54.nextNode(), root_2);
+					root_2 = (Object)adaptor.becomeRoot(stream_56.nextNode(), root_2);
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:103:60: ( expression )?
 					if ( stream_expression.hasNext() ) {
 						adaptor.addChild(root_2, stream_expression.nextTree());
@@ -4898,11 +4932,11 @@ public class OberonParser extends Parser {
 					}
 
 				}
-				stream_54.reset();
+				stream_56.reset();
 
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:103:80: ( 'ELSE' ( $s3)? )?
-				if ( stream_s3.hasNext()||stream_53.hasNext() ) {
-					adaptor.addChild(root_1, stream_53.nextNode());
+				if ( stream_55.hasNext()||stream_s3.hasNext() ) {
+					adaptor.addChild(root_1, stream_55.nextNode());
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:103:89: ( $s3)?
 					if ( stream_s3.hasNext() ) {
 						adaptor.addChild(root_1, stream_s3.nextTree());
@@ -4910,8 +4944,8 @@ public class OberonParser extends Parser {
 					stream_s3.reset();
 
 				}
+				stream_55.reset();
 				stream_s3.reset();
-				stream_53.reset();
 
 				adaptor.addChild(root_0, root_1);
 				}
@@ -4972,11 +5006,11 @@ public class OberonParser extends Parser {
 		Object char_literal213_tree=null;
 		Object string_literal215_tree=null;
 		Object string_literal217_tree=null;
+		RewriteRuleTokenStream stream_95=new RewriteRuleTokenStream(adaptor,"token 95");
+		RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
 		RewriteRuleTokenStream stream_93=new RewriteRuleTokenStream(adaptor,"token 93");
 		RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
-		RewriteRuleTokenStream stream_91=new RewriteRuleTokenStream(adaptor,"token 91");
-		RewriteRuleTokenStream stream_53=new RewriteRuleTokenStream(adaptor,"token 53");
-		RewriteRuleTokenStream stream_74=new RewriteRuleTokenStream(adaptor,"token 74");
+		RewriteRuleTokenStream stream_76=new RewriteRuleTokenStream(adaptor,"token 76");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 		RewriteRuleSubtreeStream stream_casE=new RewriteRuleSubtreeStream(adaptor,"rule casE");
 		RewriteRuleSubtreeStream stream_statementSequence=new RewriteRuleSubtreeStream(adaptor,"rule statementSequence");
@@ -4985,18 +5019,18 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:105:23: ( 'case' expression 'OF' casE ( '|' casE )* ( 'ELSE' statementSequence )? 'END' -> ^( 'case' expression 'OF' casE ( '|' casE )* ( 'ELSE' statementSequence )? 'END' ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:105:25: 'case' expression 'OF' casE ( '|' casE )* ( 'ELSE' statementSequence )? 'END'
 			{
-			string_literal209=(Token)match(input,91,FOLLOW_91_in_caseStatement1827);  
-			stream_91.add(string_literal209);
+			string_literal209=(Token)match(input,93,FOLLOW_93_in_caseStatement1848);  
+			stream_93.add(string_literal209);
 
-			pushFollow(FOLLOW_expression_in_caseStatement1829);
+			pushFollow(FOLLOW_expression_in_caseStatement1850);
 			expression210=expression();
 			state._fsp--;
 
 			stream_expression.add(expression210.getTree());
-			string_literal211=(Token)match(input,74,FOLLOW_74_in_caseStatement1831);  
-			stream_74.add(string_literal211);
+			string_literal211=(Token)match(input,76,FOLLOW_76_in_caseStatement1852);  
+			stream_76.add(string_literal211);
 
-			pushFollow(FOLLOW_casE_in_caseStatement1833);
+			pushFollow(FOLLOW_casE_in_caseStatement1854);
 			casE212=casE();
 			state._fsp--;
 
@@ -5006,7 +5040,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt35=2;
 				int LA35_0 = input.LA(1);
-				if ( (LA35_0==93) ) {
+				if ( (LA35_0==95) ) {
 					alt35=1;
 				}
 
@@ -5014,10 +5048,10 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:105:54: '|' casE
 					{
-					char_literal213=(Token)match(input,93,FOLLOW_93_in_caseStatement1836);  
-					stream_93.add(char_literal213);
+					char_literal213=(Token)match(input,95,FOLLOW_95_in_caseStatement1857);  
+					stream_95.add(char_literal213);
 
-					pushFollow(FOLLOW_casE_in_caseStatement1838);
+					pushFollow(FOLLOW_casE_in_caseStatement1859);
 					casE214=casE();
 					state._fsp--;
 
@@ -5033,17 +5067,17 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:105:65: ( 'ELSE' statementSequence )?
 			int alt36=2;
 			int LA36_0 = input.LA(1);
-			if ( (LA36_0==53) ) {
+			if ( (LA36_0==55) ) {
 				alt36=1;
 			}
 			switch (alt36) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:105:66: 'ELSE' statementSequence
 					{
-					string_literal215=(Token)match(input,53,FOLLOW_53_in_caseStatement1843);  
-					stream_53.add(string_literal215);
+					string_literal215=(Token)match(input,55,FOLLOW_55_in_caseStatement1864);  
+					stream_55.add(string_literal215);
 
-					pushFollow(FOLLOW_statementSequence_in_caseStatement1845);
+					pushFollow(FOLLOW_statementSequence_in_caseStatement1866);
 					statementSequence216=statementSequence();
 					state._fsp--;
 
@@ -5053,11 +5087,11 @@ public class OberonParser extends Parser {
 
 			}
 
-			string_literal217=(Token)match(input,55,FOLLOW_55_in_caseStatement1849);  
-			stream_55.add(string_literal217);
+			string_literal217=(Token)match(input,57,FOLLOW_57_in_caseStatement1870);  
+			stream_57.add(string_literal217);
 
 			// AST REWRITE
-			// elements: 74, 91, 53, casE, casE, statementSequence, 93, expression, 55
+			// elements: casE, 76, 93, 95, expression, statementSequence, casE, 57, 55
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -5072,27 +5106,27 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:106:26: ^( 'case' expression 'OF' casE ( '|' casE )* ( 'ELSE' statementSequence )? 'END' )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_91.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_93.nextNode(), root_1);
 				adaptor.addChild(root_1, stream_expression.nextTree());
-				adaptor.addChild(root_1, stream_74.nextNode());
+				adaptor.addChild(root_1, stream_76.nextNode());
 				adaptor.addChild(root_1, stream_casE.nextTree());
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:106:56: ( '|' casE )*
-				while ( stream_casE.hasNext()||stream_93.hasNext() ) {
-					adaptor.addChild(root_1, stream_93.nextNode());
+				while ( stream_95.hasNext()||stream_casE.hasNext() ) {
+					adaptor.addChild(root_1, stream_95.nextNode());
 					adaptor.addChild(root_1, stream_casE.nextTree());
 				}
+				stream_95.reset();
 				stream_casE.reset();
-				stream_93.reset();
 
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:106:68: ( 'ELSE' statementSequence )?
-				if ( stream_53.hasNext()||stream_statementSequence.hasNext() ) {
-					adaptor.addChild(root_1, stream_53.nextNode());
+				if ( stream_statementSequence.hasNext()||stream_55.hasNext() ) {
+					adaptor.addChild(root_1, stream_55.nextNode());
 					adaptor.addChild(root_1, stream_statementSequence.nextTree());
 				}
-				stream_53.reset();
 				stream_statementSequence.reset();
+				stream_55.reset();
 
-				adaptor.addChild(root_1, stream_55.nextNode());
+				adaptor.addChild(root_1, stream_57.nextNode());
 				adaptor.addChild(root_0, root_1);
 				}
 
@@ -5153,24 +5187,24 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:108:25: ( caseLabelList ':' statementSequence )?
 			int alt37=2;
 			int LA37_0 = input.LA(1);
-			if ( (LA37_0==CHARCONST||(LA37_0 >= IDENT && LA37_0 <= INTEGER)||LA37_0==REAL||LA37_0==STRING||LA37_0==26||LA37_0==29||LA37_0==31||LA37_0==72||LA37_0==92||LA37_0==95) ) {
+			if ( (LA37_0==CHARCONST||(LA37_0 >= IDENT && LA37_0 <= INTEGER)||LA37_0==REAL||LA37_0==STRING||LA37_0==28||LA37_0==31||LA37_0==33||LA37_0==74||LA37_0==94||LA37_0==97) ) {
 				alt37=1;
 			}
 			switch (alt37) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:108:26: caseLabelList ':' statementSequence
 					{
-					pushFollow(FOLLOW_caseLabelList_in_casE1926);
+					pushFollow(FOLLOW_caseLabelList_in_casE1947);
 					caseLabelList218=caseLabelList();
 					state._fsp--;
 
 					adaptor.addChild(root_0, caseLabelList218.getTree());
 
-					char_literal219=(Token)match(input,35,FOLLOW_35_in_casE1928); 
+					char_literal219=(Token)match(input,37,FOLLOW_37_in_casE1949); 
 					char_literal219_tree = (Object)adaptor.create(char_literal219);
 					adaptor.addChild(root_0, char_literal219_tree);
 
-					pushFollow(FOLLOW_statementSequence_in_casE1930);
+					pushFollow(FOLLOW_statementSequence_in_casE1951);
 					statementSequence220=statementSequence();
 					state._fsp--;
 
@@ -5230,7 +5264,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_caseLabels_in_caseLabelList1948);
+			pushFollow(FOLLOW_caseLabels_in_caseLabelList1969);
 			caseLabels221=caseLabels();
 			state._fsp--;
 
@@ -5241,7 +5275,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt38=2;
 				int LA38_0 = input.LA(1);
-				if ( (LA38_0==30) ) {
+				if ( (LA38_0==32) ) {
 					alt38=1;
 				}
 
@@ -5249,11 +5283,11 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:110:37: ',' caseLabels
 					{
-					char_literal222=(Token)match(input,30,FOLLOW_30_in_caseLabelList1951); 
+					char_literal222=(Token)match(input,32,FOLLOW_32_in_caseLabelList1972); 
 					char_literal222_tree = (Object)adaptor.create(char_literal222);
 					adaptor.addChild(root_0, char_literal222_tree);
 
-					pushFollow(FOLLOW_caseLabels_in_caseLabelList1953);
+					pushFollow(FOLLOW_caseLabels_in_caseLabelList1974);
 					caseLabels223=caseLabels();
 					state._fsp--;
 
@@ -5316,7 +5350,7 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_constExpression_in_caseLabels1974);
+			pushFollow(FOLLOW_constExpression_in_caseLabels1995);
 			constExpression224=constExpression();
 			state._fsp--;
 
@@ -5325,11 +5359,11 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:112:41: ( '..' constExpression )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:112:42: '..' constExpression
 			{
-			string_literal225=(Token)match(input,33,FOLLOW_33_in_caseLabels1977); 
+			string_literal225=(Token)match(input,35,FOLLOW_35_in_caseLabels1998); 
 			string_literal225_tree = (Object)adaptor.create(string_literal225);
 			adaptor.addChild(root_0, string_literal225_tree);
 
-			pushFollow(FOLLOW_constExpression_in_caseLabels1979);
+			pushFollow(FOLLOW_constExpression_in_caseLabels2000);
 			constExpression226=constExpression();
 			state._fsp--;
 
@@ -5382,9 +5416,9 @@ public class OberonParser extends Parser {
 		Object string_literal227_tree=null;
 		Object string_literal229_tree=null;
 		Object string_literal231_tree=null;
-		RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
-		RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
-		RewriteRuleTokenStream stream_86=new RewriteRuleTokenStream(adaptor,"token 86");
+		RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
+		RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
+		RewriteRuleTokenStream stream_88=new RewriteRuleTokenStream(adaptor,"token 88");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 		RewriteRuleSubtreeStream stream_statementSequence=new RewriteRuleSubtreeStream(adaptor,"rule statementSequence");
 
@@ -5392,27 +5426,27 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:114:23: ( 'WHILE' expression 'DO' statementSequence 'END' -> ^( 'WHILE' expression statementSequence ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:114:25: 'WHILE' expression 'DO' statementSequence 'END'
 			{
-			string_literal227=(Token)match(input,86,FOLLOW_86_in_whileStatement1995);  
-			stream_86.add(string_literal227);
+			string_literal227=(Token)match(input,88,FOLLOW_88_in_whileStatement2016);  
+			stream_88.add(string_literal227);
 
-			pushFollow(FOLLOW_expression_in_whileStatement1997);
+			pushFollow(FOLLOW_expression_in_whileStatement2018);
 			expression228=expression();
 			state._fsp--;
 
 			stream_expression.add(expression228.getTree());
-			string_literal229=(Token)match(input,52,FOLLOW_52_in_whileStatement1999);  
-			stream_52.add(string_literal229);
+			string_literal229=(Token)match(input,54,FOLLOW_54_in_whileStatement2020);  
+			stream_54.add(string_literal229);
 
-			pushFollow(FOLLOW_statementSequence_in_whileStatement2001);
+			pushFollow(FOLLOW_statementSequence_in_whileStatement2022);
 			statementSequence230=statementSequence();
 			state._fsp--;
 
 			stream_statementSequence.add(statementSequence230.getTree());
-			string_literal231=(Token)match(input,55,FOLLOW_55_in_whileStatement2003);  
-			stream_55.add(string_literal231);
+			string_literal231=(Token)match(input,57,FOLLOW_57_in_whileStatement2024);  
+			stream_57.add(string_literal231);
 
 			// AST REWRITE
-			// elements: statementSequence, 86, expression
+			// elements: 88, expression, statementSequence
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -5427,7 +5461,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:114:76: ^( 'WHILE' expression statementSequence )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_86.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_88.nextNode(), root_1);
 				adaptor.addChild(root_1, stream_expression.nextTree());
 				adaptor.addChild(root_1, stream_statementSequence.nextTree());
 				adaptor.addChild(root_0, root_1);
@@ -5489,18 +5523,18 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal232=(Token)match(input,79,FOLLOW_79_in_repeatStatement2027); 
+			string_literal232=(Token)match(input,81,FOLLOW_81_in_repeatStatement2048); 
 			string_literal232_tree = (Object)adaptor.create(string_literal232);
 			root_0 = (Object)adaptor.becomeRoot(string_literal232_tree, root_0);
 
-			pushFollow(FOLLOW_statementSequence_in_repeatStatement2030);
+			pushFollow(FOLLOW_statementSequence_in_repeatStatement2051);
 			statementSequence233=statementSequence();
 			state._fsp--;
 
 			adaptor.addChild(root_0, statementSequence233.getTree());
 
-			string_literal234=(Token)match(input,84,FOLLOW_84_in_repeatStatement2032); 
-			pushFollow(FOLLOW_expression_in_repeatStatement2035);
+			string_literal234=(Token)match(input,86,FOLLOW_86_in_repeatStatement2053); 
+			pushFollow(FOLLOW_expression_in_repeatStatement2056);
 			expression235=expression();
 			state._fsp--;
 
@@ -5556,17 +5590,17 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal236=(Token)match(input,66,FOLLOW_66_in_loopStatement2051); 
+			string_literal236=(Token)match(input,68,FOLLOW_68_in_loopStatement2072); 
 			string_literal236_tree = (Object)adaptor.create(string_literal236);
 			root_0 = (Object)adaptor.becomeRoot(string_literal236_tree, root_0);
 
-			pushFollow(FOLLOW_statementSequence_in_loopStatement2054);
+			pushFollow(FOLLOW_statementSequence_in_loopStatement2075);
 			statementSequence237=statementSequence();
 			state._fsp--;
 
 			adaptor.addChild(root_0, statementSequence237.getTree());
 
-			string_literal238=(Token)match(input,55,FOLLOW_55_in_loopStatement2056); 
+			string_literal238=(Token)match(input,57,FOLLOW_57_in_loopStatement2077); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -5623,34 +5657,34 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal239=(Token)match(input,87,FOLLOW_87_in_withStatement2073); 
+			string_literal239=(Token)match(input,89,FOLLOW_89_in_withStatement2094); 
 			string_literal239_tree = (Object)adaptor.create(string_literal239);
 			root_0 = (Object)adaptor.becomeRoot(string_literal239_tree, root_0);
 
-			pushFollow(FOLLOW_qualident_in_withStatement2076);
+			pushFollow(FOLLOW_qualident_in_withStatement2097);
 			qualident240=qualident();
 			state._fsp--;
 
 			adaptor.addChild(root_0, qualident240.getTree());
 
-			char_literal241=(Token)match(input,35,FOLLOW_35_in_withStatement2078); 
+			char_literal241=(Token)match(input,37,FOLLOW_37_in_withStatement2099); 
 			char_literal241_tree = (Object)adaptor.create(char_literal241);
 			adaptor.addChild(root_0, char_literal241_tree);
 
-			pushFollow(FOLLOW_qualident_in_withStatement2080);
+			pushFollow(FOLLOW_qualident_in_withStatement2101);
 			qualident242=qualident();
 			state._fsp--;
 
 			adaptor.addChild(root_0, qualident242.getTree());
 
-			string_literal243=(Token)match(input,52,FOLLOW_52_in_withStatement2082); 
-			pushFollow(FOLLOW_statementSequence_in_withStatement2085);
+			string_literal243=(Token)match(input,54,FOLLOW_54_in_withStatement2103); 
+			pushFollow(FOLLOW_statementSequence_in_withStatement2106);
 			statementSequence244=statementSequence();
 			state._fsp--;
 
 			adaptor.addChild(root_0, statementSequence244.getTree());
 
-			string_literal245=(Token)match(input,55,FOLLOW_55_in_withStatement2087); 
+			string_literal245=(Token)match(input,57,FOLLOW_57_in_withStatement2108); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -5695,7 +5729,7 @@ public class OberonParser extends Parser {
 		Object char_literal247_tree=null;
 		Object IDENT249_tree=null;
 		RewriteRuleTokenStream stream_IDENT=new RewriteRuleTokenStream(adaptor,"token IDENT");
-		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+		RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
 		RewriteRuleSubtreeStream stream_procedureBody=new RewriteRuleSubtreeStream(adaptor,"rule procedureBody");
 		RewriteRuleSubtreeStream stream_procedureHeading=new RewriteRuleSubtreeStream(adaptor,"rule procedureHeading");
 
@@ -5703,24 +5737,24 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:122:23: ( procedureHeading ';' procedureBody IDENT -> ^( PROCEDURE procedureHeading procedureBody ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:122:25: procedureHeading ';' procedureBody IDENT
 			{
-			pushFollow(FOLLOW_procedureHeading_in_procedureDeclaration2097);
+			pushFollow(FOLLOW_procedureHeading_in_procedureDeclaration2118);
 			procedureHeading246=procedureHeading();
 			state._fsp--;
 
 			stream_procedureHeading.add(procedureHeading246.getTree());
-			char_literal247=(Token)match(input,37,FOLLOW_37_in_procedureDeclaration2099);  
-			stream_37.add(char_literal247);
+			char_literal247=(Token)match(input,39,FOLLOW_39_in_procedureDeclaration2120);  
+			stream_39.add(char_literal247);
 
-			pushFollow(FOLLOW_procedureBody_in_procedureDeclaration2101);
+			pushFollow(FOLLOW_procedureBody_in_procedureDeclaration2122);
 			procedureBody248=procedureBody();
 			state._fsp--;
 
 			stream_procedureBody.add(procedureBody248.getTree());
-			IDENT249=(Token)match(input,IDENT,FOLLOW_IDENT_in_procedureDeclaration2103);  
+			IDENT249=(Token)match(input,IDENT,FOLLOW_IDENT_in_procedureDeclaration2124);  
 			stream_IDENT.add(IDENT249);
 
 			// AST REWRITE
-			// elements: procedureBody, procedureHeading
+			// elements: procedureHeading, procedureBody
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -5789,8 +5823,8 @@ public class OberonParser extends Parser {
 
 		Object string_literal250_tree=null;
 		Object char_literal251_tree=null;
-		RewriteRuleTokenStream stream_77=new RewriteRuleTokenStream(adaptor,"token 77");
-		RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
+		RewriteRuleTokenStream stream_79=new RewriteRuleTokenStream(adaptor,"token 79");
+		RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
 		RewriteRuleSubtreeStream stream_formalParameters=new RewriteRuleSubtreeStream(adaptor,"rule formalParameters");
 		RewriteRuleSubtreeStream stream_identdef=new RewriteRuleSubtreeStream(adaptor,"rule identdef");
 
@@ -5798,28 +5832,28 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:124:23: ( 'PROCEDURE' ( '*' )? identdef ( formalParameters )? -> identdef ( formalParameters )? )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:124:25: 'PROCEDURE' ( '*' )? identdef ( formalParameters )?
 			{
-			string_literal250=(Token)match(input,77,FOLLOW_77_in_procedureHeading2143);  
-			stream_77.add(string_literal250);
+			string_literal250=(Token)match(input,79,FOLLOW_79_in_procedureHeading2164);  
+			stream_79.add(string_literal250);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:124:37: ( '*' )?
 			int alt39=2;
 			int LA39_0 = input.LA(1);
-			if ( (LA39_0==28) ) {
+			if ( (LA39_0==30) ) {
 				alt39=1;
 			}
 			switch (alt39) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:124:37: '*'
 					{
-					char_literal251=(Token)match(input,28,FOLLOW_28_in_procedureHeading2145);  
-					stream_28.add(char_literal251);
+					char_literal251=(Token)match(input,30,FOLLOW_30_in_procedureHeading2166);  
+					stream_30.add(char_literal251);
 
 					}
 					break;
 
 			}
 
-			pushFollow(FOLLOW_identdef_in_procedureHeading2148);
+			pushFollow(FOLLOW_identdef_in_procedureHeading2169);
 			identdef252=identdef();
 			state._fsp--;
 
@@ -5827,14 +5861,14 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:124:51: ( formalParameters )?
 			int alt40=2;
 			int LA40_0 = input.LA(1);
-			if ( (LA40_0==26) ) {
+			if ( (LA40_0==28) ) {
 				alt40=1;
 			}
 			switch (alt40) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:124:51: formalParameters
 					{
-					pushFollow(FOLLOW_formalParameters_in_procedureHeading2150);
+					pushFollow(FOLLOW_formalParameters_in_procedureHeading2171);
 					formalParameters253=formalParameters();
 					state._fsp--;
 
@@ -5845,7 +5879,7 @@ public class OberonParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: formalParameters, identdef
+			// elements: identdef, formalParameters
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -5912,8 +5946,8 @@ public class OberonParser extends Parser {
 
 		Object string_literal255_tree=null;
 		Object string_literal257_tree=null;
-		RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
-		RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
+		RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+		RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
 		RewriteRuleSubtreeStream stream_statementSequence=new RewriteRuleSubtreeStream(adaptor,"rule statementSequence");
 		RewriteRuleSubtreeStream stream_declarationSequence=new RewriteRuleSubtreeStream(adaptor,"rule declarationSequence");
 
@@ -5921,7 +5955,7 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:126:23: ( declarationSequence ( 'BEGIN' statementSequence )? 'END' -> ^( PROCEDURE_BODY ( declarationSequence )? ( statementSequence )? ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:126:25: declarationSequence ( 'BEGIN' statementSequence )? 'END'
 			{
-			pushFollow(FOLLOW_declarationSequence_in_procedureBody2174);
+			pushFollow(FOLLOW_declarationSequence_in_procedureBody2195);
 			declarationSequence254=declarationSequence();
 			state._fsp--;
 
@@ -5929,17 +5963,17 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:126:45: ( 'BEGIN' statementSequence )?
 			int alt41=2;
 			int LA41_0 = input.LA(1);
-			if ( (LA41_0==46) ) {
+			if ( (LA41_0==48) ) {
 				alt41=1;
 			}
 			switch (alt41) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:126:46: 'BEGIN' statementSequence
 					{
-					string_literal255=(Token)match(input,46,FOLLOW_46_in_procedureBody2177);  
-					stream_46.add(string_literal255);
+					string_literal255=(Token)match(input,48,FOLLOW_48_in_procedureBody2198);  
+					stream_48.add(string_literal255);
 
-					pushFollow(FOLLOW_statementSequence_in_procedureBody2179);
+					pushFollow(FOLLOW_statementSequence_in_procedureBody2200);
 					statementSequence256=statementSequence();
 					state._fsp--;
 
@@ -5949,11 +5983,11 @@ public class OberonParser extends Parser {
 
 			}
 
-			string_literal257=(Token)match(input,55,FOLLOW_55_in_procedureBody2183);  
-			stream_55.add(string_literal257);
+			string_literal257=(Token)match(input,57,FOLLOW_57_in_procedureBody2204);  
+			stream_57.add(string_literal257);
 
 			// AST REWRITE
-			// elements: statementSequence, declarationSequence
+			// elements: declarationSequence, statementSequence
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -6040,15 +6074,15 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal258=(Token)match(input,77,FOLLOW_77_in_forwardDeclaration2210); 
+			string_literal258=(Token)match(input,79,FOLLOW_79_in_forwardDeclaration2231); 
 			string_literal258_tree = (Object)adaptor.create(string_literal258);
 			adaptor.addChild(root_0, string_literal258_tree);
 
-			char_literal259=(Token)match(input,90,FOLLOW_90_in_forwardDeclaration2212); 
+			char_literal259=(Token)match(input,92,FOLLOW_92_in_forwardDeclaration2233); 
 			char_literal259_tree = (Object)adaptor.create(char_literal259);
 			adaptor.addChild(root_0, char_literal259_tree);
 
-			pushFollow(FOLLOW_identdef_in_forwardDeclaration2214);
+			pushFollow(FOLLOW_identdef_in_forwardDeclaration2235);
 			identdef260=identdef();
 			state._fsp--;
 
@@ -6057,14 +6091,14 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:128:50: ( formalParameters )?
 			int alt42=2;
 			int LA42_0 = input.LA(1);
-			if ( (LA42_0==26) ) {
+			if ( (LA42_0==28) ) {
 				alt42=1;
 			}
 			switch (alt42) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:128:50: formalParameters
 					{
-					pushFollow(FOLLOW_formalParameters_in_forwardDeclaration2216);
+					pushFollow(FOLLOW_formalParameters_in_forwardDeclaration2237);
 					formalParameters261=formalParameters();
 					state._fsp--;
 
@@ -6134,17 +6168,17 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt43=4;
 				switch ( input.LA(1) ) {
-				case 48:
+				case 50:
 					{
 					alt43=1;
 					}
 					break;
-				case 83:
+				case 85:
 					{
 					alt43=2;
 					}
 					break;
-				case 85:
+				case 87:
 					{
 					alt43=3;
 					}
@@ -6154,7 +6188,7 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:130:27: constdeclarationSequence
 					{
-					pushFollow(FOLLOW_constdeclarationSequence_in_declarationSequence2229);
+					pushFollow(FOLLOW_constdeclarationSequence_in_declarationSequence2250);
 					constdeclarationSequence262=constdeclarationSequence();
 					state._fsp--;
 
@@ -6165,7 +6199,7 @@ public class OberonParser extends Parser {
 				case 2 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:130:54: typedeclarationSequence
 					{
-					pushFollow(FOLLOW_typedeclarationSequence_in_declarationSequence2233);
+					pushFollow(FOLLOW_typedeclarationSequence_in_declarationSequence2254);
 					typedeclarationSequence263=typedeclarationSequence();
 					state._fsp--;
 
@@ -6176,7 +6210,7 @@ public class OberonParser extends Parser {
 				case 3 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:130:79: vardeclarationSequence
 					{
-					pushFollow(FOLLOW_vardeclarationSequence_in_declarationSequence2236);
+					pushFollow(FOLLOW_vardeclarationSequence_in_declarationSequence2257);
 					vardeclarationSequence264=vardeclarationSequence();
 					state._fsp--;
 
@@ -6195,12 +6229,12 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt44=3;
 				int LA44_0 = input.LA(1);
-				if ( (LA44_0==77) ) {
+				if ( (LA44_0==79) ) {
 					int LA44_2 = input.LA(2);
-					if ( (LA44_2==90) ) {
+					if ( (LA44_2==92) ) {
 						alt44=2;
 					}
-					else if ( (LA44_2==IDENT||LA44_2==28) ) {
+					else if ( (LA44_2==IDENT||LA44_2==30) ) {
 						alt44=1;
 					}
 
@@ -6210,25 +6244,25 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:130:107: procedureDeclaration ';' !
 					{
-					pushFollow(FOLLOW_procedureDeclaration_in_declarationSequence2243);
+					pushFollow(FOLLOW_procedureDeclaration_in_declarationSequence2264);
 					procedureDeclaration265=procedureDeclaration();
 					state._fsp--;
 
 					adaptor.addChild(root_0, procedureDeclaration265.getTree());
 
-					char_literal266=(Token)match(input,37,FOLLOW_37_in_declarationSequence2245); 
+					char_literal266=(Token)match(input,39,FOLLOW_39_in_declarationSequence2266); 
 					}
 					break;
 				case 2 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:130:135: forwardDeclaration ';'
 					{
-					pushFollow(FOLLOW_forwardDeclaration_in_declarationSequence2250);
+					pushFollow(FOLLOW_forwardDeclaration_in_declarationSequence2271);
 					forwardDeclaration267=forwardDeclaration();
 					state._fsp--;
 
 					adaptor.addChild(root_0, forwardDeclaration267.getTree());
 
-					char_literal268=(Token)match(input,37,FOLLOW_37_in_declarationSequence2252); 
+					char_literal268=(Token)match(input,39,FOLLOW_39_in_declarationSequence2273); 
 					char_literal268_tree = (Object)adaptor.create(char_literal268);
 					adaptor.addChild(root_0, char_literal268_tree);
 
@@ -6282,16 +6316,16 @@ public class OberonParser extends Parser {
 
 		Object string_literal269_tree=null;
 		Object char_literal271_tree=null;
-		RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
-		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+		RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+		RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
 		RewriteRuleSubtreeStream stream_constantDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule constantDeclaration");
 
 		try {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:132:26: ( 'CONST' ( constantDeclaration ';' )* -> ^( 'CONST' ( constantDeclaration )* ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:132:28: 'CONST' ( constantDeclaration ';' )*
 			{
-			string_literal269=(Token)match(input,48,FOLLOW_48_in_constdeclarationSequence2262);  
-			stream_48.add(string_literal269);
+			string_literal269=(Token)match(input,50,FOLLOW_50_in_constdeclarationSequence2283);  
+			stream_50.add(string_literal269);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:132:36: ( constantDeclaration ';' )*
 			loop45:
@@ -6306,13 +6340,13 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:132:37: constantDeclaration ';'
 					{
-					pushFollow(FOLLOW_constantDeclaration_in_constdeclarationSequence2265);
+					pushFollow(FOLLOW_constantDeclaration_in_constdeclarationSequence2286);
 					constantDeclaration270=constantDeclaration();
 					state._fsp--;
 
 					stream_constantDeclaration.add(constantDeclaration270.getTree());
-					char_literal271=(Token)match(input,37,FOLLOW_37_in_constdeclarationSequence2267);  
-					stream_37.add(char_literal271);
+					char_literal271=(Token)match(input,39,FOLLOW_39_in_constdeclarationSequence2288);  
+					stream_39.add(char_literal271);
 
 					}
 					break;
@@ -6323,7 +6357,7 @@ public class OberonParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: constantDeclaration, 48
+			// elements: 50, constantDeclaration
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -6338,7 +6372,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:132:72: ^( 'CONST' ( constantDeclaration )* )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_48.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_50.nextNode(), root_1);
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:132:82: ( constantDeclaration )*
 				while ( stream_constantDeclaration.hasNext() ) {
 					adaptor.addChild(root_1, stream_constantDeclaration.nextTree());
@@ -6395,16 +6429,16 @@ public class OberonParser extends Parser {
 
 		Object string_literal272_tree=null;
 		Object char_literal274_tree=null;
-		RewriteRuleTokenStream stream_83=new RewriteRuleTokenStream(adaptor,"token 83");
-		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+		RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+		RewriteRuleTokenStream stream_85=new RewriteRuleTokenStream(adaptor,"token 85");
 		RewriteRuleSubtreeStream stream_typeDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule typeDeclaration");
 
 		try {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:134:25: ( 'TYPE' ( typeDeclaration ';' )* -> ^( 'TYPE' ( typeDeclaration )* ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:134:27: 'TYPE' ( typeDeclaration ';' )*
 			{
-			string_literal272=(Token)match(input,83,FOLLOW_83_in_typedeclarationSequence2295);  
-			stream_83.add(string_literal272);
+			string_literal272=(Token)match(input,85,FOLLOW_85_in_typedeclarationSequence2316);  
+			stream_85.add(string_literal272);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:134:34: ( typeDeclaration ';' )*
 			loop46:
@@ -6419,13 +6453,13 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:134:36: typeDeclaration ';'
 					{
-					pushFollow(FOLLOW_typeDeclaration_in_typedeclarationSequence2299);
+					pushFollow(FOLLOW_typeDeclaration_in_typedeclarationSequence2320);
 					typeDeclaration273=typeDeclaration();
 					state._fsp--;
 
 					stream_typeDeclaration.add(typeDeclaration273.getTree());
-					char_literal274=(Token)match(input,37,FOLLOW_37_in_typedeclarationSequence2301);  
-					stream_37.add(char_literal274);
+					char_literal274=(Token)match(input,39,FOLLOW_39_in_typedeclarationSequence2322);  
+					stream_39.add(char_literal274);
 
 					}
 					break;
@@ -6436,7 +6470,7 @@ public class OberonParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: 83, typeDeclaration
+			// elements: typeDeclaration, 85
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -6451,7 +6485,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:134:72: ^( 'TYPE' ( typeDeclaration )* )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_83.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_85.nextNode(), root_1);
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:134:81: ( typeDeclaration )*
 				while ( stream_typeDeclaration.hasNext() ) {
 					adaptor.addChild(root_1, stream_typeDeclaration.nextTree());
@@ -6508,16 +6542,16 @@ public class OberonParser extends Parser {
 
 		Object string_literal275_tree=null;
 		Object char_literal277_tree=null;
-		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
-		RewriteRuleTokenStream stream_85=new RewriteRuleTokenStream(adaptor,"token 85");
+		RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+		RewriteRuleTokenStream stream_87=new RewriteRuleTokenStream(adaptor,"token 87");
 		RewriteRuleSubtreeStream stream_variableDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule variableDeclaration");
 
 		try {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:136:24: ( 'VAR' ( variableDeclaration ';' )* -> ^( 'VAR' ( variableDeclaration )* ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:136:27: 'VAR' ( variableDeclaration ';' )*
 			{
-			string_literal275=(Token)match(input,85,FOLLOW_85_in_vardeclarationSequence2336);  
-			stream_85.add(string_literal275);
+			string_literal275=(Token)match(input,87,FOLLOW_87_in_vardeclarationSequence2357);  
+			stream_87.add(string_literal275);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:136:33: ( variableDeclaration ';' )*
 			loop47:
@@ -6532,13 +6566,13 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:136:34: variableDeclaration ';'
 					{
-					pushFollow(FOLLOW_variableDeclaration_in_vardeclarationSequence2339);
+					pushFollow(FOLLOW_variableDeclaration_in_vardeclarationSequence2360);
 					variableDeclaration276=variableDeclaration();
 					state._fsp--;
 
 					stream_variableDeclaration.add(variableDeclaration276.getTree());
-					char_literal277=(Token)match(input,37,FOLLOW_37_in_vardeclarationSequence2341);  
-					stream_37.add(char_literal277);
+					char_literal277=(Token)match(input,39,FOLLOW_39_in_vardeclarationSequence2362);  
+					stream_39.add(char_literal277);
 
 					}
 					break;
@@ -6549,7 +6583,7 @@ public class OberonParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: variableDeclaration, 85
+			// elements: variableDeclaration, 87
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -6564,7 +6598,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:136:72: ^( 'VAR' ( variableDeclaration )* )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_85.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_87.nextNode(), root_1);
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:136:80: ( variableDeclaration )*
 				while ( stream_variableDeclaration.hasNext() ) {
 					adaptor.addChild(root_1, stream_variableDeclaration.nextTree());
@@ -6608,7 +6642,7 @@ public class OberonParser extends Parser {
 
 
 	// $ANTLR start "formalParameters"
-	// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:1: formalParameters : '(' ( fpSection ( ';' fpSection )* )? ')' ( ':' qualident )? -> ^( FORMAL_PARAMETERS ( fpSection )* ( qualident )? ) ;
+	// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:1: formalParameters : '(' ( fpSection ( ';' fpSection )* )? ')' ( ':' qualident )? -> ^( F_PARAMS ( fpSection )* ( qualident )? ) ;
 	public final OberonParser.formalParameters_return formalParameters() throws RecognitionException {
 		OberonParser.formalParameters_return retval = new OberonParser.formalParameters_return();
 		retval.start = input.LT(1);
@@ -6627,31 +6661,31 @@ public class OberonParser extends Parser {
 		Object char_literal280_tree=null;
 		Object char_literal282_tree=null;
 		Object char_literal283_tree=null;
-		RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
-		RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
-		RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
+		RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+		RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
 		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+		RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
 		RewriteRuleSubtreeStream stream_fpSection=new RewriteRuleSubtreeStream(adaptor,"rule fpSection");
 		RewriteRuleSubtreeStream stream_qualident=new RewriteRuleSubtreeStream(adaptor,"rule qualident");
 
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:23: ( '(' ( fpSection ( ';' fpSection )* )? ')' ( ':' qualident )? -> ^( FORMAL_PARAMETERS ( fpSection )* ( qualident )? ) )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:23: ( '(' ( fpSection ( ';' fpSection )* )? ')' ( ':' qualident )? -> ^( F_PARAMS ( fpSection )* ( qualident )? ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:25: '(' ( fpSection ( ';' fpSection )* )? ')' ( ':' qualident )?
 			{
-			char_literal278=(Token)match(input,26,FOLLOW_26_in_formalParameters2378);  
-			stream_26.add(char_literal278);
+			char_literal278=(Token)match(input,28,FOLLOW_28_in_formalParameters2399);  
+			stream_28.add(char_literal278);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:29: ( fpSection ( ';' fpSection )* )?
 			int alt49=2;
 			int LA49_0 = input.LA(1);
-			if ( (LA49_0==IDENT||LA49_0==85) ) {
+			if ( (LA49_0==IDENT||LA49_0==87) ) {
 				alt49=1;
 			}
 			switch (alt49) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:30: fpSection ( ';' fpSection )*
 					{
-					pushFollow(FOLLOW_fpSection_in_formalParameters2381);
+					pushFollow(FOLLOW_fpSection_in_formalParameters2402);
 					fpSection279=fpSection();
 					state._fsp--;
 
@@ -6661,7 +6695,7 @@ public class OberonParser extends Parser {
 					while (true) {
 						int alt48=2;
 						int LA48_0 = input.LA(1);
-						if ( (LA48_0==37) ) {
+						if ( (LA48_0==39) ) {
 							alt48=1;
 						}
 
@@ -6669,10 +6703,10 @@ public class OberonParser extends Parser {
 						case 1 :
 							// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:41: ';' fpSection
 							{
-							char_literal280=(Token)match(input,37,FOLLOW_37_in_formalParameters2384);  
-							stream_37.add(char_literal280);
+							char_literal280=(Token)match(input,39,FOLLOW_39_in_formalParameters2405);  
+							stream_39.add(char_literal280);
 
-							pushFollow(FOLLOW_fpSection_in_formalParameters2386);
+							pushFollow(FOLLOW_fpSection_in_formalParameters2407);
 							fpSection281=fpSection();
 							state._fsp--;
 
@@ -6690,23 +6724,23 @@ public class OberonParser extends Parser {
 
 			}
 
-			char_literal282=(Token)match(input,27,FOLLOW_27_in_formalParameters2392);  
-			stream_27.add(char_literal282);
+			char_literal282=(Token)match(input,29,FOLLOW_29_in_formalParameters2413);  
+			stream_29.add(char_literal282);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:63: ( ':' qualident )?
 			int alt50=2;
 			int LA50_0 = input.LA(1);
-			if ( (LA50_0==35) ) {
+			if ( (LA50_0==37) ) {
 				alt50=1;
 			}
 			switch (alt50) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:64: ':' qualident
 					{
-					char_literal283=(Token)match(input,35,FOLLOW_35_in_formalParameters2395);  
-					stream_35.add(char_literal283);
+					char_literal283=(Token)match(input,37,FOLLOW_37_in_formalParameters2416);  
+					stream_37.add(char_literal283);
 
-					pushFollow(FOLLOW_qualident_in_formalParameters2397);
+					pushFollow(FOLLOW_qualident_in_formalParameters2418);
 					qualident284=qualident();
 					state._fsp--;
 
@@ -6727,19 +6761,19 @@ public class OberonParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 139:80: -> ^( FORMAL_PARAMETERS ( fpSection )* ( qualident )? )
+			// 139:80: -> ^( F_PARAMS ( fpSection )* ( qualident )? )
 			{
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:83: ^( FORMAL_PARAMETERS ( fpSection )* ( qualident )? )
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:83: ^( F_PARAMS ( fpSection )* ( qualident )? )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(FORMAL_PARAMETERS, "FORMAL_PARAMETERS"), root_1);
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:103: ( fpSection )*
+				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(F_PARAMS, "F_PARAMS"), root_1);
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:94: ( fpSection )*
 				while ( stream_fpSection.hasNext() ) {
 					adaptor.addChild(root_1, stream_fpSection.nextTree());
 				}
 				stream_fpSection.reset();
 
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:114: ( qualident )?
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:139:105: ( qualident )?
 				if ( stream_qualident.hasNext() ) {
 					adaptor.addChild(root_1, stream_qualident.nextTree());
 				}
@@ -6782,7 +6816,7 @@ public class OberonParser extends Parser {
 
 
 	// $ANTLR start "fpSection"
-	// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:1: fpSection : ( 'VAR' )? IDENT ( ',' IDENT )* ':' formalType ;
+	// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:1: fpSection : ( 'VAR' )? IDENT ( ',' IDENT )* ':' formalType -> ^( F_PARAM ^( ID ( IDENT )* ) formalType ) ;
 	public final OberonParser.fpSection_return fpSection() throws RecognitionException {
 		OberonParser.fpSection_return retval = new OberonParser.fpSection_return();
 		retval.start = input.LT(1);
@@ -6801,43 +6835,43 @@ public class OberonParser extends Parser {
 		Object char_literal287_tree=null;
 		Object IDENT288_tree=null;
 		Object char_literal289_tree=null;
+		RewriteRuleTokenStream stream_IDENT=new RewriteRuleTokenStream(adaptor,"token IDENT");
+		RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
+		RewriteRuleTokenStream stream_87=new RewriteRuleTokenStream(adaptor,"token 87");
+		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+		RewriteRuleSubtreeStream stream_formalType=new RewriteRuleSubtreeStream(adaptor,"rule formalType");
 
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:23: ( ( 'VAR' )? IDENT ( ',' IDENT )* ':' formalType )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:23: ( ( 'VAR' )? IDENT ( ',' IDENT )* ':' formalType -> ^( F_PARAM ^( ID ( IDENT )* ) formalType ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:25: ( 'VAR' )? IDENT ( ',' IDENT )* ':' formalType
 			{
-			root_0 = (Object)adaptor.nil();
-
-
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:25: ( 'VAR' )?
 			int alt51=2;
 			int LA51_0 = input.LA(1);
-			if ( (LA51_0==85) ) {
+			if ( (LA51_0==87) ) {
 				alt51=1;
 			}
 			switch (alt51) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:25: 'VAR'
 					{
-					string_literal285=(Token)match(input,85,FOLLOW_85_in_fpSection2431); 
-					string_literal285_tree = (Object)adaptor.create(string_literal285);
-					adaptor.addChild(root_0, string_literal285_tree);
+					string_literal285=(Token)match(input,87,FOLLOW_87_in_fpSection2452);  
+					stream_87.add(string_literal285);
 
 					}
 					break;
 
 			}
 
-			IDENT286=(Token)match(input,IDENT,FOLLOW_IDENT_in_fpSection2434); 
-			IDENT286_tree = (Object)adaptor.create(IDENT286);
-			adaptor.addChild(root_0, IDENT286_tree);
+			IDENT286=(Token)match(input,IDENT,FOLLOW_IDENT_in_fpSection2455);  
+			stream_IDENT.add(IDENT286);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:38: ( ',' IDENT )*
 			loop52:
 			while (true) {
 				int alt52=2;
 				int LA52_0 = input.LA(1);
-				if ( (LA52_0==30) ) {
+				if ( (LA52_0==32) ) {
 					alt52=1;
 				}
 
@@ -6845,13 +6879,11 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:39: ',' IDENT
 					{
-					char_literal287=(Token)match(input,30,FOLLOW_30_in_fpSection2437); 
-					char_literal287_tree = (Object)adaptor.create(char_literal287);
-					adaptor.addChild(root_0, char_literal287_tree);
+					char_literal287=(Token)match(input,32,FOLLOW_32_in_fpSection2458);  
+					stream_32.add(char_literal287);
 
-					IDENT288=(Token)match(input,IDENT,FOLLOW_IDENT_in_fpSection2439); 
-					IDENT288_tree = (Object)adaptor.create(IDENT288);
-					adaptor.addChild(root_0, IDENT288_tree);
+					IDENT288=(Token)match(input,IDENT,FOLLOW_IDENT_in_fpSection2460);  
+					stream_IDENT.add(IDENT288);
 
 					}
 					break;
@@ -6861,15 +6893,52 @@ public class OberonParser extends Parser {
 				}
 			}
 
-			char_literal289=(Token)match(input,35,FOLLOW_35_in_fpSection2444); 
-			char_literal289_tree = (Object)adaptor.create(char_literal289);
-			adaptor.addChild(root_0, char_literal289_tree);
+			char_literal289=(Token)match(input,37,FOLLOW_37_in_fpSection2465);  
+			stream_37.add(char_literal289);
 
-			pushFollow(FOLLOW_formalType_in_fpSection2446);
+			pushFollow(FOLLOW_formalType_in_fpSection2467);
 			formalType290=formalType();
 			state._fsp--;
 
-			adaptor.addChild(root_0, formalType290.getTree());
+			stream_formalType.add(formalType290.getTree());
+			// AST REWRITE
+			// elements: IDENT, formalType
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
+
+			root_0 = (Object)adaptor.nil();
+			// 141:67: -> ^( F_PARAM ^( ID ( IDENT )* ) formalType )
+			{
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:70: ^( F_PARAM ^( ID ( IDENT )* ) formalType )
+				{
+				Object root_1 = (Object)adaptor.nil();
+				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(F_PARAM, "F_PARAM"), root_1);
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:80: ^( ID ( IDENT )* )
+				{
+				Object root_2 = (Object)adaptor.nil();
+				root_2 = (Object)adaptor.becomeRoot((Object)adaptor.create(ID, "ID"), root_2);
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:141:85: ( IDENT )*
+				while ( stream_IDENT.hasNext() ) {
+					adaptor.addChild(root_2, stream_IDENT.nextNode());
+				}
+				stream_IDENT.reset();
+
+				adaptor.addChild(root_1, root_2);
+				}
+
+				adaptor.addChild(root_1, stream_formalType.nextTree());
+				adaptor.addChild(root_0, root_1);
+				}
+
+			}
+
+
+			retval.tree = root_0;
 
 			}
 
@@ -6919,10 +6988,10 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:143:23: ( ( 'ARRAY' ^ 'OF' !)* qualident | procedureType )
 			int alt54=2;
 			int LA54_0 = input.LA(1);
-			if ( (LA54_0==IDENT||LA54_0==44) ) {
+			if ( (LA54_0==IDENT||LA54_0==46) ) {
 				alt54=1;
 			}
-			else if ( (LA54_0==77) ) {
+			else if ( (LA54_0==79) ) {
 				alt54=2;
 			}
 
@@ -6944,7 +7013,7 @@ public class OberonParser extends Parser {
 					while (true) {
 						int alt53=2;
 						int LA53_0 = input.LA(1);
-						if ( (LA53_0==44) ) {
+						if ( (LA53_0==46) ) {
 							alt53=1;
 						}
 
@@ -6952,11 +7021,11 @@ public class OberonParser extends Parser {
 						case 1 :
 							// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:143:26: 'ARRAY' ^ 'OF' !
 							{
-							string_literal291=(Token)match(input,44,FOLLOW_44_in_formalType2466); 
+							string_literal291=(Token)match(input,46,FOLLOW_46_in_formalType2502); 
 							string_literal291_tree = (Object)adaptor.create(string_literal291);
 							root_0 = (Object)adaptor.becomeRoot(string_literal291_tree, root_0);
 
-							string_literal292=(Token)match(input,74,FOLLOW_74_in_formalType2469); 
+							string_literal292=(Token)match(input,76,FOLLOW_76_in_formalType2505); 
 							}
 							break;
 
@@ -6965,7 +7034,7 @@ public class OberonParser extends Parser {
 						}
 					}
 
-					pushFollow(FOLLOW_qualident_in_formalType2474);
+					pushFollow(FOLLOW_qualident_in_formalType2510);
 					qualident293=qualident();
 					state._fsp--;
 
@@ -6979,7 +7048,7 @@ public class OberonParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_procedureType_in_formalType2478);
+					pushFollow(FOLLOW_procedureType_in_formalType2514);
 					procedureType294=procedureType();
 					state._fsp--;
 
@@ -7051,26 +7120,26 @@ public class OberonParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal295=(Token)match(input,70,FOLLOW_70_in_module2501); 
+			string_literal295=(Token)match(input,72,FOLLOW_72_in_module2537); 
 			string_literal295_tree = (Object)adaptor.create(string_literal295);
 			root_0 = (Object)adaptor.becomeRoot(string_literal295_tree, root_0);
 
-			IDENT296=(Token)match(input,IDENT,FOLLOW_IDENT_in_module2504); 
+			IDENT296=(Token)match(input,IDENT,FOLLOW_IDENT_in_module2540); 
 			IDENT296_tree = (Object)adaptor.create(IDENT296);
 			adaptor.addChild(root_0, IDENT296_tree);
 
-			char_literal297=(Token)match(input,37,FOLLOW_37_in_module2506); 
+			char_literal297=(Token)match(input,39,FOLLOW_39_in_module2542); 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:145:46: ( importList )?
 			int alt55=2;
 			int LA55_0 = input.LA(1);
-			if ( (LA55_0==60) ) {
+			if ( (LA55_0==62) ) {
 				alt55=1;
 			}
 			switch (alt55) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:145:46: importList
 					{
-					pushFollow(FOLLOW_importList_in_module2509);
+					pushFollow(FOLLOW_importList_in_module2545);
 					importList298=importList();
 					state._fsp--;
 
@@ -7081,7 +7150,7 @@ public class OberonParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_declarationSequence_in_module2512);
+			pushFollow(FOLLOW_declarationSequence_in_module2548);
 			declarationSequence299=declarationSequence();
 			state._fsp--;
 
@@ -7090,15 +7159,15 @@ public class OberonParser extends Parser {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:145:78: ( 'BEGIN' ! statementSequence )?
 			int alt56=2;
 			int LA56_0 = input.LA(1);
-			if ( (LA56_0==46) ) {
+			if ( (LA56_0==48) ) {
 				alt56=1;
 			}
 			switch (alt56) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:145:79: 'BEGIN' ! statementSequence
 					{
-					string_literal300=(Token)match(input,46,FOLLOW_46_in_module2515); 
-					pushFollow(FOLLOW_statementSequence_in_module2518);
+					string_literal300=(Token)match(input,48,FOLLOW_48_in_module2551); 
+					pushFollow(FOLLOW_statementSequence_in_module2554);
 					statementSequence301=statementSequence();
 					state._fsp--;
 
@@ -7109,10 +7178,10 @@ public class OberonParser extends Parser {
 
 			}
 
-			string_literal302=(Token)match(input,55,FOLLOW_55_in_module2522); 
-			IDENT303=(Token)match(input,IDENT,FOLLOW_IDENT_in_module2525); 
-			char_literal304=(Token)match(input,32,FOLLOW_32_in_module2528); 
-			EOF305=(Token)match(input,EOF,FOLLOW_EOF_in_module2531); 
+			string_literal302=(Token)match(input,57,FOLLOW_57_in_module2558); 
+			IDENT303=(Token)match(input,IDENT,FOLLOW_IDENT_in_module2561); 
+			char_literal304=(Token)match(input,34,FOLLOW_34_in_module2564); 
+			EOF305=(Token)match(input,EOF,FOLLOW_EOF_in_module2567); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -7158,19 +7227,19 @@ public class OberonParser extends Parser {
 		Object string_literal306_tree=null;
 		Object char_literal308_tree=null;
 		Object char_literal310_tree=null;
-		RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
-		RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
-		RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+		RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
+		RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
+		RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
 		RewriteRuleSubtreeStream stream_importDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule importDeclaration");
 
 		try {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:147:23: ( 'IMPORT' importDeclaration ( ',' importDeclaration )* ';' -> ^( 'IMPORT' importDeclaration ( importDeclaration )* ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:147:25: 'IMPORT' importDeclaration ( ',' importDeclaration )* ';'
 			{
-			string_literal306=(Token)match(input,60,FOLLOW_60_in_importList2551);  
-			stream_60.add(string_literal306);
+			string_literal306=(Token)match(input,62,FOLLOW_62_in_importList2587);  
+			stream_62.add(string_literal306);
 
-			pushFollow(FOLLOW_importDeclaration_in_importList2553);
+			pushFollow(FOLLOW_importDeclaration_in_importList2589);
 			importDeclaration307=importDeclaration();
 			state._fsp--;
 
@@ -7180,7 +7249,7 @@ public class OberonParser extends Parser {
 			while (true) {
 				int alt57=2;
 				int LA57_0 = input.LA(1);
-				if ( (LA57_0==30) ) {
+				if ( (LA57_0==32) ) {
 					alt57=1;
 				}
 
@@ -7188,10 +7257,10 @@ public class OberonParser extends Parser {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:147:53: ',' importDeclaration
 					{
-					char_literal308=(Token)match(input,30,FOLLOW_30_in_importList2556);  
-					stream_30.add(char_literal308);
+					char_literal308=(Token)match(input,32,FOLLOW_32_in_importList2592);  
+					stream_32.add(char_literal308);
 
-					pushFollow(FOLLOW_importDeclaration_in_importList2558);
+					pushFollow(FOLLOW_importDeclaration_in_importList2594);
 					importDeclaration309=importDeclaration();
 					state._fsp--;
 
@@ -7204,11 +7273,11 @@ public class OberonParser extends Parser {
 				}
 			}
 
-			char_literal310=(Token)match(input,37,FOLLOW_37_in_importList2562);  
-			stream_37.add(char_literal310);
+			char_literal310=(Token)match(input,39,FOLLOW_39_in_importList2598);  
+			stream_39.add(char_literal310);
 
 			// AST REWRITE
-			// elements: 60, importDeclaration, importDeclaration
+			// elements: importDeclaration, 62, importDeclaration
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -7223,7 +7292,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:147:88: ^( 'IMPORT' importDeclaration ( importDeclaration )* )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_60.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_62.nextNode(), root_1);
 				adaptor.addChild(root_1, stream_importDeclaration.nextTree());
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:147:117: ( importDeclaration )*
 				while ( stream_importDeclaration.hasNext() ) {
@@ -7283,29 +7352,29 @@ public class OberonParser extends Parser {
 		Object string_literal312_tree=null;
 		Object IDENT313_tree=null;
 		RewriteRuleTokenStream stream_IDENT=new RewriteRuleTokenStream(adaptor,"token IDENT");
-		RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
+		RewriteRuleTokenStream stream_38=new RewriteRuleTokenStream(adaptor,"token 38");
 
 		try {
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:149:23: ( IDENT ( ':=' IDENT )? -> ^( ':=' IDENT ( IDENT )? ) )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:149:26: IDENT ( ':=' IDENT )?
 			{
-			IDENT311=(Token)match(input,IDENT,FOLLOW_IDENT_in_importDeclaration2595);  
+			IDENT311=(Token)match(input,IDENT,FOLLOW_IDENT_in_importDeclaration2631);  
 			stream_IDENT.add(IDENT311);
 
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:149:32: ( ':=' IDENT )?
 			int alt58=2;
 			int LA58_0 = input.LA(1);
-			if ( (LA58_0==36) ) {
+			if ( (LA58_0==38) ) {
 				alt58=1;
 			}
 			switch (alt58) {
 				case 1 :
 					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:149:33: ':=' IDENT
 					{
-					string_literal312=(Token)match(input,36,FOLLOW_36_in_importDeclaration2598);  
-					stream_36.add(string_literal312);
+					string_literal312=(Token)match(input,38,FOLLOW_38_in_importDeclaration2634);  
+					stream_38.add(string_literal312);
 
-					IDENT313=(Token)match(input,IDENT,FOLLOW_IDENT_in_importDeclaration2600);  
+					IDENT313=(Token)match(input,IDENT,FOLLOW_IDENT_in_importDeclaration2636);  
 					stream_IDENT.add(IDENT313);
 
 					}
@@ -7314,7 +7383,7 @@ public class OberonParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: IDENT, 36, IDENT
+			// elements: IDENT, IDENT, 38
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -7329,7 +7398,7 @@ public class OberonParser extends Parser {
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:149:88: ^( ':=' IDENT ( IDENT )? )
 				{
 				Object root_1 = (Object)adaptor.nil();
-				root_1 = (Object)adaptor.becomeRoot(stream_36.nextNode(), root_1);
+				root_1 = (Object)adaptor.becomeRoot(stream_38.nextNode(), root_1);
 				adaptor.addChild(root_1, stream_IDENT.nextNode());
 				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:149:102: ( IDENT )?
 				if ( stream_IDENT.hasNext() ) {
@@ -7369,315 +7438,315 @@ public class OberonParser extends Parser {
 
 
 
-	public static final BitSet FOLLOW_43_in_abs89 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_abs92 = new BitSet(new long[]{0x0000000000088000L});
-	public static final BitSet FOLLOW_number_in_abs95 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_abs97 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_73_in_odd123 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_odd126 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_odd129 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_odd131 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_47_in_cap173 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_cap176 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_CHARACTER_in_cap179 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_cap181 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_45_in_ash207 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_ash210 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_ash213 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_ash215 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_65_in_len241 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_len244 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_len247 = new BitSet(new long[]{0x0000000048000000L});
-	public static final BitSet FOLLOW_30_in_len250 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_len252 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_len256 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_67_in_maxMin280 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_68_in_maxMin283 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_maxMin287 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_maxMin290 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_set_in_maxMin292 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_maxMin294 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_81_in_size320 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_size323 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_size326 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_size328 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_62_in_inc355 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_inc358 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_inc361 = new BitSet(new long[]{0x0000000048000000L});
-	public static final BitSet FOLLOW_30_in_inc364 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_inc367 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_inc371 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_50_in_dec397 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_dec400 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_dec403 = new BitSet(new long[]{0x0000000048000000L});
-	public static final BitSet FOLLOW_30_in_dec406 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_dec409 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_dec413 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_63_in_incl438 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_incl441 = new BitSet(new long[]{0x0000000000000000L,0x0000000010000000L});
-	public static final BitSet FOLLOW_set_in_incl444 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_incl446 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_incl449 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_incl451 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_56_in_excl476 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_excl479 = new BitSet(new long[]{0x0000000000000000L,0x0000000010000000L});
-	public static final BitSet FOLLOW_set_in_excl482 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_excl484 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_excl487 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_excl489 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_49_in_copy514 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_copy517 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_copy520 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_copy522 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_copy525 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_copy527 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_71_in_neW553 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_neW556 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_neW559 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_neW561 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_58_in_halt587 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_halt590 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_INTEGER_in_halt593 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_halt595 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_abs_in_predefined616 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_odd_in_predefined618 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_cap_in_predefined620 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ash_in_predefined622 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_len_in_predefined624 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_maxMin_in_predefined626 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_size_in_predefined628 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_inc_in_predefined630 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_dec_in_predefined632 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_incl_in_predefined634 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_excl_in_predefined636 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_copy_in_predefined638 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_neW_in_predefined640 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_halt_in_predefined642 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IDENT_in_identdef694 = new BitSet(new long[]{0x0000000010000002L});
-	public static final BitSet FOLLOW_28_in_identdef696 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identdef_in_constantDeclaration707 = new BitSet(new long[]{0x0000010000000000L});
-	public static final BitSet FOLLOW_40_in_constantDeclaration709 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_constExpression_in_constantDeclaration711 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_constExpression741 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identdef_in_typeDeclaration755 = new BitSet(new long[]{0x0000010000000000L});
-	public static final BitSet FOLLOW_40_in_typeDeclaration757 = new BitSet(new long[]{0x0000100000004000L,0x0000000000007000L});
-	public static final BitSet FOLLOW_type_in_typeDeclaration759 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_qualident_in_type811 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_arrayType_in_type815 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_recordType_in_type819 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_pointerType_in_type823 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_procedureType_in_type827 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_44_in_arrayType847 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_length_in_arrayType849 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000400L});
-	public static final BitSet FOLLOW_30_in_arrayType852 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_length_in_arrayType854 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000400L});
-	public static final BitSet FOLLOW_74_in_arrayType858 = new BitSet(new long[]{0x0000100000004000L,0x0000000000007000L});
-	public static final BitSet FOLLOW_type_in_arrayType860 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_constExpression_in_length883 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_78_in_recordType902 = new BitSet(new long[]{0x0000002004004000L});
-	public static final BitSet FOLLOW_26_in_recordType905 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_baseType_in_recordType907 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_recordType909 = new BitSet(new long[]{0x0000002000004000L});
-	public static final BitSet FOLLOW_fieldListSequence_in_recordType913 = new BitSet(new long[]{0x0080000000000000L});
-	public static final BitSet FOLLOW_55_in_recordType915 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_qualident_in_baseType947 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_fieldList_in_fieldListSequence959 = new BitSet(new long[]{0x0000002000000002L});
-	public static final BitSet FOLLOW_37_in_fieldListSequence962 = new BitSet(new long[]{0x0000002000004000L});
-	public static final BitSet FOLLOW_fieldList_in_fieldListSequence965 = new BitSet(new long[]{0x0000002000000002L});
-	public static final BitSet FOLLOW_identList_in_fieldList989 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_35_in_fieldList991 = new BitSet(new long[]{0x0000100000004000L,0x0000000000007000L});
-	public static final BitSet FOLLOW_type_in_fieldList994 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identdef_in_identList1016 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_30_in_identList1019 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_identdef_in_identList1021 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_76_in_pointerType1041 = new BitSet(new long[]{0x0000100000004000L,0x0000000000007000L});
-	public static final BitSet FOLLOW_type_in_pointerType1044 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_77_in_procedureType1060 = new BitSet(new long[]{0x0000000004000002L});
-	public static final BitSet FOLLOW_formalParameters_in_procedureType1063 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identList_in_variableDeclaration1074 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_35_in_variableDeclaration1076 = new BitSet(new long[]{0x0000100000004000L,0x0000000000007000L});
-	public static final BitSet FOLLOW_type_in_variableDeclaration1078 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IDENT_in_qualident1117 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_qualident1119 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_IDENT_in_qualident1123 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_qualident_in_designator1151 = new BitSet(new long[]{0x0000000104000002L,0x0000000005000000L});
-	public static final BitSet FOLLOW_32_in_designator1162 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_IDENT_in_designator1164 = new BitSet(new long[]{0x0000000104000002L,0x0000000005000000L});
-	public static final BitSet FOLLOW_88_in_designator1168 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expList_in_designator1171 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_89_in_designator1173 = new BitSet(new long[]{0x0000000104000002L,0x0000000005000000L});
-	public static final BitSet FOLLOW_26_in_designator1178 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_designator1181 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_designator1183 = new BitSet(new long[]{0x0000000104000002L,0x0000000005000000L});
-	public static final BitSet FOLLOW_90_in_designator1188 = new BitSet(new long[]{0x0000000104000002L,0x0000000005000000L});
-	public static final BitSet FOLLOW_expression_in_expList1212 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_30_in_expList1215 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_expList1217 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_simpleExpression_in_expression1238 = new BitSet(new long[]{0x200007C001000002L,0x0000000000000001L});
-	public static final BitSet FOLLOW_relation_in_expression1241 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_simpleExpression_in_expression1244 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_term_in_simpleExpression1303 = new BitSet(new long[]{0x00000000A0000002L,0x0000000000000800L});
-	public static final BitSet FOLLOW_addOperator_in_simpleExpression1306 = new BitSet(new long[]{0x000000000428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_term_in_simpleExpression1309 = new BitSet(new long[]{0x00000000A0000002L,0x0000000000000800L});
-	public static final BitSet FOLLOW_factor_in_term1362 = new BitSet(new long[]{0x0008000412000002L,0x0000000000000020L});
-	public static final BitSet FOLLOW_mulOperator_in_term1365 = new BitSet(new long[]{0x000000000428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_factor_in_term1368 = new BitSet(new long[]{0x0008000412000002L,0x0000000000000020L});
-	public static final BitSet FOLLOW_number_in_factor1419 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CHARCONST_in_factor1423 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_STRING_in_factor1427 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_72_in_factor1431 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_set_in_factor1435 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_designator_in_factor1439 = new BitSet(new long[]{0x0000000004000002L});
-	public static final BitSet FOLLOW_actualParameters_in_factor1441 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_26_in_factor1446 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_factor1449 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_factor1452 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_95_in_factor1457 = new BitSet(new long[]{0x000000000428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_factor_in_factor1459 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_92_in_set1485 = new BitSet(new long[]{0x00000000A428C080L,0x00000000D0000100L});
-	public static final BitSet FOLLOW_element_in_set1488 = new BitSet(new long[]{0x0000000040000000L,0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_set1491 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_element_in_set1493 = new BitSet(new long[]{0x0000000040000000L,0x0000000040000000L});
-	public static final BitSet FOLLOW_94_in_set1500 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_element1522 = new BitSet(new long[]{0x0000000200000002L});
-	public static final BitSet FOLLOW_33_in_element1526 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_element1528 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_26_in_actualParameters1543 = new BitSet(new long[]{0x00000000AC28C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expList_in_actualParameters1546 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_actualParameters1549 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_predefined_in_statement1572 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_statement2_in_statement1574 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ifStatement_in_statement1576 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_caseStatement_in_statement1578 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_whileStatement_in_statement1580 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_repeatStatement_in_statement1582 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_loopStatement_in_statement1584 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_withStatement_in_statement1586 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_57_in_statement1589 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_80_in_statement1593 = new BitSet(new long[]{0x00000000A428C082L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_statement1595 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_designator_in_statement21618 = new BitSet(new long[]{0x0000001004000000L});
-	public static final BitSet FOLLOW_36_in_statement21623 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_statement21625 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_procedureCall_in_statement21630 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_actualParameters_in_procedureCall1664 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_statement_in_statementSequence1677 = new BitSet(new long[]{0x0000002000000002L});
-	public static final BitSet FOLLOW_37_in_statementSequence1681 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statement_in_statementSequence1683 = new BitSet(new long[]{0x0000002000000002L});
-	public static final BitSet FOLLOW_59_in_ifStatement1718 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_ifStatement1720 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_82_in_ifStatement1722 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_ifStatement1726 = new BitSet(new long[]{0x00E0000000000000L});
-	public static final BitSet FOLLOW_54_in_ifStatement1729 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_ifStatement1731 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_82_in_ifStatement1733 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_ifStatement1737 = new BitSet(new long[]{0x00E0000000000000L});
-	public static final BitSet FOLLOW_53_in_ifStatement1742 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_ifStatement1746 = new BitSet(new long[]{0x0080000000000000L});
-	public static final BitSet FOLLOW_55_in_ifStatement1750 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_91_in_caseStatement1827 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_caseStatement1829 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-	public static final BitSet FOLLOW_74_in_caseStatement1831 = new BitSet(new long[]{0x00A00000A428C080L,0x00000000B0000100L});
-	public static final BitSet FOLLOW_casE_in_caseStatement1833 = new BitSet(new long[]{0x00A0000000000000L,0x0000000020000000L});
-	public static final BitSet FOLLOW_93_in_caseStatement1836 = new BitSet(new long[]{0x00A00000A428C080L,0x00000000B0000100L});
-	public static final BitSet FOLLOW_casE_in_caseStatement1838 = new BitSet(new long[]{0x00A0000000000000L,0x0000000020000000L});
-	public static final BitSet FOLLOW_53_in_caseStatement1843 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_caseStatement1845 = new BitSet(new long[]{0x0080000000000000L});
-	public static final BitSet FOLLOW_55_in_caseStatement1849 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_caseLabelList_in_casE1926 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_35_in_casE1928 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_casE1930 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_caseLabels_in_caseLabelList1948 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_30_in_caseLabelList1951 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_caseLabels_in_caseLabelList1953 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_constExpression_in_caseLabels1974 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_33_in_caseLabels1977 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_constExpression_in_caseLabels1979 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_86_in_whileStatement1995 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_whileStatement1997 = new BitSet(new long[]{0x0010000000000000L});
-	public static final BitSet FOLLOW_52_in_whileStatement1999 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_whileStatement2001 = new BitSet(new long[]{0x0080000000000000L});
-	public static final BitSet FOLLOW_55_in_whileStatement2003 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_79_in_repeatStatement2027 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_repeatStatement2030 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_84_in_repeatStatement2032 = new BitSet(new long[]{0x00000000A428C080L,0x0000000090000100L});
-	public static final BitSet FOLLOW_expression_in_repeatStatement2035 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_66_in_loopStatement2051 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_loopStatement2054 = new BitSet(new long[]{0x0080000000000000L});
-	public static final BitSet FOLLOW_55_in_loopStatement2056 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_87_in_withStatement2073 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_withStatement2076 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_35_in_withStatement2078 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_withStatement2080 = new BitSet(new long[]{0x0010000000000000L});
-	public static final BitSet FOLLOW_52_in_withStatement2082 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_withStatement2085 = new BitSet(new long[]{0x0080000000000000L});
-	public static final BitSet FOLLOW_55_in_withStatement2087 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_procedureHeading_in_procedureDeclaration2097 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_procedureDeclaration2099 = new BitSet(new long[]{0x0081400000000000L,0x0000000000282000L});
-	public static final BitSet FOLLOW_procedureBody_in_procedureDeclaration2101 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_IDENT_in_procedureDeclaration2103 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_77_in_procedureHeading2143 = new BitSet(new long[]{0x0000000010004000L});
-	public static final BitSet FOLLOW_28_in_procedureHeading2145 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_identdef_in_procedureHeading2148 = new BitSet(new long[]{0x0000000004000002L});
-	public static final BitSet FOLLOW_formalParameters_in_procedureHeading2150 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_declarationSequence_in_procedureBody2174 = new BitSet(new long[]{0x0080400000000000L});
-	public static final BitSet FOLLOW_46_in_procedureBody2177 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_procedureBody2179 = new BitSet(new long[]{0x0080000000000000L});
-	public static final BitSet FOLLOW_55_in_procedureBody2183 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_77_in_forwardDeclaration2210 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
-	public static final BitSet FOLLOW_90_in_forwardDeclaration2212 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_identdef_in_forwardDeclaration2214 = new BitSet(new long[]{0x0000000004000002L});
-	public static final BitSet FOLLOW_formalParameters_in_forwardDeclaration2216 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_constdeclarationSequence_in_declarationSequence2229 = new BitSet(new long[]{0x0001000000000002L,0x0000000000282000L});
-	public static final BitSet FOLLOW_typedeclarationSequence_in_declarationSequence2233 = new BitSet(new long[]{0x0001000000000002L,0x0000000000282000L});
-	public static final BitSet FOLLOW_vardeclarationSequence_in_declarationSequence2236 = new BitSet(new long[]{0x0001000000000002L,0x0000000000282000L});
-	public static final BitSet FOLLOW_procedureDeclaration_in_declarationSequence2243 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_declarationSequence2245 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
-	public static final BitSet FOLLOW_forwardDeclaration_in_declarationSequence2250 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_declarationSequence2252 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
-	public static final BitSet FOLLOW_48_in_constdeclarationSequence2262 = new BitSet(new long[]{0x0000000000004002L});
-	public static final BitSet FOLLOW_constantDeclaration_in_constdeclarationSequence2265 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_constdeclarationSequence2267 = new BitSet(new long[]{0x0000000000004002L});
-	public static final BitSet FOLLOW_83_in_typedeclarationSequence2295 = new BitSet(new long[]{0x0000000000004002L});
-	public static final BitSet FOLLOW_typeDeclaration_in_typedeclarationSequence2299 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_typedeclarationSequence2301 = new BitSet(new long[]{0x0000000000004002L});
-	public static final BitSet FOLLOW_85_in_vardeclarationSequence2336 = new BitSet(new long[]{0x0000000000004002L});
-	public static final BitSet FOLLOW_variableDeclaration_in_vardeclarationSequence2339 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_vardeclarationSequence2341 = new BitSet(new long[]{0x0000000000004002L});
-	public static final BitSet FOLLOW_26_in_formalParameters2378 = new BitSet(new long[]{0x0000000008004000L,0x0000000000200000L});
-	public static final BitSet FOLLOW_fpSection_in_formalParameters2381 = new BitSet(new long[]{0x0000002008000000L});
-	public static final BitSet FOLLOW_37_in_formalParameters2384 = new BitSet(new long[]{0x0000000000004000L,0x0000000000200000L});
-	public static final BitSet FOLLOW_fpSection_in_formalParameters2386 = new BitSet(new long[]{0x0000002008000000L});
-	public static final BitSet FOLLOW_27_in_formalParameters2392 = new BitSet(new long[]{0x0000000800000002L});
-	public static final BitSet FOLLOW_35_in_formalParameters2395 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_qualident_in_formalParameters2397 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_85_in_fpSection2431 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_IDENT_in_fpSection2434 = new BitSet(new long[]{0x0000000840000000L});
-	public static final BitSet FOLLOW_30_in_fpSection2437 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_IDENT_in_fpSection2439 = new BitSet(new long[]{0x0000000840000000L});
-	public static final BitSet FOLLOW_35_in_fpSection2444 = new BitSet(new long[]{0x0000100000004000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_formalType_in_fpSection2446 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_44_in_formalType2466 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
-	public static final BitSet FOLLOW_74_in_formalType2469 = new BitSet(new long[]{0x0000100000004000L});
-	public static final BitSet FOLLOW_qualident_in_formalType2474 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_procedureType_in_formalType2478 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_70_in_module2501 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_IDENT_in_module2504 = new BitSet(new long[]{0x0000002000000000L});
-	public static final BitSet FOLLOW_37_in_module2506 = new BitSet(new long[]{0x1081400000000000L,0x0000000000282000L});
-	public static final BitSet FOLLOW_importList_in_module2509 = new BitSet(new long[]{0x0081400000000000L,0x0000000000282000L});
-	public static final BitSet FOLLOW_declarationSequence_in_module2512 = new BitSet(new long[]{0x0080400000000000L});
-	public static final BitSet FOLLOW_46_in_module2515 = new BitSet(new long[]{0xCF06A82000004000L,0x0000000018C3829EL});
-	public static final BitSet FOLLOW_statementSequence_in_module2518 = new BitSet(new long[]{0x0080000000000000L});
-	public static final BitSet FOLLOW_55_in_module2522 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_IDENT_in_module2525 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_module2528 = new BitSet(new long[]{0x0000000000000000L});
-	public static final BitSet FOLLOW_EOF_in_module2531 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_60_in_importList2551 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_importDeclaration_in_importList2553 = new BitSet(new long[]{0x0000002040000000L});
-	public static final BitSet FOLLOW_30_in_importList2556 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_importDeclaration_in_importList2558 = new BitSet(new long[]{0x0000002040000000L});
-	public static final BitSet FOLLOW_37_in_importList2562 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IDENT_in_importDeclaration2595 = new BitSet(new long[]{0x0000001000000002L});
-	public static final BitSet FOLLOW_36_in_importDeclaration2598 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_IDENT_in_importDeclaration2600 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_45_in_abs93 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_abs96 = new BitSet(new long[]{0x0000000000210000L});
+	public static final BitSet FOLLOW_number_in_abs99 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_abs101 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_75_in_odd127 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_odd130 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_odd133 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_odd135 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_49_in_cap177 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_cap180 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_CHARACTER_in_cap183 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_cap185 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_47_in_ash211 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_ash214 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_ash217 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_ash219 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_67_in_len245 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_len248 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_len251 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_32_in_len254 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_len256 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_len260 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_69_in_maxMin284 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_70_in_maxMin287 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_maxMin291 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_maxMin294 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_set_in_maxMin296 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_maxMin298 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_83_in_size324 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_size327 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_size330 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_size332 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_64_in_inc359 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_inc362 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_inc365 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_32_in_inc368 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_inc371 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_inc375 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_52_in_dec401 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_dec404 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_dec407 = new BitSet(new long[]{0x0000000120000000L});
+	public static final BitSet FOLLOW_32_in_dec410 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_dec413 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_dec417 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_65_in_incl442 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_incl445 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
+	public static final BitSet FOLLOW_set_in_incl448 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_incl450 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_incl453 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_incl455 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_58_in_excl480 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_excl483 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
+	public static final BitSet FOLLOW_set_in_excl486 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_excl488 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_excl491 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_excl493 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_51_in_copy518 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_copy521 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_copy524 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_copy526 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_copy529 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_copy531 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_73_in_neW557 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_neW560 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_neW563 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_neW565 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_60_in_halt591 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_halt594 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_INTEGER_in_halt597 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_halt599 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_abs_in_predefined620 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_odd_in_predefined622 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_cap_in_predefined624 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ash_in_predefined626 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_len_in_predefined628 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_maxMin_in_predefined630 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_size_in_predefined632 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_inc_in_predefined634 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_dec_in_predefined636 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_incl_in_predefined638 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_excl_in_predefined640 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_copy_in_predefined642 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_neW_in_predefined644 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_halt_in_predefined646 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IDENT_in_identdef698 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_30_in_identdef700 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identdef_in_constantDeclaration711 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_42_in_constantDeclaration713 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_constExpression_in_constantDeclaration715 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_constExpression745 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identdef_in_typeDeclaration759 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_42_in_typeDeclaration761 = new BitSet(new long[]{0x0000400000008000L,0x000000000001C000L});
+	public static final BitSet FOLLOW_type_in_typeDeclaration763 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_qualident_in_type815 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_arrayType_in_type819 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_recordType_in_type823 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_pointerType_in_type827 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_procedureType_in_type831 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_46_in_arrayType851 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_length_in_arrayType853 = new BitSet(new long[]{0x0000000100000000L,0x0000000000001000L});
+	public static final BitSet FOLLOW_32_in_arrayType856 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_length_in_arrayType858 = new BitSet(new long[]{0x0000000100000000L,0x0000000000001000L});
+	public static final BitSet FOLLOW_76_in_arrayType862 = new BitSet(new long[]{0x0000400000008000L,0x000000000001C000L});
+	public static final BitSet FOLLOW_type_in_arrayType864 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_constExpression_in_length903 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_80_in_recordType922 = new BitSet(new long[]{0x0000008010008000L});
+	public static final BitSet FOLLOW_28_in_recordType925 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_baseType_in_recordType927 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_recordType929 = new BitSet(new long[]{0x0000008000008000L});
+	public static final BitSet FOLLOW_fieldListSequence_in_recordType933 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_57_in_recordType935 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_qualident_in_baseType967 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_fieldList_in_fieldListSequence979 = new BitSet(new long[]{0x0000008000000002L});
+	public static final BitSet FOLLOW_39_in_fieldListSequence982 = new BitSet(new long[]{0x0000008000008000L});
+	public static final BitSet FOLLOW_fieldList_in_fieldListSequence985 = new BitSet(new long[]{0x0000008000000002L});
+	public static final BitSet FOLLOW_identList_in_fieldList1009 = new BitSet(new long[]{0x0000002000000000L});
+	public static final BitSet FOLLOW_37_in_fieldList1011 = new BitSet(new long[]{0x0000400000008000L,0x000000000001C000L});
+	public static final BitSet FOLLOW_type_in_fieldList1014 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identdef_in_identList1036 = new BitSet(new long[]{0x0000000100000002L});
+	public static final BitSet FOLLOW_32_in_identList1039 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_identdef_in_identList1041 = new BitSet(new long[]{0x0000000100000002L});
+	public static final BitSet FOLLOW_78_in_pointerType1061 = new BitSet(new long[]{0x0000400000008000L,0x000000000001C000L});
+	public static final BitSet FOLLOW_type_in_pointerType1064 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_79_in_procedureType1080 = new BitSet(new long[]{0x0000000010000002L});
+	public static final BitSet FOLLOW_formalParameters_in_procedureType1083 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identList_in_variableDeclaration1094 = new BitSet(new long[]{0x0000002000000000L});
+	public static final BitSet FOLLOW_37_in_variableDeclaration1096 = new BitSet(new long[]{0x0000400000008000L,0x000000000001C000L});
+	public static final BitSet FOLLOW_type_in_variableDeclaration1098 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IDENT_in_qualident1137 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_qualident1139 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_IDENT_in_qualident1143 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_qualident_in_designator1171 = new BitSet(new long[]{0x0000000410000002L,0x0000000014000000L});
+	public static final BitSet FOLLOW_34_in_designator1182 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_IDENT_in_designator1185 = new BitSet(new long[]{0x0000000410000002L,0x0000000014000000L});
+	public static final BitSet FOLLOW_90_in_designator1189 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expList_in_designator1192 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_91_in_designator1194 = new BitSet(new long[]{0x0000000410000002L,0x0000000014000000L});
+	public static final BitSet FOLLOW_28_in_designator1199 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_designator1202 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_designator1204 = new BitSet(new long[]{0x0000000410000002L,0x0000000014000000L});
+	public static final BitSet FOLLOW_92_in_designator1209 = new BitSet(new long[]{0x0000000410000002L,0x0000000014000000L});
+	public static final BitSet FOLLOW_expression_in_expList1233 = new BitSet(new long[]{0x0000000100000002L});
+	public static final BitSet FOLLOW_32_in_expList1236 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_expList1238 = new BitSet(new long[]{0x0000000100000002L});
+	public static final BitSet FOLLOW_simpleExpression_in_expression1259 = new BitSet(new long[]{0x80001F0004000002L,0x0000000000000004L});
+	public static final BitSet FOLLOW_relation_in_expression1262 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_simpleExpression_in_expression1265 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_term_in_simpleExpression1324 = new BitSet(new long[]{0x0000000280000002L,0x0000000000002000L});
+	public static final BitSet FOLLOW_addOperator_in_simpleExpression1327 = new BitSet(new long[]{0x0000000010A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_term_in_simpleExpression1330 = new BitSet(new long[]{0x0000000280000002L,0x0000000000002000L});
+	public static final BitSet FOLLOW_factor_in_term1383 = new BitSet(new long[]{0x0020001048000002L,0x0000000000000080L});
+	public static final BitSet FOLLOW_mulOperator_in_term1386 = new BitSet(new long[]{0x0000000010A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_factor_in_term1389 = new BitSet(new long[]{0x0020001048000002L,0x0000000000000080L});
+	public static final BitSet FOLLOW_number_in_factor1440 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CHARCONST_in_factor1444 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_STRING_in_factor1448 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_74_in_factor1452 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_set_in_factor1456 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_designator_in_factor1460 = new BitSet(new long[]{0x0000000010000002L});
+	public static final BitSet FOLLOW_actualParameters_in_factor1462 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_28_in_factor1467 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_factor1470 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_factor1473 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_97_in_factor1478 = new BitSet(new long[]{0x0000000010A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_factor_in_factor1480 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_94_in_set1506 = new BitSet(new long[]{0x0000000290A18080L,0x0000000340000400L});
+	public static final BitSet FOLLOW_element_in_set1509 = new BitSet(new long[]{0x0000000100000000L,0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_set1512 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_element_in_set1514 = new BitSet(new long[]{0x0000000100000000L,0x0000000100000000L});
+	public static final BitSet FOLLOW_96_in_set1521 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_element1543 = new BitSet(new long[]{0x0000000800000002L});
+	public static final BitSet FOLLOW_35_in_element1547 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_element1549 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_28_in_actualParameters1564 = new BitSet(new long[]{0x00000002B0A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expList_in_actualParameters1567 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_actualParameters1570 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_predefined_in_statement1593 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_statement2_in_statement1595 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ifStatement_in_statement1597 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_caseStatement_in_statement1599 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_whileStatement_in_statement1601 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_repeatStatement_in_statement1603 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_loopStatement_in_statement1605 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_withStatement_in_statement1607 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_59_in_statement1610 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_82_in_statement1614 = new BitSet(new long[]{0x0000000290A18082L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_statement1616 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_designator_in_statement21639 = new BitSet(new long[]{0x0000004010000000L});
+	public static final BitSet FOLLOW_38_in_statement21644 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_statement21646 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_procedureCall_in_statement21651 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_actualParameters_in_procedureCall1685 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_statement_in_statementSequence1698 = new BitSet(new long[]{0x0000008000000002L});
+	public static final BitSet FOLLOW_39_in_statementSequence1702 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statement_in_statementSequence1704 = new BitSet(new long[]{0x0000008000000002L});
+	public static final BitSet FOLLOW_61_in_ifStatement1739 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_ifStatement1741 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_84_in_ifStatement1743 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_ifStatement1747 = new BitSet(new long[]{0x0380000000000000L});
+	public static final BitSet FOLLOW_56_in_ifStatement1750 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_ifStatement1752 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_84_in_ifStatement1754 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_ifStatement1758 = new BitSet(new long[]{0x0380000000000000L});
+	public static final BitSet FOLLOW_55_in_ifStatement1763 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_ifStatement1767 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_57_in_ifStatement1771 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_93_in_caseStatement1848 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_caseStatement1850 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+	public static final BitSet FOLLOW_76_in_caseStatement1852 = new BitSet(new long[]{0x0280000290A18080L,0x00000002C0000400L});
+	public static final BitSet FOLLOW_casE_in_caseStatement1854 = new BitSet(new long[]{0x0280000000000000L,0x0000000080000000L});
+	public static final BitSet FOLLOW_95_in_caseStatement1857 = new BitSet(new long[]{0x0280000290A18080L,0x00000002C0000400L});
+	public static final BitSet FOLLOW_casE_in_caseStatement1859 = new BitSet(new long[]{0x0280000000000000L,0x0000000080000000L});
+	public static final BitSet FOLLOW_55_in_caseStatement1864 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_caseStatement1866 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_57_in_caseStatement1870 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_caseLabelList_in_casE1947 = new BitSet(new long[]{0x0000002000000000L});
+	public static final BitSet FOLLOW_37_in_casE1949 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_casE1951 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_caseLabels_in_caseLabelList1969 = new BitSet(new long[]{0x0000000100000002L});
+	public static final BitSet FOLLOW_32_in_caseLabelList1972 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_caseLabels_in_caseLabelList1974 = new BitSet(new long[]{0x0000000100000002L});
+	public static final BitSet FOLLOW_constExpression_in_caseLabels1995 = new BitSet(new long[]{0x0000000800000000L});
+	public static final BitSet FOLLOW_35_in_caseLabels1998 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_constExpression_in_caseLabels2000 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_88_in_whileStatement2016 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_whileStatement2018 = new BitSet(new long[]{0x0040000000000000L});
+	public static final BitSet FOLLOW_54_in_whileStatement2020 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_whileStatement2022 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_57_in_whileStatement2024 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_81_in_repeatStatement2048 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_repeatStatement2051 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_86_in_repeatStatement2053 = new BitSet(new long[]{0x0000000290A18080L,0x0000000240000400L});
+	public static final BitSet FOLLOW_expression_in_repeatStatement2056 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_68_in_loopStatement2072 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_loopStatement2075 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_57_in_loopStatement2077 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_89_in_withStatement2094 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_withStatement2097 = new BitSet(new long[]{0x0000002000000000L});
+	public static final BitSet FOLLOW_37_in_withStatement2099 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_withStatement2101 = new BitSet(new long[]{0x0040000000000000L});
+	public static final BitSet FOLLOW_54_in_withStatement2103 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_withStatement2106 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_57_in_withStatement2108 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_procedureHeading_in_procedureDeclaration2118 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_procedureDeclaration2120 = new BitSet(new long[]{0x0205000000000000L,0x0000000000A08000L});
+	public static final BitSet FOLLOW_procedureBody_in_procedureDeclaration2122 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_IDENT_in_procedureDeclaration2124 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_79_in_procedureHeading2164 = new BitSet(new long[]{0x0000000040008000L});
+	public static final BitSet FOLLOW_30_in_procedureHeading2166 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_identdef_in_procedureHeading2169 = new BitSet(new long[]{0x0000000010000002L});
+	public static final BitSet FOLLOW_formalParameters_in_procedureHeading2171 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_declarationSequence_in_procedureBody2195 = new BitSet(new long[]{0x0201000000000000L});
+	public static final BitSet FOLLOW_48_in_procedureBody2198 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_procedureBody2200 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_57_in_procedureBody2204 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_79_in_forwardDeclaration2231 = new BitSet(new long[]{0x0000000000000000L,0x0000000010000000L});
+	public static final BitSet FOLLOW_92_in_forwardDeclaration2233 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_identdef_in_forwardDeclaration2235 = new BitSet(new long[]{0x0000000010000002L});
+	public static final BitSet FOLLOW_formalParameters_in_forwardDeclaration2237 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_constdeclarationSequence_in_declarationSequence2250 = new BitSet(new long[]{0x0004000000000002L,0x0000000000A08000L});
+	public static final BitSet FOLLOW_typedeclarationSequence_in_declarationSequence2254 = new BitSet(new long[]{0x0004000000000002L,0x0000000000A08000L});
+	public static final BitSet FOLLOW_vardeclarationSequence_in_declarationSequence2257 = new BitSet(new long[]{0x0004000000000002L,0x0000000000A08000L});
+	public static final BitSet FOLLOW_procedureDeclaration_in_declarationSequence2264 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_declarationSequence2266 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
+	public static final BitSet FOLLOW_forwardDeclaration_in_declarationSequence2271 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_declarationSequence2273 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
+	public static final BitSet FOLLOW_50_in_constdeclarationSequence2283 = new BitSet(new long[]{0x0000000000008002L});
+	public static final BitSet FOLLOW_constantDeclaration_in_constdeclarationSequence2286 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_constdeclarationSequence2288 = new BitSet(new long[]{0x0000000000008002L});
+	public static final BitSet FOLLOW_85_in_typedeclarationSequence2316 = new BitSet(new long[]{0x0000000000008002L});
+	public static final BitSet FOLLOW_typeDeclaration_in_typedeclarationSequence2320 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_typedeclarationSequence2322 = new BitSet(new long[]{0x0000000000008002L});
+	public static final BitSet FOLLOW_87_in_vardeclarationSequence2357 = new BitSet(new long[]{0x0000000000008002L});
+	public static final BitSet FOLLOW_variableDeclaration_in_vardeclarationSequence2360 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_vardeclarationSequence2362 = new BitSet(new long[]{0x0000000000008002L});
+	public static final BitSet FOLLOW_28_in_formalParameters2399 = new BitSet(new long[]{0x0000000020008000L,0x0000000000800000L});
+	public static final BitSet FOLLOW_fpSection_in_formalParameters2402 = new BitSet(new long[]{0x0000008020000000L});
+	public static final BitSet FOLLOW_39_in_formalParameters2405 = new BitSet(new long[]{0x0000000000008000L,0x0000000000800000L});
+	public static final BitSet FOLLOW_fpSection_in_formalParameters2407 = new BitSet(new long[]{0x0000008020000000L});
+	public static final BitSet FOLLOW_29_in_formalParameters2413 = new BitSet(new long[]{0x0000002000000002L});
+	public static final BitSet FOLLOW_37_in_formalParameters2416 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_qualident_in_formalParameters2418 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_87_in_fpSection2452 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_IDENT_in_fpSection2455 = new BitSet(new long[]{0x0000002100000000L});
+	public static final BitSet FOLLOW_32_in_fpSection2458 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_IDENT_in_fpSection2460 = new BitSet(new long[]{0x0000002100000000L});
+	public static final BitSet FOLLOW_37_in_fpSection2465 = new BitSet(new long[]{0x0000400000008000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_formalType_in_fpSection2467 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_46_in_formalType2502 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+	public static final BitSet FOLLOW_76_in_formalType2505 = new BitSet(new long[]{0x0000400000008000L});
+	public static final BitSet FOLLOW_qualident_in_formalType2510 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_procedureType_in_formalType2514 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_72_in_module2537 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_IDENT_in_module2540 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_module2542 = new BitSet(new long[]{0x4205000000000000L,0x0000000000A08000L});
+	public static final BitSet FOLLOW_importList_in_module2545 = new BitSet(new long[]{0x0205000000000000L,0x0000000000A08000L});
+	public static final BitSet FOLLOW_declarationSequence_in_module2548 = new BitSet(new long[]{0x0201000000000000L});
+	public static final BitSet FOLLOW_48_in_module2551 = new BitSet(new long[]{0x3C1AA08000008000L,0x00000000630E0A7BL});
+	public static final BitSet FOLLOW_statementSequence_in_module2554 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_57_in_module2558 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_IDENT_in_module2561 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_module2564 = new BitSet(new long[]{0x0000000000000000L});
+	public static final BitSet FOLLOW_EOF_in_module2567 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_62_in_importList2587 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_importDeclaration_in_importList2589 = new BitSet(new long[]{0x0000008100000000L});
+	public static final BitSet FOLLOW_32_in_importList2592 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_importDeclaration_in_importList2594 = new BitSet(new long[]{0x0000008100000000L});
+	public static final BitSet FOLLOW_39_in_importList2598 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IDENT_in_importDeclaration2631 = new BitSet(new long[]{0x0000004000000002L});
+	public static final BitSet FOLLOW_38_in_importDeclaration2634 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_IDENT_in_importDeclaration2636 = new BitSet(new long[]{0x0000000000000002L});
 }
