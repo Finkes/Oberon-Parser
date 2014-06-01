@@ -67,7 +67,7 @@ variableDeclaration   : identList ':' type -> ^(DECLARE identList type);
 
 qualident             : (options{ greedy=true;}:IDENT '.')? IDENT -> ^(ID IDENT*);
 
-designator            : qualident ('.' IDENT | '['! expList ']'! | '('! qualident ')'! | '^')*;
+designator            : qualident (options{ greedy=true;}:'.' IDENT | '['! expList ']'! | '('! qualident ')'! | '^')*;
 
 expList               : expression (',' expression)*;
 
@@ -140,7 +140,7 @@ formalParameters      : '(' (fpSection (';' fpSection)*)? ')' (':' qualident)? -
 
 fpSection             : 'VAR'? IDENT (',' IDENT)*  ':' formalType;
 
-formalType            : ('ARRAY' 'OF')* qualident | procedureType;
+formalType            : ('ARRAY'^ 'OF'!)* qualident | procedureType;
 
 module                : 'MODULE'^ IDENT ';'! importList? declarationSequence ('BEGIN'! statementSequence)? 'END'! IDENT! '.'! EOF!;
 

@@ -16,151 +16,271 @@ digraph {
   n5 [label="key"];
   n6 [label=":"];
   n7 [label="ARRAY"];
-  n8 [label="OF"];
-  n9 [label="ID"];
-  n9 [label="ID"];
-  n10 [label="CHAR"];
-  n11 [label="unique"];
-  n12 [label=":"];
-  n13 [label="ID"];
-  n13 [label="ID"];
-  n14 [label="BOOLEAN"];
-  n15 [label="PROCEDURE_BODY"];
-  n15 [label="PROCEDURE_BODY"];
-  n16 [label="VAR"];
-  n16 [label="VAR"];
-  n17 [label="DECLARE"];
-  n17 [label="DECLARE"];
-  n18 [label="p"];
-  n19 [label=","];
-  n20 [label="q"];
-  n21 [label="ID"];
-  n21 [label="ID"];
-  n22 [label="List"];
-  n23 [label="BLOCK"];
-  n23 [label="BLOCK"];
-  n24 [label="ASSIGN"];
-  n24 [label="ASSIGN"];
-  n25 [label="ID"];
-  n25 [label="ID"];
-  n26 [label="p"];
-  n27 [label="ID"];
-  n27 [label="ID"];
-  n28 [label="root"];
-  n29 [label="WHILE"];
-  n29 [label="WHILE"];
-  n30 [label="&"];
-  n30 [label="&"];
-  n31 [label="#"];
-  n31 [label="#"];
-  n32 [label="ID"];
-  n32 [label="ID"];
-  n33 [label="p"];
-  n34 [label="next"];
-  n35 [label="NIL"];
-  n36 [label="<"];
-  n36 [label="<"];
-  n37 [label="ID"];
-  n37 [label="ID"];
-  n38 [label="p"];
-  n39 [label="next"];
-  n40 [label="."];
-  n41 [label="key"];
-  n42 [label="ID"];
-  n42 [label="ID"];
-  n43 [label="key"];
-  n44 [label="BLOCK"];
-  n44 [label="BLOCK"];
-  n45 [label="ASSIGN"];
-  n45 [label="ASSIGN"];
-  n46 [label="ID"];
-  n46 [label="ID"];
-  n47 [label="p"];
-  n48 [label="ID"];
-  n48 [label="ID"];
-  n49 [label="p"];
-  n50 [label="next"];
-  n51 [label="IF"];
-  n51 [label="IF"];
+  n7 [label="ARRAY"];
+  n8 [label="ID"];
+  n8 [label="ID"];
+  n9 [label="CHAR"];
+  n10 [label="unique"];
+  n11 [label=":"];
+  n12 [label="ID"];
+  n12 [label="ID"];
+  n13 [label="BOOLEAN"];
+  n14 [label="PROCEDURE_BODY"];
+  n14 [label="PROCEDURE_BODY"];
+  n15 [label="VAR"];
+  n15 [label="VAR"];
+  n16 [label="DECLARE"];
+  n16 [label="DECLARE"];
+  n17 [label="p"];
+  n18 [label=","];
+  n19 [label="q"];
+  n20 [label="ID"];
+  n20 [label="ID"];
+  n21 [label="List"];
+  n22 [label="BLOCK"];
+  n22 [label="BLOCK"];
+  n23 [label="ASSIGN"];
+  n23 [label="ASSIGN"];
+  n24 [label="ID"];
+  n24 [label="ID"];
+  n25 [label="p"];
+  n26 [label="ID"];
+  n26 [label="ID"];
+  n27 [label="root"];
+  n28 [label="WHILE"];
+  n28 [label="WHILE"];
+  n29 [label="&"];
+  n29 [label="&"];
+  n30 [label="#"];
+  n30 [label="#"];
+  n31 [label="ID"];
+  n31 [label="ID"];
+  n32 [label="p"];
+  n33 [label="next"];
+  n34 [label="NIL"];
+  n35 [label="<"];
+  n35 [label="<"];
+  n36 [label="ID"];
+  n36 [label="ID"];
+  n37 [label="p"];
+  n38 [label="next"];
+  n39 [label="."];
+  n40 [label="key"];
+  n41 [label="ID"];
+  n41 [label="ID"];
+  n42 [label="key"];
+  n43 [label="BLOCK"];
+  n43 [label="BLOCK"];
+  n44 [label="ASSIGN"];
+  n44 [label="ASSIGN"];
+  n45 [label="ID"];
+  n45 [label="ID"];
+  n46 [label="p"];
+  n47 [label="ID"];
+  n47 [label="ID"];
+  n48 [label="p"];
+  n49 [label="next"];
+  n50 [label="IF"];
+  n50 [label="IF"];
+  n51 [label="&"];
+  n51 [label="&"];
   n52 [label="&"];
   n52 [label="&"];
-  n53 [label="&"];
-  n53 [label="&"];
-  n54 [label="ID"];
-  n54 [label="ID"];
-  n55 [label="unique"];
-  n56 [label="#"];
-  n56 [label="#"];
-  n57 [label="ID"];
-  n57 [label="ID"];
-  n58 [label="p"];
-  n59 [label="next"];
-  n60 [label="NIL"];
-  n61 [label="="];
-  n61 [label="="];
-  n62 [label="ID"];
-  n62 [label="ID"];
-  n63 [label="p"];
-  n64 [label="next"];
-  n65 [label="."];
-  n66 [label="key"];
-  n67 [label="ID"];
-  n67 [label="ID"];
-  n68 [label="key"];
-  n69 [label="BLOCK"];
-  n69 [label="BLOCK"];
-  n70 [label="HALT"];
-  n70 [label="HALT"];
-  n71 [label="99"];
-  n72 [label="NEW"];
-  n72 [label="NEW"];
-  n73 [label="ID"];
-  n73 [label="ID"];
-  n74 [label="q"];
-  n75 [label="COPY"];
-  n75 [label="COPY"];
-  n76 [label="ID"];
-  n76 [label="ID"];
-  n77 [label="key"];
-  n78 [label="ID"];
-  n78 [label="ID"];
-  n79 [label="q"];
-  n80 [label="key"];
-  n81 [label="ASSIGN"];
-  n81 [label="ASSIGN"];
-  n82 [label="ID"];
-  n82 [label="ID"];
-  n83 [label="q"];
-  n84 [label="next"];
-  n85 [label="ID"];
-  n85 [label="ID"];
-  n86 [label="p"];
-  n87 [label="next"];
-  n88 [label="ASSIGN"];
-  n88 [label="ASSIGN"];
-  n89 [label="ID"];
-  n89 [label="ID"];
-  n90 [label="p"];
-  n91 [label="next"];
-  n92 [label="ID"];
-  n92 [label="ID"];
-  n93 [label="q"];
-  n94 [label="ASSIGN"];
-  n94 [label="ASSIGN"];
-  n95 [label="ID"];
-  n95 [label="ID"];
-  n96 [label="p"];
-  n97 [label="next"];
+  n53 [label="ID"];
+  n53 [label="ID"];
+  n54 [label="unique"];
+  n55 [label="#"];
+  n55 [label="#"];
+  n56 [label="ID"];
+  n56 [label="ID"];
+  n57 [label="p"];
+  n58 [label="next"];
+  n59 [label="NIL"];
+  n60 [label="="];
+  n60 [label="="];
+  n61 [label="ID"];
+  n61 [label="ID"];
+  n62 [label="p"];
+  n63 [label="next"];
+  n64 [label="."];
+  n65 [label="key"];
+  n66 [label="ID"];
+  n66 [label="ID"];
+  n67 [label="key"];
+  n68 [label="BLOCK"];
+  n68 [label="BLOCK"];
+  n69 [label="HALT"];
+  n69 [label="HALT"];
+  n70 [label="99"];
+  n71 [label="NEW"];
+  n71 [label="NEW"];
+  n72 [label="ID"];
+  n72 [label="ID"];
+  n73 [label="q"];
+  n74 [label="COPY"];
+  n74 [label="COPY"];
+  n75 [label="ID"];
+  n75 [label="ID"];
+  n76 [label="key"];
+  n77 [label="ID"];
+  n77 [label="ID"];
+  n78 [label="q"];
+  n79 [label="key"];
+  n80 [label="ASSIGN"];
+  n80 [label="ASSIGN"];
+  n81 [label="ID"];
+  n81 [label="ID"];
+  n82 [label="q"];
+  n83 [label="next"];
+  n84 [label="ID"];
+  n84 [label="ID"];
+  n85 [label="p"];
+  n86 [label="next"];
+  n87 [label="ASSIGN"];
+  n87 [label="ASSIGN"];
+  n88 [label="ID"];
+  n88 [label="ID"];
+  n89 [label="p"];
+  n90 [label="next"];
+  n91 [label="ID"];
+  n91 [label="ID"];
+  n92 [label="q"];
+  n93 [label="ASSIGN"];
+  n93 [label="ASSIGN"];
+  n94 [label="ID"];
+  n94 [label="ID"];
+  n95 [label="p"];
+  n96 [label="next"];
+  n97 [label="+"];
+  n97 [label="+"];
   n98 [label="+"];
   n98 [label="+"];
-  n99 [label="+"];
-  n99 [label="+"];
-  n100 [label="1"];
-  n101 [label="2"];
-  n102 [label="*"];
-  n102 [label="*"];
-  n103 [label="3"];
-  n104 [label="4"];
+  n99 [label="1"];
+  n100 [label="2"];
+  n101 [label="*"];
+  n101 [label="*"];
+  n102 [label="3"];
+  n103 [label="4"];
+  n104 [label="PROCEDURE"];
+  n104 [label="PROCEDURE"];
+  n105 [label="Delete"];
+  n106 [label="FORMAL_PARAMETERS"];
+  n106 [label="FORMAL_PARAMETERS"];
+  n107 [label="key"];
+  n108 [label=":"];
+  n109 [label="ARRAY"];
+  n109 [label="ARRAY"];
+  n110 [label="ID"];
+  n110 [label="ID"];
+  n111 [label="CHAR"];
+  n112 [label="PROCEDURE_BODY"];
+  n112 [label="PROCEDURE_BODY"];
+  n113 [label="VAR"];
+  n113 [label="VAR"];
+  n114 [label="DECLARE"];
+  n114 [label="DECLARE"];
+  n115 [label="p"];
+  n116 [label="ID"];
+  n116 [label="ID"];
+  n117 [label="List"];
+  n118 [label="BLOCK"];
+  n118 [label="BLOCK"];
+  n119 [label="ASSIGN"];
+  n119 [label="ASSIGN"];
+  n120 [label="ID"];
+  n120 [label="ID"];
+  n121 [label="p"];
+  n122 [label="ID"];
+  n122 [label="ID"];
+  n123 [label="root"];
+  n124 [label="WHILE"];
+  n124 [label="WHILE"];
+  n125 [label="&"];
+  n125 [label="&"];
+  n126 [label="#"];
+  n126 [label="#"];
+  n127 [label="ID"];
+  n127 [label="ID"];
+  n128 [label="p"];
+  n129 [label="next"];
+  n130 [label="NIL"];
+  n131 [label="<"];
+  n131 [label="<"];
+  n132 [label="ID"];
+  n132 [label="ID"];
+  n133 [label="p"];
+  n134 [label="next"];
+  n135 [label="."];
+  n136 [label="key"];
+  n137 [label="ID"];
+  n137 [label="ID"];
+  n138 [label="key"];
+  n139 [label="BLOCK"];
+  n139 [label="BLOCK"];
+  n140 [label="ASSIGN"];
+  n140 [label="ASSIGN"];
+  n141 [label="ID"];
+  n141 [label="ID"];
+  n142 [label="p"];
+  n143 [label="ID"];
+  n143 [label="ID"];
+  n144 [label="p"];
+  n145 [label="next"];
+  n146 [label="IF"];
+  n146 [label="IF"];
+  n147 [label="&"];
+  n147 [label="&"];
+  n148 [label="#"];
+  n148 [label="#"];
+  n149 [label="ID"];
+  n149 [label="ID"];
+  n150 [label="p"];
+  n151 [label="next"];
+  n152 [label="NIL"];
+  n153 [label="="];
+  n153 [label="="];
+  n154 [label="ID"];
+  n154 [label="ID"];
+  n155 [label="p"];
+  n156 [label="next"];
+  n157 [label="."];
+  n158 [label="key"];
+  n159 [label="ID"];
+  n159 [label="ID"];
+  n160 [label="key"];
+  n161 [label="BLOCK"];
+  n161 [label="BLOCK"];
+  n162 [label="ASSIGN"];
+  n162 [label="ASSIGN"];
+  n163 [label="ID"];
+  n163 [label="ID"];
+  n164 [label="p"];
+  n165 [label="next"];
+  n166 [label="ID"];
+  n166 [label="ID"];
+  n167 [label="p"];
+  n168 [label="next"];
+  n169 [label="."];
+  n170 [label="next"];
+  n171 [label="PROCEDURE"];
+  n171 [label="PROCEDURE"];
+  n172 [label="InitList"];
+  n173 [label="PROCEDURE_BODY"];
+  n173 [label="PROCEDURE_BODY"];
+  n174 [label="BLOCK"];
+  n174 [label="BLOCK"];
+  n175 [label="NEW"];
+  n175 [label="NEW"];
+  n176 [label="ID"];
+  n176 [label="ID"];
+  n177 [label="root"];
+  n178 [label="ASSIGN"];
+  n178 [label="ASSIGN"];
+  n179 [label="ID"];
+  n179 [label="ID"];
+  n180 [label="root"];
+  n181 [label="next"];
+  n182 [label="NIL"];
 
   n0 -> n1 // "MODULE" -> "List"
   n0 -> n2 // "MODULE" -> "PROCEDURE"
@@ -169,102 +289,180 @@ digraph {
   n4 -> n5 // "FORMAL_PARAMETERS" -> "key"
   n4 -> n6 // "FORMAL_PARAMETERS" -> ":"
   n4 -> n7 // "FORMAL_PARAMETERS" -> "ARRAY"
-  n4 -> n8 // "FORMAL_PARAMETERS" -> "OF"
-  n4 -> n9 // "FORMAL_PARAMETERS" -> "ID"
-  n9 -> n10 // "ID" -> "CHAR"
-  n4 -> n11 // "FORMAL_PARAMETERS" -> "unique"
-  n4 -> n12 // "FORMAL_PARAMETERS" -> ":"
-  n4 -> n13 // "FORMAL_PARAMETERS" -> "ID"
-  n13 -> n14 // "ID" -> "BOOLEAN"
-  n2 -> n15 // "PROCEDURE" -> "PROCEDURE_BODY"
-  n15 -> n16 // "PROCEDURE_BODY" -> "VAR"
-  n16 -> n17 // "VAR" -> "DECLARE"
-  n17 -> n18 // "DECLARE" -> "p"
-  n17 -> n19 // "DECLARE" -> ","
-  n17 -> n20 // "DECLARE" -> "q"
-  n17 -> n21 // "DECLARE" -> "ID"
-  n21 -> n22 // "ID" -> "List"
-  n15 -> n23 // "PROCEDURE_BODY" -> "BLOCK"
-  n23 -> n24 // "BLOCK" -> "ASSIGN"
-  n24 -> n25 // "ASSIGN" -> "ID"
-  n25 -> n26 // "ID" -> "p"
-  n24 -> n27 // "ASSIGN" -> "ID"
-  n27 -> n28 // "ID" -> "root"
-  n23 -> n29 // "BLOCK" -> "WHILE"
-  n29 -> n30 // "WHILE" -> "&"
-  n30 -> n31 // "&" -> "#"
-  n31 -> n32 // "#" -> "ID"
-  n32 -> n33 // "ID" -> "p"
-  n32 -> n34 // "ID" -> "next"
-  n31 -> n35 // "#" -> "NIL"
-  n30 -> n36 // "&" -> "<"
-  n36 -> n37 // "<" -> "ID"
-  n37 -> n38 // "ID" -> "p"
-  n37 -> n39 // "ID" -> "next"
-  n36 -> n40 // "<" -> "."
-  n36 -> n41 // "<" -> "key"
-  n36 -> n42 // "<" -> "ID"
-  n42 -> n43 // "ID" -> "key"
-  n29 -> n44 // "WHILE" -> "BLOCK"
-  n44 -> n45 // "BLOCK" -> "ASSIGN"
-  n45 -> n46 // "ASSIGN" -> "ID"
-  n46 -> n47 // "ID" -> "p"
-  n45 -> n48 // "ASSIGN" -> "ID"
-  n48 -> n49 // "ID" -> "p"
-  n48 -> n50 // "ID" -> "next"
-  n23 -> n51 // "BLOCK" -> "IF"
-  n51 -> n52 // "IF" -> "&"
-  n52 -> n53 // "&" -> "&"
-  n53 -> n54 // "&" -> "ID"
-  n54 -> n55 // "ID" -> "unique"
-  n53 -> n56 // "&" -> "#"
-  n56 -> n57 // "#" -> "ID"
-  n57 -> n58 // "ID" -> "p"
-  n57 -> n59 // "ID" -> "next"
-  n56 -> n60 // "#" -> "NIL"
-  n52 -> n61 // "&" -> "="
-  n61 -> n62 // "=" -> "ID"
-  n62 -> n63 // "ID" -> "p"
-  n62 -> n64 // "ID" -> "next"
-  n61 -> n65 // "=" -> "."
-  n61 -> n66 // "=" -> "key"
-  n61 -> n67 // "=" -> "ID"
-  n67 -> n68 // "ID" -> "key"
-  n51 -> n69 // "IF" -> "BLOCK"
-  n69 -> n70 // "BLOCK" -> "HALT"
-  n70 -> n71 // "HALT" -> "99"
-  n23 -> n72 // "BLOCK" -> "NEW"
-  n72 -> n73 // "NEW" -> "ID"
-  n73 -> n74 // "ID" -> "q"
-  n23 -> n75 // "BLOCK" -> "COPY"
-  n75 -> n76 // "COPY" -> "ID"
-  n76 -> n77 // "ID" -> "key"
-  n75 -> n78 // "COPY" -> "ID"
-  n78 -> n79 // "ID" -> "q"
-  n78 -> n80 // "ID" -> "key"
-  n23 -> n81 // "BLOCK" -> "ASSIGN"
-  n81 -> n82 // "ASSIGN" -> "ID"
-  n82 -> n83 // "ID" -> "q"
-  n82 -> n84 // "ID" -> "next"
-  n81 -> n85 // "ASSIGN" -> "ID"
-  n85 -> n86 // "ID" -> "p"
-  n85 -> n87 // "ID" -> "next"
-  n23 -> n88 // "BLOCK" -> "ASSIGN"
-  n88 -> n89 // "ASSIGN" -> "ID"
-  n89 -> n90 // "ID" -> "p"
-  n89 -> n91 // "ID" -> "next"
-  n88 -> n92 // "ASSIGN" -> "ID"
-  n92 -> n93 // "ID" -> "q"
-  n23 -> n94 // "BLOCK" -> "ASSIGN"
-  n94 -> n95 // "ASSIGN" -> "ID"
-  n95 -> n96 // "ID" -> "p"
-  n95 -> n97 // "ID" -> "next"
-  n94 -> n98 // "ASSIGN" -> "+"
-  n98 -> n99 // "+" -> "+"
-  n99 -> n100 // "+" -> "1"
-  n99 -> n101 // "+" -> "2"
-  n98 -> n102 // "+" -> "*"
-  n102 -> n103 // "*" -> "3"
-  n102 -> n104 // "*" -> "4"
+  n7 -> n8 // "ARRAY" -> "ID"
+  n8 -> n9 // "ID" -> "CHAR"
+  n4 -> n10 // "FORMAL_PARAMETERS" -> "unique"
+  n4 -> n11 // "FORMAL_PARAMETERS" -> ":"
+  n4 -> n12 // "FORMAL_PARAMETERS" -> "ID"
+  n12 -> n13 // "ID" -> "BOOLEAN"
+  n2 -> n14 // "PROCEDURE" -> "PROCEDURE_BODY"
+  n14 -> n15 // "PROCEDURE_BODY" -> "VAR"
+  n15 -> n16 // "VAR" -> "DECLARE"
+  n16 -> n17 // "DECLARE" -> "p"
+  n16 -> n18 // "DECLARE" -> ","
+  n16 -> n19 // "DECLARE" -> "q"
+  n16 -> n20 // "DECLARE" -> "ID"
+  n20 -> n21 // "ID" -> "List"
+  n14 -> n22 // "PROCEDURE_BODY" -> "BLOCK"
+  n22 -> n23 // "BLOCK" -> "ASSIGN"
+  n23 -> n24 // "ASSIGN" -> "ID"
+  n24 -> n25 // "ID" -> "p"
+  n23 -> n26 // "ASSIGN" -> "ID"
+  n26 -> n27 // "ID" -> "root"
+  n22 -> n28 // "BLOCK" -> "WHILE"
+  n28 -> n29 // "WHILE" -> "&"
+  n29 -> n30 // "&" -> "#"
+  n30 -> n31 // "#" -> "ID"
+  n31 -> n32 // "ID" -> "p"
+  n31 -> n33 // "ID" -> "next"
+  n30 -> n34 // "#" -> "NIL"
+  n29 -> n35 // "&" -> "<"
+  n35 -> n36 // "<" -> "ID"
+  n36 -> n37 // "ID" -> "p"
+  n36 -> n38 // "ID" -> "next"
+  n35 -> n39 // "<" -> "."
+  n35 -> n40 // "<" -> "key"
+  n35 -> n41 // "<" -> "ID"
+  n41 -> n42 // "ID" -> "key"
+  n28 -> n43 // "WHILE" -> "BLOCK"
+  n43 -> n44 // "BLOCK" -> "ASSIGN"
+  n44 -> n45 // "ASSIGN" -> "ID"
+  n45 -> n46 // "ID" -> "p"
+  n44 -> n47 // "ASSIGN" -> "ID"
+  n47 -> n48 // "ID" -> "p"
+  n47 -> n49 // "ID" -> "next"
+  n22 -> n50 // "BLOCK" -> "IF"
+  n50 -> n51 // "IF" -> "&"
+  n51 -> n52 // "&" -> "&"
+  n52 -> n53 // "&" -> "ID"
+  n53 -> n54 // "ID" -> "unique"
+  n52 -> n55 // "&" -> "#"
+  n55 -> n56 // "#" -> "ID"
+  n56 -> n57 // "ID" -> "p"
+  n56 -> n58 // "ID" -> "next"
+  n55 -> n59 // "#" -> "NIL"
+  n51 -> n60 // "&" -> "="
+  n60 -> n61 // "=" -> "ID"
+  n61 -> n62 // "ID" -> "p"
+  n61 -> n63 // "ID" -> "next"
+  n60 -> n64 // "=" -> "."
+  n60 -> n65 // "=" -> "key"
+  n60 -> n66 // "=" -> "ID"
+  n66 -> n67 // "ID" -> "key"
+  n50 -> n68 // "IF" -> "BLOCK"
+  n68 -> n69 // "BLOCK" -> "HALT"
+  n69 -> n70 // "HALT" -> "99"
+  n22 -> n71 // "BLOCK" -> "NEW"
+  n71 -> n72 // "NEW" -> "ID"
+  n72 -> n73 // "ID" -> "q"
+  n22 -> n74 // "BLOCK" -> "COPY"
+  n74 -> n75 // "COPY" -> "ID"
+  n75 -> n76 // "ID" -> "key"
+  n74 -> n77 // "COPY" -> "ID"
+  n77 -> n78 // "ID" -> "q"
+  n77 -> n79 // "ID" -> "key"
+  n22 -> n80 // "BLOCK" -> "ASSIGN"
+  n80 -> n81 // "ASSIGN" -> "ID"
+  n81 -> n82 // "ID" -> "q"
+  n81 -> n83 // "ID" -> "next"
+  n80 -> n84 // "ASSIGN" -> "ID"
+  n84 -> n85 // "ID" -> "p"
+  n84 -> n86 // "ID" -> "next"
+  n22 -> n87 // "BLOCK" -> "ASSIGN"
+  n87 -> n88 // "ASSIGN" -> "ID"
+  n88 -> n89 // "ID" -> "p"
+  n88 -> n90 // "ID" -> "next"
+  n87 -> n91 // "ASSIGN" -> "ID"
+  n91 -> n92 // "ID" -> "q"
+  n22 -> n93 // "BLOCK" -> "ASSIGN"
+  n93 -> n94 // "ASSIGN" -> "ID"
+  n94 -> n95 // "ID" -> "p"
+  n94 -> n96 // "ID" -> "next"
+  n93 -> n97 // "ASSIGN" -> "+"
+  n97 -> n98 // "+" -> "+"
+  n98 -> n99 // "+" -> "1"
+  n98 -> n100 // "+" -> "2"
+  n97 -> n101 // "+" -> "*"
+  n101 -> n102 // "*" -> "3"
+  n101 -> n103 // "*" -> "4"
+  n0 -> n104 // "MODULE" -> "PROCEDURE"
+  n104 -> n105 // "PROCEDURE" -> "Delete"
+  n104 -> n106 // "PROCEDURE" -> "FORMAL_PARAMETERS"
+  n106 -> n107 // "FORMAL_PARAMETERS" -> "key"
+  n106 -> n108 // "FORMAL_PARAMETERS" -> ":"
+  n106 -> n109 // "FORMAL_PARAMETERS" -> "ARRAY"
+  n109 -> n110 // "ARRAY" -> "ID"
+  n110 -> n111 // "ID" -> "CHAR"
+  n104 -> n112 // "PROCEDURE" -> "PROCEDURE_BODY"
+  n112 -> n113 // "PROCEDURE_BODY" -> "VAR"
+  n113 -> n114 // "VAR" -> "DECLARE"
+  n114 -> n115 // "DECLARE" -> "p"
+  n114 -> n116 // "DECLARE" -> "ID"
+  n116 -> n117 // "ID" -> "List"
+  n112 -> n118 // "PROCEDURE_BODY" -> "BLOCK"
+  n118 -> n119 // "BLOCK" -> "ASSIGN"
+  n119 -> n120 // "ASSIGN" -> "ID"
+  n120 -> n121 // "ID" -> "p"
+  n119 -> n122 // "ASSIGN" -> "ID"
+  n122 -> n123 // "ID" -> "root"
+  n118 -> n124 // "BLOCK" -> "WHILE"
+  n124 -> n125 // "WHILE" -> "&"
+  n125 -> n126 // "&" -> "#"
+  n126 -> n127 // "#" -> "ID"
+  n127 -> n128 // "ID" -> "p"
+  n127 -> n129 // "ID" -> "next"
+  n126 -> n130 // "#" -> "NIL"
+  n125 -> n131 // "&" -> "<"
+  n131 -> n132 // "<" -> "ID"
+  n132 -> n133 // "ID" -> "p"
+  n132 -> n134 // "ID" -> "next"
+  n131 -> n135 // "<" -> "."
+  n131 -> n136 // "<" -> "key"
+  n131 -> n137 // "<" -> "ID"
+  n137 -> n138 // "ID" -> "key"
+  n124 -> n139 // "WHILE" -> "BLOCK"
+  n139 -> n140 // "BLOCK" -> "ASSIGN"
+  n140 -> n141 // "ASSIGN" -> "ID"
+  n141 -> n142 // "ID" -> "p"
+  n140 -> n143 // "ASSIGN" -> "ID"
+  n143 -> n144 // "ID" -> "p"
+  n143 -> n145 // "ID" -> "next"
+  n118 -> n146 // "BLOCK" -> "IF"
+  n146 -> n147 // "IF" -> "&"
+  n147 -> n148 // "&" -> "#"
+  n148 -> n149 // "#" -> "ID"
+  n149 -> n150 // "ID" -> "p"
+  n149 -> n151 // "ID" -> "next"
+  n148 -> n152 // "#" -> "NIL"
+  n147 -> n153 // "&" -> "="
+  n153 -> n154 // "=" -> "ID"
+  n154 -> n155 // "ID" -> "p"
+  n154 -> n156 // "ID" -> "next"
+  n153 -> n157 // "=" -> "."
+  n153 -> n158 // "=" -> "key"
+  n153 -> n159 // "=" -> "ID"
+  n159 -> n160 // "ID" -> "key"
+  n146 -> n161 // "IF" -> "BLOCK"
+  n161 -> n162 // "BLOCK" -> "ASSIGN"
+  n162 -> n163 // "ASSIGN" -> "ID"
+  n163 -> n164 // "ID" -> "p"
+  n163 -> n165 // "ID" -> "next"
+  n162 -> n166 // "ASSIGN" -> "ID"
+  n166 -> n167 // "ID" -> "p"
+  n166 -> n168 // "ID" -> "next"
+  n162 -> n169 // "ASSIGN" -> "."
+  n162 -> n170 // "ASSIGN" -> "next"
+  n0 -> n171 // "MODULE" -> "PROCEDURE"
+  n171 -> n172 // "PROCEDURE" -> "InitList"
+  n171 -> n173 // "PROCEDURE" -> "PROCEDURE_BODY"
+  n173 -> n174 // "PROCEDURE_BODY" -> "BLOCK"
+  n174 -> n175 // "BLOCK" -> "NEW"
+  n175 -> n176 // "NEW" -> "ID"
+  n176 -> n177 // "ID" -> "root"
+  n174 -> n178 // "BLOCK" -> "ASSIGN"
+  n178 -> n179 // "ASSIGN" -> "ID"
+  n179 -> n180 // "ID" -> "root"
+  n179 -> n181 // "ID" -> "next"
+  n178 -> n182 // "ASSIGN" -> "NIL"
 
 }
