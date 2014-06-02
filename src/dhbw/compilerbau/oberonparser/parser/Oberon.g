@@ -5,148 +5,169 @@ options {
   output=AST;
 }
 
-tokens{ASSIGN;DECLARE;BLOCK;PROCEDURE_BODY;F_PARAMS;F_PARAM;PROCEDURE;TYPE_DECL;ID;LENGTH;}
+tokens{ASSIGN;DECLARE;BLOCK;PROCEDURE_BODY;F_PARAMS;F_PARAM;PROCEDURE;TYPE_DECL;ID;LENGTH;IMPORT_DECL;}
 
 @lexer::header  {package dhbw.compilerbau.oberonparser.parser; }
 @parser::header {package dhbw.compilerbau.oberonparser.parser; }
 
 
 /* predefined PROCEDURES */
-abs                   : 'ABS'^ '('! number ')'!;
-odd                   : 'ODD'^ '('! INTEGER ')'!;                
-cap                   : 'CAP'^ '('! CHARACTER ')'!;
-ash                   : 'ASH'^ '('! INTEGER ')'!;
-len                   : 'LEN'^ '('! qualident (',' INTEGER)? ')'!;
-maxMin                : ('MAX'^|'MIN'^) '('! qualident|set ')'!;
+abs                   :     'ABS'^ '('! number ')'!;
+odd                   :     'ODD'^ '('! INTEGER ')'!;                
+cap                   :     'CAP'^ '('! CHARACTER ')'!;
+ash                   :     'ASH'^ '('! INTEGER ')'!;
+len                   :     'LEN'^ '('! qualident (',' INTEGER)? ')'!;
+maxMin                :     ('MAX'^|'MIN'^) '('! qualident|set ')'!;
 //min                   : 'MIN' '(' qualident|set ')';
-size                  : 'SIZE'^ '('! qualident ')'!;
+size                  :     'SIZE'^ '('! qualident ')'!;
 
-inc                   : 'INC'^ '('! INTEGER (','! INTEGER)? ')'!;
-dec                   : 'DEC'^ '('! INTEGER (','! INTEGER)? ')'!;
-incl                  : 'INCL'^ '('! set ','! INTEGER ')'!;
-excl                  : 'EXCL'^ '('! set ','! INTEGER ')'!;
-copy                  : 'COPY'^ '('! qualident ','! qualident ')'!;
-neW                   : 'NEW'^ '('! qualident ')'! ;
-halt                  : 'HALT'^ '('! INTEGER ')'!;
+inc                   :     'INC'^ '('! INTEGER (','! INTEGER)? ')'!;
+dec                   :     'DEC'^ '('! INTEGER (','! INTEGER)? ')'!;
+incl                  :     'INCL'^ '('! set ','! INTEGER ')'!;
+excl                  :     'EXCL'^ '('! set ','! INTEGER ')'!;
+copy                  :     'COPY'^ '('! qualident ','! qualident ')'!;
+neW                   :     'NEW'^ '('! qualident ')'! ;
+halt                  :     'HALT'^ '('! INTEGER ')'!;
 
-predefined            : (abs|odd|cap|ash|len|maxMin|size|inc|dec|incl|excl|copy|neW|halt);
+predefined            :     (abs|odd|cap|ash|len|maxMin|size|inc|dec|incl|excl|copy|neW|halt);
 
 /* rules */
 
-number                : INTEGER | REAL;
+number                :     INTEGER | REAL;
 
-identdef              : IDENT '*'?;
+identdef              :     IDENT '*'?;
 
-constantDeclaration   : identdef '=' constExpression      -> ^( '=' identdef constExpression);
+constantDeclaration   :     identdef '=' constExpression      
+                            -> ^( '=' identdef constExpression);
 
-constExpression       : expression;
+constExpression       :     expression;
 
-typeDeclaration       : identdef '=' type                 -> ^( TYPE_DECL identdef type);
+typeDeclaration       :     identdef '=' type                 
+                            -> ^( TYPE_DECL identdef type);
 
-type                  : qualident | arrayType | recordType | pointerType | procedureType;
+type                  :     qualident | arrayType | recordType | pointerType | procedureType;
 
-arrayType             : 'ARRAY' length (',' length)* 'OF' type -> ^('ARRAY' ^(LENGTH length*) type );
+arrayType             :     'ARRAY' length (',' length)* 'OF' type 
+                            -> ^('ARRAY' ^(LENGTH length*) type );
 
-length                : constExpression;
+length                :     constExpression;
 
-recordType            : 'RECORD' ('(' baseType ')')? fieldListSequence 'END' -> ^('RECORD' baseType? fieldListSequence);
+recordType            :     'RECORD' ('(' baseType ')')? fieldListSequence 'END' 
+                            -> ^('RECORD' baseType? fieldListSequence);
 
-baseType              : qualident;
+baseType              :     qualident;
 
-fieldListSequence     : fieldList (';'! fieldList)* ;
+fieldListSequence     :     fieldList (';'! fieldList)* ;
 
-fieldList             : (identList ':'^ type)?;
+fieldList             :     (identList ':'^ type)?;
 
-identList             : identdef (',' identdef)*;
+identList             :     identdef (',' identdef)*;
 
-pointerType           : 'POINTER TO'^ type;
+pointerType           :     'POINTER TO'^ type;
 
-procedureType         : 'PROCEDURE'^ formalParameters?;
+procedureType         :     'PROCEDURE'^ formalParameters?;
 
-variableDeclaration   : identList ':' type -> ^(DECLARE identList type);
+variableDeclaration   :     identList ':' type 
+                            -> ^(DECLARE identList type)
+                      ;
 
-qualident             : (options{ greedy=true;}:IDENT '.')? IDENT -> ^(ID IDENT*);
+qualident             :     (options{ greedy=true;}:IDENT '.')? IDENT 
+                            -> ^(ID IDENT*);
 
-designator            : qualident (options{ greedy=true;}:'.'! IDENT | '['! expList ']'! | '('! qualident ')'! | '^')*;
+designator            :     qualident (options{ greedy=true;}:'.'! IDENT | '['! expList ']'! | '('! qualident ')'! | '^')*;
 
-expList               : expression (',' expression)*;
+expList               :     expression (',' expression)*;
 
-expression            : simpleExpression (relation^ simpleExpression)?;// -> ^(simpleExpression (relation simpleExpression)?);
+expression            :     simpleExpression (relation^ simpleExpression)?
+                            ;// -> ^(simpleExpression (relation simpleExpression)?);
 
-relation              : '=' | '#'|'<'|'<='|'>'|'>='|'IN'|'IS';
+relation              :     '=' | '#'|'<'|'<='|'>'|'>='|'IN'|'IS';
 
-simpleExpression      : ('+'|'-')? term (addOperator^ term)*;
+simpleExpression      :     ('+'|'-')? term (addOperator^ term)*;
 
-addOperator           : '+' | '-' | 'OR';
+addOperator           :     '+' | '-' | 'OR';
 
-term                  : factor (mulOperator^ factor)*;
+term                  :     factor (mulOperator^ factor)*;
 
-mulOperator           : '*'|'/'|'DIV'|'MOD'|'&';
+mulOperator           :     '*'|'/'|'DIV'|'MOD'|'&';
 
-factor                : number | CHARCONST | STRING | 'NIL' | set | designator actualParameters? | '('! expression^ ')'! | '~' factor;
+factor                :     number | CHARCONST | STRING | 'NIL' | set | designator actualParameters? | '('! expression^ ')'! | '~' factor;
 
-set                   : '{' (element (',' element)* )? '}';
+set                   :     '{' (element (',' element)* )? '}';
 
-element               : expression ( '..' expression)?;
+element               :     expression ( '..' expression)?;
 
-actualParameters      : '('! expList? ')'!;
+actualParameters      :     '('! expList? ')'!;
 
-statement             :  (predefined|statement2|ifStatement|caseStatement|whileStatement|repeatStatement|loopStatement|withStatement| 'EXIT' | 'RETURN' expression? )?;
+statement             :     (predefined|statement2|ifStatement|caseStatement|whileStatement|repeatStatement|loopStatement|withStatement| 'EXIT' | 'RETURN' expression? )?;
 
-statement2            : designator  ((':=' expression) | procedureCall) -> ^(ASSIGN designator expression? procedureCall?) ; //-> ^(assignment?  procedureCall?); //->  {$aaaa == null}? ^(ASSIGN designator assignment) -> ^(ASSIGN designator procedureCall) ;
+statement2            :     designator  ((':=' expression) | procedureCall) 
+                            -> ^(ASSIGN designator expression? procedureCall?) ; //-> ^(assignment?  procedureCall?); //->  {$aaaa == null}? ^(ASSIGN designator assignment) -> ^(ASSIGN designator procedureCall) ;
 
-procedureCall         :  actualParameters?;
+procedureCall         :     actualParameters?;
 
-statementSequence     : statement ( ';' statement)*  -> ^(BLOCK statement ( statement)*);
+statementSequence     :     statement ( ';' statement)*  
+                            -> ^(BLOCK statement ( statement)*);
 
-ifStatement           : 'IF' expression 'THEN' s1=statementSequence ('ELSIF' expression 'THEN' s2=statementSequence)* ('ELSE' s3=statementSequence)? 'END' 
-                      -> ^('IF' expression? $s1? ^('ELSIF' expression?  $s2?)* ('ELSE' $s3?)?   );
+ifStatement           :     'IF' expression 'THEN' s1=statementSequence ('ELSIF' expression 'THEN' s2=statementSequence)* ('ELSE' s3=statementSequence)? 'END' 
+                            -> ^('IF' expression? $s1? ^('ELSIF' expression?  $s2?)* ('ELSE' $s3?)?   );
 
-caseStatement         : 'case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END' 
-                      -> ^('case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END');
+caseStatement         :     'case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END' 
+                            -> ^('case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END');
 
-casE                  : (caseLabelList ':' statementSequence)?;
+casE                  :     (caseLabelList ':' statementSequence)?;
 
-caseLabelList         : caseLabels (',' caseLabels)*;
+caseLabelList         :     caseLabels (',' caseLabels)*;
 
-caseLabels            : constExpression ('..' constExpression);
+caseLabels            :     constExpression ('..' constExpression);
 
-whileStatement        : 'WHILE' expression 'DO' statementSequence 'END' -> ^('WHILE' expression statementSequence);
+whileStatement        :     'WHILE' expression 'DO' statementSequence 'END' 
+                            -> ^('WHILE' expression statementSequence);
 
-repeatStatement       : 'REPEAT'^ statementSequence 'UNTIL'! expression;
+repeatStatement       :     'REPEAT'^ statementSequence 'UNTIL'! expression;
 
-loopStatement         : 'LOOP'^ statementSequence 'END'!;
+loopStatement         :     'LOOP'^ statementSequence 'END'!;
 
-withStatement         : 'WITH'^ qualident ':' qualident 'DO'! statementSequence 'END'!;
+withStatement         :     'WITH'^ qualident ':' qualident 'DO'! statementSequence 'END'!;
 
-procedureDeclaration  : procedureHeading ';' procedureBody IDENT                -> ^(PROCEDURE procedureHeading  procedureBody );
+procedureDeclaration  :     procedureHeading ';' procedureBody IDENT                
+                            -> ^(PROCEDURE procedureHeading  procedureBody );
 
-procedureHeading      : 'PROCEDURE' '*'? identdef formalParameters? -> identdef formalParameters?;
+procedureHeading      :     'PROCEDURE' '*'? identdef formalParameters? 
+                            -> identdef formalParameters?;
 
-procedureBody         : declarationSequence ('BEGIN' statementSequence)? 'END'   -> ^(PROCEDURE_BODY declarationSequence?  statementSequence? );
+procedureBody         :     declarationSequence ('BEGIN' statementSequence)? 'END'   
+                            -> ^(PROCEDURE_BODY declarationSequence?  statementSequence? );
 
-forwardDeclaration    : 'PROCEDURE' '^' identdef formalParameters?;
+forwardDeclaration    :     'PROCEDURE' '^' identdef formalParameters?;
 
-declarationSequence    : (constdeclarationSequence | typedeclarationSequence |vardeclarationSequence  )* (procedureDeclaration ';'! | forwardDeclaration ';')*;
+declarationSequence    :    (constdeclarationSequence | typedeclarationSequence |vardeclarationSequence  )* (procedureDeclaration ';'! | forwardDeclaration ';')*;
 
-constdeclarationSequence : 'CONST' (constantDeclaration ';')*       -> ^('CONST' (constantDeclaration )*);
+constdeclarationSequence :  'CONST' (constantDeclaration ';')*       
+                            -> ^('CONST' (constantDeclaration )*);
 
-typedeclarationSequence : 'TYPE' ( typeDeclaration ';')*            -> ^('TYPE' ( typeDeclaration )*);
+typedeclarationSequence :   'TYPE' ( typeDeclaration ';')*            
+                            -> ^('TYPE' ( typeDeclaration )*);
 
-vardeclarationSequence :  'VAR' (variableDeclaration ';')*          -> ^('VAR' (variableDeclaration )*);
+vardeclarationSequence :    'VAR' (variableDeclaration ';')*          
+                            -> ^('VAR' (variableDeclaration )*);
 
 
-formalParameters      : '(' (fpSection (';' fpSection)*)? ')' (':' qualident)? -> ^(F_PARAMS fpSection* qualident?);
+formalParameters      :     '(' (fpSection (';' fpSection)*)? ')' (':' qualident)? 
+                            -> ^(F_PARAMS fpSection* qualident?);
 
-fpSection             : 'VAR'? IDENT (',' IDENT)*  ':' formalType -> ^(F_PARAM ^(ID IDENT*) formalType);
+fpSection             :     'VAR'? IDENT (',' IDENT)*  ':' formalType 
+                            -> ^(F_PARAM ^(ID IDENT*) formalType);
 
-formalType            : ('ARRAY'^ 'OF'!)* qualident | procedureType;
+formalType            :     ('ARRAY'^ 'OF'!)* qualident | procedureType;
 
-module                : 'MODULE'^ IDENT ';'! importList? declarationSequence ('BEGIN'! statementSequence)? 'END'! IDENT! '.'! EOF!;
+module                :     'MODULE'^ IDENT ';'! importList? declarationSequence ('BEGIN'! statementSequence)? 'END'! IDENT! '.'! EOF!;
 
-importList            : 'IMPORT' importDeclaration (',' importDeclaration)* ';'     -> ^('IMPORT' importDeclaration ( importDeclaration)* ) ;
+importList            :     'IMPORT' importDeclaration (',' importDeclaration)* ';'     
+                            -> ^('IMPORT' importDeclaration ( importDeclaration)* ) ;
 
-importDeclaration     :  IDENT (':=' IDENT)?                                        -> ^( ':=' IDENT ( IDENT)?);
+importDeclaration     :     IDENT (':=' IDENT)?                                        
+                            -> ^( IMPORT_DECL IDENT ( IDENT)?);
 
 
 

@@ -4,6 +4,6 @@ IMPORT Write, Read := Read2;
  
 BEGIN
 
-/* Kommentar */
+(* Kommentar *)
 
 END HelloWorld.
