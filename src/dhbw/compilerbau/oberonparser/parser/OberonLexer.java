@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g 2014-06-02 09:39:17
+// $ANTLR 3.5.2 /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g 2014-06-02 11:08:58
 package dhbw.compilerbau.oberonparser.parser; 
 
 import org.antlr.runtime.*;
@@ -9,8 +9,6 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class OberonLexer extends Lexer {
 	public static final int EOF=-1;
-	public static final int T__27=27;
-	public static final int T__28=28;
 	public static final int T__29=29;
 	public static final int T__30=30;
 	public static final int T__31=31;
@@ -81,29 +79,33 @@ public class OberonLexer extends Lexer {
 	public static final int T__96=96;
 	public static final int T__97=97;
 	public static final int T__98=98;
+	public static final int T__99=99;
+	public static final int T__100=100;
 	public static final int ASSIGN=4;
 	public static final int BLOCK=5;
-	public static final int CHARACTER=6;
-	public static final int CHARCONST=7;
-	public static final int COMMENT=8;
-	public static final int DECLARE=9;
-	public static final int DIGIT=10;
-	public static final int F_PARAM=11;
-	public static final int F_PARAMS=12;
-	public static final int HEX_DIGIT=13;
-	public static final int ID=14;
-	public static final int IDENT=15;
-	public static final int IMPORT_DECL=16;
-	public static final int INTEGER=17;
-	public static final int LENGTH=18;
-	public static final int LETTER=19;
-	public static final int PROCEDURE=20;
-	public static final int PROCEDURE_BODY=21;
-	public static final int REAL=22;
-	public static final int SCALE_FACTOR=23;
-	public static final int STRING=24;
-	public static final int TYPE_DECL=25;
-	public static final int WS=26;
+	public static final int CALL=6;
+	public static final int CHARACTER=7;
+	public static final int CHARCONST=8;
+	public static final int COMMENT=9;
+	public static final int DECLARE=10;
+	public static final int DIGIT=11;
+	public static final int FIELD_LIST=12;
+	public static final int F_PARAM=13;
+	public static final int F_PARAMS=14;
+	public static final int HEX_DIGIT=15;
+	public static final int ID=16;
+	public static final int IDENT=17;
+	public static final int IMPORT_DECL=18;
+	public static final int INTEGER=19;
+	public static final int LENGTH=20;
+	public static final int LETTER=21;
+	public static final int PROCEDURE=22;
+	public static final int PROCEDURE_BODY=23;
+	public static final int REAL=24;
+	public static final int SCALE_FACTOR=25;
+	public static final int STRING=26;
+	public static final int TYPE_DECL=27;
+	public static final int WS=28;
 
 	// delegates
 	// delegators
@@ -120,55 +122,15 @@ public class OberonLexer extends Lexer {
 	}
 	@Override public String getGrammarFileName() { return "/home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g"; }
 
-	// $ANTLR start "T__27"
-	public final void mT__27() throws RecognitionException {
-		try {
-			int _type = T__27;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:9:7: ( '#' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:9:9: '#'
-			{
-			match('#'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__27"
-
-	// $ANTLR start "T__28"
-	public final void mT__28() throws RecognitionException {
-		try {
-			int _type = T__28;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:10:7: ( '&' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:10:9: '&'
-			{
-			match('&'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__28"
-
 	// $ANTLR start "T__29"
 	public final void mT__29() throws RecognitionException {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:11:7: ( '(' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:11:9: '('
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:9:7: ( '#' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:9:9: '#'
 			{
-			match('('); 
+			match('#'); 
 			}
 
 			state.type = _type;
@@ -185,10 +147,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__30;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:12:7: ( ')' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:12:9: ')'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:10:7: ( '&' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:10:9: '&'
 			{
-			match(')'); 
+			match('&'); 
 			}
 
 			state.type = _type;
@@ -205,10 +167,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__31;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:13:7: ( '*' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:13:9: '*'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:11:7: ( '(' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:11:9: '('
 			{
-			match('*'); 
+			match('('); 
 			}
 
 			state.type = _type;
@@ -225,10 +187,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__32;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:14:7: ( '+' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:14:9: '+'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:12:7: ( ')' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:12:9: ')'
 			{
-			match('+'); 
+			match(')'); 
 			}
 
 			state.type = _type;
@@ -245,10 +207,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__33;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:15:7: ( ',' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:15:9: ','
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:13:7: ( '*' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:13:9: '*'
 			{
-			match(','); 
+			match('*'); 
 			}
 
 			state.type = _type;
@@ -265,10 +227,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__34;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:16:7: ( '-' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:16:9: '-'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:14:7: ( '+' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:14:9: '+'
 			{
-			match('-'); 
+			match('+'); 
 			}
 
 			state.type = _type;
@@ -285,10 +247,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__35;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:17:7: ( '.' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:17:9: '.'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:15:7: ( ',' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:15:9: ','
 			{
-			match('.'); 
+			match(','); 
 			}
 
 			state.type = _type;
@@ -305,11 +267,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__36;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:18:7: ( '..' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:18:9: '..'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:16:7: ( '-' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:16:9: '-'
 			{
-			match(".."); 
-
+			match('-'); 
 			}
 
 			state.type = _type;
@@ -326,10 +287,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__37;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:19:7: ( '/' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:19:9: '/'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:17:7: ( '.' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:17:9: '.'
 			{
-			match('/'); 
+			match('.'); 
 			}
 
 			state.type = _type;
@@ -346,10 +307,11 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__38;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:20:7: ( ':' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:20:9: ':'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:18:7: ( '..' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:18:9: '..'
 			{
-			match(':'); 
+			match(".."); 
+
 			}
 
 			state.type = _type;
@@ -366,11 +328,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__39;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:21:7: ( ':=' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:21:9: ':='
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:19:7: ( '/' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:19:9: '/'
 			{
-			match(":="); 
-
+			match('/'); 
 			}
 
 			state.type = _type;
@@ -387,10 +348,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__40;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:22:7: ( ';' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:22:9: ';'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:20:7: ( ':' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:20:9: ':'
 			{
-			match(';'); 
+			match(':'); 
 			}
 
 			state.type = _type;
@@ -407,10 +368,11 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__41;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:23:7: ( '<' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:23:9: '<'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:21:7: ( ':=' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:21:9: ':='
 			{
-			match('<'); 
+			match(":="); 
+
 			}
 
 			state.type = _type;
@@ -427,11 +389,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__42;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:24:7: ( '<=' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:24:9: '<='
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:22:7: ( ';' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:22:9: ';'
 			{
-			match("<="); 
-
+			match(';'); 
 			}
 
 			state.type = _type;
@@ -448,10 +409,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__43;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:25:7: ( '=' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:25:9: '='
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:23:7: ( '<' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:23:9: '<'
 			{
-			match('='); 
+			match('<'); 
 			}
 
 			state.type = _type;
@@ -468,10 +429,11 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__44;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:26:7: ( '>' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:26:9: '>'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:24:7: ( '<=' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:24:9: '<='
 			{
-			match('>'); 
+			match("<="); 
+
 			}
 
 			state.type = _type;
@@ -488,11 +450,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__45;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:27:7: ( '>=' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:27:9: '>='
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:25:7: ( '=' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:25:9: '='
 			{
-			match(">="); 
-
+			match('='); 
 			}
 
 			state.type = _type;
@@ -509,11 +470,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__46;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:28:7: ( 'ABS' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:28:9: 'ABS'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:26:7: ( '>' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:26:9: '>'
 			{
-			match("ABS"); 
-
+			match('>'); 
 			}
 
 			state.type = _type;
@@ -530,10 +490,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__47;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:29:7: ( 'ARRAY' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:29:9: 'ARRAY'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:27:7: ( '>=' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:27:9: '>='
 			{
-			match("ARRAY"); 
+			match(">="); 
 
 			}
 
@@ -551,10 +511,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__48;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:30:7: ( 'ASH' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:30:9: 'ASH'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:28:7: ( 'ABS' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:28:9: 'ABS'
 			{
-			match("ASH"); 
+			match("ABS"); 
 
 			}
 
@@ -572,10 +532,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__49;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:31:7: ( 'BEGIN' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:31:9: 'BEGIN'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:29:7: ( 'ARRAY' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:29:9: 'ARRAY'
 			{
-			match("BEGIN"); 
+			match("ARRAY"); 
 
 			}
 
@@ -593,10 +553,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__50;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:7: ( 'CAP' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:9: 'CAP'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:30:7: ( 'ASH' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:30:9: 'ASH'
 			{
-			match("CAP"); 
+			match("ASH"); 
 
 			}
 
@@ -614,10 +574,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__51;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:33:7: ( 'CONST' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:33:9: 'CONST'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:31:7: ( 'BEGIN' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:31:9: 'BEGIN'
 			{
-			match("CONST"); 
+			match("BEGIN"); 
 
 			}
 
@@ -635,10 +595,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__52;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:34:7: ( 'COPY' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:34:9: 'COPY'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:7: ( 'CAP' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:32:9: 'CAP'
 			{
-			match("COPY"); 
+			match("CAP"); 
 
 			}
 
@@ -656,10 +616,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__53;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:35:7: ( 'DEC' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:35:9: 'DEC'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:33:7: ( 'CONST' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:33:9: 'CONST'
 			{
-			match("DEC"); 
+			match("CONST"); 
 
 			}
 
@@ -677,10 +637,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__54;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:36:7: ( 'DIV' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:36:9: 'DIV'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:34:7: ( 'COPY' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:34:9: 'COPY'
 			{
-			match("DIV"); 
+			match("COPY"); 
 
 			}
 
@@ -698,10 +658,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__55;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:37:7: ( 'DO' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:37:9: 'DO'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:35:7: ( 'DEC' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:35:9: 'DEC'
 			{
-			match("DO"); 
+			match("DEC"); 
 
 			}
 
@@ -719,10 +679,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__56;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:38:7: ( 'ELSE' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:38:9: 'ELSE'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:36:7: ( 'DIV' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:36:9: 'DIV'
 			{
-			match("ELSE"); 
+			match("DIV"); 
 
 			}
 
@@ -740,10 +700,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__57;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:39:7: ( 'ELSIF' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:39:9: 'ELSIF'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:37:7: ( 'DO' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:37:9: 'DO'
 			{
-			match("ELSIF"); 
+			match("DO"); 
 
 			}
 
@@ -761,10 +721,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__58;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:40:7: ( 'END' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:40:9: 'END'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:38:7: ( 'ELSE' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:38:9: 'ELSE'
 			{
-			match("END"); 
+			match("ELSE"); 
 
 			}
 
@@ -782,10 +742,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__59;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:41:7: ( 'EXCL' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:41:9: 'EXCL'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:39:7: ( 'ELSIF' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:39:9: 'ELSIF'
 			{
-			match("EXCL"); 
+			match("ELSIF"); 
 
 			}
 
@@ -803,10 +763,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__60;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:42:7: ( 'EXIT' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:42:9: 'EXIT'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:40:7: ( 'END' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:40:9: 'END'
 			{
-			match("EXIT"); 
+			match("END"); 
 
 			}
 
@@ -824,10 +784,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__61;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:43:7: ( 'HALT' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:43:9: 'HALT'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:41:7: ( 'EXCL' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:41:9: 'EXCL'
 			{
-			match("HALT"); 
+			match("EXCL"); 
 
 			}
 
@@ -845,10 +805,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__62;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:44:7: ( 'IF' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:44:9: 'IF'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:42:7: ( 'EXIT' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:42:9: 'EXIT'
 			{
-			match("IF"); 
+			match("EXIT"); 
 
 			}
 
@@ -866,10 +826,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__63;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:45:7: ( 'IMPORT' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:45:9: 'IMPORT'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:43:7: ( 'HALT' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:43:9: 'HALT'
 			{
-			match("IMPORT"); 
+			match("HALT"); 
 
 			}
 
@@ -887,10 +847,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__64;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:46:7: ( 'IN' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:46:9: 'IN'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:44:7: ( 'IF' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:44:9: 'IF'
 			{
-			match("IN"); 
+			match("IF"); 
 
 			}
 
@@ -908,10 +868,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__65;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:47:7: ( 'INC' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:47:9: 'INC'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:45:7: ( 'IMPORT' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:45:9: 'IMPORT'
 			{
-			match("INC"); 
+			match("IMPORT"); 
 
 			}
 
@@ -929,10 +889,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__66;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:7: ( 'INCL' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:9: 'INCL'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:46:7: ( 'IN' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:46:9: 'IN'
 			{
-			match("INCL"); 
+			match("IN"); 
 
 			}
 
@@ -950,10 +910,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__67;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:49:7: ( 'IS' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:49:9: 'IS'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:47:7: ( 'INC' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:47:9: 'INC'
 			{
-			match("IS"); 
+			match("INC"); 
 
 			}
 
@@ -971,10 +931,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__68;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:50:7: ( 'LEN' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:50:9: 'LEN'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:7: ( 'INCL' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:48:9: 'INCL'
 			{
-			match("LEN"); 
+			match("INCL"); 
 
 			}
 
@@ -992,10 +952,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__69;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:51:7: ( 'LOOP' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:51:9: 'LOOP'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:49:7: ( 'IS' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:49:9: 'IS'
 			{
-			match("LOOP"); 
+			match("IS"); 
 
 			}
 
@@ -1013,10 +973,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__70;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:7: ( 'MAX' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:9: 'MAX'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:50:7: ( 'LEN' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:50:9: 'LEN'
 			{
-			match("MAX"); 
+			match("LEN"); 
 
 			}
 
@@ -1034,10 +994,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__71;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:53:7: ( 'MIN' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:53:9: 'MIN'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:51:7: ( 'LOOP' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:51:9: 'LOOP'
 			{
-			match("MIN"); 
+			match("LOOP"); 
 
 			}
 
@@ -1055,10 +1015,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__72;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:54:7: ( 'MOD' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:54:9: 'MOD'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:7: ( 'MAX' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:52:9: 'MAX'
 			{
-			match("MOD"); 
+			match("MAX"); 
 
 			}
 
@@ -1076,10 +1036,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__73;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:55:7: ( 'MODULE' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:55:9: 'MODULE'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:53:7: ( 'MIN' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:53:9: 'MIN'
 			{
-			match("MODULE"); 
+			match("MIN"); 
 
 			}
 
@@ -1097,10 +1057,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__74;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:56:7: ( 'NEW' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:56:9: 'NEW'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:54:7: ( 'MOD' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:54:9: 'MOD'
 			{
-			match("NEW"); 
+			match("MOD"); 
 
 			}
 
@@ -1118,10 +1078,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__75;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:57:7: ( 'NIL' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:57:9: 'NIL'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:55:7: ( 'MODULE' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:55:9: 'MODULE'
 			{
-			match("NIL"); 
+			match("MODULE"); 
 
 			}
 
@@ -1139,10 +1099,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__76;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:58:7: ( 'ODD' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:58:9: 'ODD'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:56:7: ( 'NEW' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:56:9: 'NEW'
 			{
-			match("ODD"); 
+			match("NEW"); 
 
 			}
 
@@ -1160,10 +1120,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__77;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:59:7: ( 'OF' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:59:9: 'OF'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:57:7: ( 'NIL' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:57:9: 'NIL'
 			{
-			match("OF"); 
+			match("NIL"); 
 
 			}
 
@@ -1181,10 +1141,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__78;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:60:7: ( 'OR' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:60:9: 'OR'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:58:7: ( 'ODD' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:58:9: 'ODD'
 			{
-			match("OR"); 
+			match("ODD"); 
 
 			}
 
@@ -1202,10 +1162,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__79;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:61:7: ( 'POINTER TO' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:61:9: 'POINTER TO'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:59:7: ( 'OF' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:59:9: 'OF'
 			{
-			match("POINTER TO"); 
+			match("OF"); 
 
 			}
 
@@ -1223,10 +1183,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__80;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:62:7: ( 'PROCEDURE' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:62:9: 'PROCEDURE'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:60:7: ( 'OR' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:60:9: 'OR'
 			{
-			match("PROCEDURE"); 
+			match("OR"); 
 
 			}
 
@@ -1244,10 +1204,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__81;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:63:7: ( 'RECORD' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:63:9: 'RECORD'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:61:7: ( 'POINTER TO' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:61:9: 'POINTER TO'
 			{
-			match("RECORD"); 
+			match("POINTER TO"); 
 
 			}
 
@@ -1265,10 +1225,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__82;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:64:7: ( 'REPEAT' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:64:9: 'REPEAT'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:62:7: ( 'PROCEDURE' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:62:9: 'PROCEDURE'
 			{
-			match("REPEAT"); 
+			match("PROCEDURE"); 
 
 			}
 
@@ -1286,10 +1246,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__83;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:65:7: ( 'RETURN' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:65:9: 'RETURN'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:63:7: ( 'RECORD' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:63:9: 'RECORD'
 			{
-			match("RETURN"); 
+			match("RECORD"); 
 
 			}
 
@@ -1307,10 +1267,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__84;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:66:7: ( 'SIZE' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:66:9: 'SIZE'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:64:7: ( 'REPEAT' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:64:9: 'REPEAT'
 			{
-			match("SIZE"); 
+			match("REPEAT"); 
 
 			}
 
@@ -1328,10 +1288,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__85;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:67:7: ( 'THEN' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:67:9: 'THEN'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:65:7: ( 'RETURN' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:65:9: 'RETURN'
 			{
-			match("THEN"); 
+			match("RETURN"); 
 
 			}
 
@@ -1349,10 +1309,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__86;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:68:7: ( 'TYPE' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:68:9: 'TYPE'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:66:7: ( 'SIZE' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:66:9: 'SIZE'
 			{
-			match("TYPE"); 
+			match("SIZE"); 
 
 			}
 
@@ -1370,10 +1330,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__87;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:69:7: ( 'UNTIL' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:69:9: 'UNTIL'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:67:7: ( 'THEN' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:67:9: 'THEN'
 			{
-			match("UNTIL"); 
+			match("THEN"); 
 
 			}
 
@@ -1391,10 +1351,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__88;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:7: ( 'VAR' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:9: 'VAR'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:68:7: ( 'TYPE' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:68:9: 'TYPE'
 			{
-			match("VAR"); 
+			match("TYPE"); 
 
 			}
 
@@ -1412,10 +1372,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__89;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:71:7: ( 'WHILE' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:71:9: 'WHILE'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:69:7: ( 'UNTIL' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:69:9: 'UNTIL'
 			{
-			match("WHILE"); 
+			match("UNTIL"); 
 
 			}
 
@@ -1433,10 +1393,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__90;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:72:7: ( 'WITH' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:72:9: 'WITH'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:7: ( 'VAR' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:70:9: 'VAR'
 			{
-			match("WITH"); 
+			match("VAR"); 
 
 			}
 
@@ -1454,10 +1414,11 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__91;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:73:7: ( '[' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:73:9: '['
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:71:7: ( 'WHILE' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:71:9: 'WHILE'
 			{
-			match('['); 
+			match("WHILE"); 
+
 			}
 
 			state.type = _type;
@@ -1474,10 +1435,11 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__92;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:74:7: ( ']' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:74:9: ']'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:72:7: ( 'WITH' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:72:9: 'WITH'
 			{
-			match(']'); 
+			match("WITH"); 
+
 			}
 
 			state.type = _type;
@@ -1494,10 +1456,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__93;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:75:7: ( '^' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:75:9: '^'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:73:7: ( '[' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:73:9: '['
 			{
-			match('^'); 
+			match('['); 
 			}
 
 			state.type = _type;
@@ -1514,11 +1476,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__94;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:76:7: ( 'case' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:76:9: 'case'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:74:7: ( ']' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:74:9: ']'
 			{
-			match("case"); 
-
+			match(']'); 
 			}
 
 			state.type = _type;
@@ -1535,10 +1496,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__95;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:77:7: ( '{' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:77:9: '{'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:75:7: ( '^' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:75:9: '^'
 			{
-			match('{'); 
+			match('^'); 
 			}
 
 			state.type = _type;
@@ -1555,10 +1516,11 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__96;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:78:7: ( '|' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:78:9: '|'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:76:7: ( 'case' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:76:9: 'case'
 			{
-			match('|'); 
+			match("case"); 
+
 			}
 
 			state.type = _type;
@@ -1575,10 +1537,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__97;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:79:7: ( '}' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:79:9: '}'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:77:7: ( '{' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:77:9: '{'
 			{
-			match('}'); 
+			match('{'); 
 			}
 
 			state.type = _type;
@@ -1595,10 +1557,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = T__98;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:80:7: ( '~' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:80:9: '~'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:78:7: ( '|' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:78:9: '|'
 			{
-			match('~'); 
+			match('|'); 
 			}
 
 			state.type = _type;
@@ -1610,13 +1572,53 @@ public class OberonLexer extends Lexer {
 	}
 	// $ANTLR end "T__98"
 
+	// $ANTLR start "T__99"
+	public final void mT__99() throws RecognitionException {
+		try {
+			int _type = T__99;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:79:7: ( '}' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:79:9: '}'
+			{
+			match('}'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__99"
+
+	// $ANTLR start "T__100"
+	public final void mT__100() throws RecognitionException {
+		try {
+			int _type = T__100;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:80:8: ( '~' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:80:10: '~'
+			{
+			match('~'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__100"
+
 	// $ANTLR start "IDENT"
 	public final void mIDENT() throws RecognitionException {
 		try {
 			int _type = IDENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:189:23: ( ( LETTER ) ( LETTER | DIGIT )* )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:189:25: ( LETTER ) ( LETTER | DIGIT )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:191:23: ( ( LETTER ) ( LETTER | DIGIT )* )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:191:25: ( LETTER ) ( LETTER | DIGIT )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -1626,7 +1628,7 @@ public class OberonLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:189:33: ( LETTER | DIGIT )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:191:33: ( LETTER | DIGIT )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -1671,16 +1673,16 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = INTEGER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:191:23: ( DIGIT ( DIGIT )* | DIGIT ( HEX_DIGIT )* 'H' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:23: ( DIGIT ( DIGIT )* | DIGIT ( HEX_DIGIT )* 'H' )
 			int alt4=2;
 			alt4 = dfa4.predict(input);
 			switch (alt4) {
 				case 1 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:191:25: DIGIT ( DIGIT )*
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:25: DIGIT ( DIGIT )*
 					{
 					mDIGIT(); 
 
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:191:31: ( DIGIT )*
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:31: ( DIGIT )*
 					loop2:
 					while (true) {
 						int alt2=2;
@@ -1712,11 +1714,11 @@ public class OberonLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:191:40: DIGIT ( HEX_DIGIT )* 'H'
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:40: DIGIT ( HEX_DIGIT )* 'H'
 					{
 					mDIGIT(); 
 
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:191:46: ( HEX_DIGIT )*
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:46: ( HEX_DIGIT )*
 					loop3:
 					while (true) {
 						int alt3=2;
@@ -1764,12 +1766,12 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = REAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:23: ( DIGIT ( DIGIT )* '.' ( DIGIT )* ( SCALE_FACTOR )? )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:25: DIGIT ( DIGIT )* '.' ( DIGIT )* ( SCALE_FACTOR )?
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:23: ( DIGIT ( DIGIT )* '.' ( DIGIT )* ( SCALE_FACTOR )? )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:25: DIGIT ( DIGIT )* '.' ( DIGIT )* ( SCALE_FACTOR )?
 			{
 			mDIGIT(); 
 
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:31: ( DIGIT )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:31: ( DIGIT )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -1799,7 +1801,7 @@ public class OberonLexer extends Lexer {
 			}
 
 			match('.'); 
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:42: ( DIGIT )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:42: ( DIGIT )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -1828,7 +1830,7 @@ public class OberonLexer extends Lexer {
 				}
 			}
 
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:49: ( SCALE_FACTOR )?
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:49: ( SCALE_FACTOR )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( ((LA7_0 >= 'D' && LA7_0 <= 'E')) ) {
@@ -1836,7 +1838,7 @@ public class OberonLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:193:49: SCALE_FACTOR
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:49: SCALE_FACTOR
 					{
 					mSCALE_FACTOR(); 
 
@@ -1861,7 +1863,7 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = CHARCONST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:23: ( '\"' CHARACTER '\"' | DIGIT ( HEX_DIGIT )* 'X' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:197:23: ( '\"' CHARACTER '\"' | DIGIT ( HEX_DIGIT )* 'X' )
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='\"') ) {
@@ -1879,7 +1881,7 @@ public class OberonLexer extends Lexer {
 
 			switch (alt9) {
 				case 1 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:25: '\"' CHARACTER '\"'
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:197:25: '\"' CHARACTER '\"'
 					{
 					match('\"'); 
 					mCHARACTER(); 
@@ -1888,11 +1890,11 @@ public class OberonLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:45: DIGIT ( HEX_DIGIT )* 'X'
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:197:45: DIGIT ( HEX_DIGIT )* 'X'
 					{
 					mDIGIT(); 
 
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:195:51: ( HEX_DIGIT )*
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:197:51: ( HEX_DIGIT )*
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -1940,11 +1942,11 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:197:23: ( '\"' ( CHARACTER )* '\"' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:197:25: '\"' ( CHARACTER )* '\"'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:199:23: ( '\"' ( CHARACTER )* '\"' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:199:25: '\"' ( CHARACTER )* '\"'
 			{
 			match('\"'); 
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:197:29: ( CHARACTER )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:199:29: ( CHARACTER )*
 			loop10:
 			while (true) {
 				int alt10=2;
@@ -1990,12 +1992,12 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:200:23: ( '(*' ( options {greedy=false; } : . )* '*)' )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:200:25: '(*' ( options {greedy=false; } : . )* '*)'
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:202:23: ( '(*' ( options {greedy=false; } : . )* '*)' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:202:25: '(*' ( options {greedy=false; } : . )* '*)'
 			{
 			match("(*"); 
 
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:200:30: ( options {greedy=false; } : . )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:202:30: ( options {greedy=false; } : . )*
 			loop11:
 			while (true) {
 				int alt11=2;
@@ -2016,7 +2018,7 @@ public class OberonLexer extends Lexer {
 
 				switch (alt11) {
 				case 1 :
-					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:200:55: .
+					// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:202:55: .
 					{
 					matchAny(); 
 					}
@@ -2044,7 +2046,7 @@ public class OberonLexer extends Lexer {
 	// $ANTLR start "DIGIT"
 	public final void mDIGIT() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:202:23: ( '0' .. '9' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:204:23: ( '0' .. '9' )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
@@ -2067,7 +2069,7 @@ public class OberonLexer extends Lexer {
 	// $ANTLR start "HEX_DIGIT"
 	public final void mHEX_DIGIT() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:204:23: ( DIGIT | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:206:23: ( DIGIT | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F') ) {
@@ -2090,8 +2092,8 @@ public class OberonLexer extends Lexer {
 	// $ANTLR start "SCALE_FACTOR"
 	public final void mSCALE_FACTOR() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:206:23: ( ( 'E' | 'D' ) ( '+' | '-' )? DIGIT ( DIGIT )* )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:206:25: ( 'E' | 'D' ) ( '+' | '-' )? DIGIT ( DIGIT )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:208:23: ( ( 'E' | 'D' ) ( '+' | '-' )? DIGIT ( DIGIT )* )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:208:25: ( 'E' | 'D' ) ( '+' | '-' )? DIGIT ( DIGIT )*
 			{
 			if ( (input.LA(1) >= 'D' && input.LA(1) <= 'E') ) {
 				input.consume();
@@ -2101,7 +2103,7 @@ public class OberonLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:206:37: ( '+' | '-' )?
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:208:37: ( '+' | '-' )?
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0=='+'||LA12_0=='-') ) {
@@ -2126,7 +2128,7 @@ public class OberonLexer extends Lexer {
 
 			mDIGIT(); 
 
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:206:56: ( DIGIT )*
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:208:56: ( DIGIT )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -2167,7 +2169,7 @@ public class OberonLexer extends Lexer {
 	// $ANTLR start "LETTER"
 	public final void mLETTER() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:208:23: ( 'a' .. 'z' | 'A' .. 'Z' )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:210:23: ( 'a' .. 'z' | 'A' .. 'Z' )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
@@ -2190,7 +2192,7 @@ public class OberonLexer extends Lexer {
 	// $ANTLR start "CHARACTER"
 	public final void mCHARACTER() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:210:23: ( LETTER | '!' | '?' | '.' | ',' | DIGIT )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:212:23: ( LETTER | '!' | '?' | '.' | ',' | DIGIT )
 			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:
 			{
 			if ( input.LA(1)=='!'||input.LA(1)==','||input.LA(1)=='.'||(input.LA(1) >= '0' && input.LA(1) <= '9')||input.LA(1)=='?'||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
@@ -2215,10 +2217,10 @@ public class OberonLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:214:23: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:214:27: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:216:23: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:216:27: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:214:27: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:216:27: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt14=0;
 			loop14:
 			while (true) {
@@ -2265,558 +2267,558 @@ public class OberonLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:8: ( T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | IDENT | INTEGER | REAL | CHARCONST | STRING | COMMENT | WS )
+		// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:8: ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | IDENT | INTEGER | REAL | CHARCONST | STRING | COMMENT | WS )
 		int alt15=79;
 		alt15 = dfa15.predict(input);
 		switch (alt15) {
 			case 1 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:10: T__27
-				{
-				mT__27(); 
-
-				}
-				break;
-			case 2 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:16: T__28
-				{
-				mT__28(); 
-
-				}
-				break;
-			case 3 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:22: T__29
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:10: T__29
 				{
 				mT__29(); 
 
 				}
 				break;
-			case 4 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:28: T__30
+			case 2 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:16: T__30
 				{
 				mT__30(); 
 
 				}
 				break;
-			case 5 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:34: T__31
+			case 3 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:22: T__31
 				{
 				mT__31(); 
 
 				}
 				break;
-			case 6 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:40: T__32
+			case 4 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:28: T__32
 				{
 				mT__32(); 
 
 				}
 				break;
-			case 7 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:46: T__33
+			case 5 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:34: T__33
 				{
 				mT__33(); 
 
 				}
 				break;
-			case 8 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:52: T__34
+			case 6 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:40: T__34
 				{
 				mT__34(); 
 
 				}
 				break;
-			case 9 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:58: T__35
+			case 7 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:46: T__35
 				{
 				mT__35(); 
 
 				}
 				break;
-			case 10 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:64: T__36
+			case 8 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:52: T__36
 				{
 				mT__36(); 
 
 				}
 				break;
-			case 11 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:70: T__37
+			case 9 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:58: T__37
 				{
 				mT__37(); 
 
 				}
 				break;
-			case 12 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:76: T__38
+			case 10 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:64: T__38
 				{
 				mT__38(); 
 
 				}
 				break;
-			case 13 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:82: T__39
+			case 11 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:70: T__39
 				{
 				mT__39(); 
 
 				}
 				break;
-			case 14 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:88: T__40
+			case 12 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:76: T__40
 				{
 				mT__40(); 
 
 				}
 				break;
-			case 15 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:94: T__41
+			case 13 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:82: T__41
 				{
 				mT__41(); 
 
 				}
 				break;
-			case 16 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:100: T__42
+			case 14 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:88: T__42
 				{
 				mT__42(); 
 
 				}
 				break;
-			case 17 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:106: T__43
+			case 15 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:94: T__43
 				{
 				mT__43(); 
 
 				}
 				break;
-			case 18 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:112: T__44
+			case 16 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:100: T__44
 				{
 				mT__44(); 
 
 				}
 				break;
-			case 19 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:118: T__45
+			case 17 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:106: T__45
 				{
 				mT__45(); 
 
 				}
 				break;
-			case 20 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:124: T__46
+			case 18 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:112: T__46
 				{
 				mT__46(); 
 
 				}
 				break;
-			case 21 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:130: T__47
+			case 19 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:118: T__47
 				{
 				mT__47(); 
 
 				}
 				break;
-			case 22 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:136: T__48
+			case 20 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:124: T__48
 				{
 				mT__48(); 
 
 				}
 				break;
-			case 23 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:142: T__49
+			case 21 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:130: T__49
 				{
 				mT__49(); 
 
 				}
 				break;
-			case 24 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:148: T__50
+			case 22 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:136: T__50
 				{
 				mT__50(); 
 
 				}
 				break;
-			case 25 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:154: T__51
+			case 23 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:142: T__51
 				{
 				mT__51(); 
 
 				}
 				break;
-			case 26 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:160: T__52
+			case 24 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:148: T__52
 				{
 				mT__52(); 
 
 				}
 				break;
-			case 27 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:166: T__53
+			case 25 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:154: T__53
 				{
 				mT__53(); 
 
 				}
 				break;
-			case 28 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:172: T__54
+			case 26 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:160: T__54
 				{
 				mT__54(); 
 
 				}
 				break;
-			case 29 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:178: T__55
+			case 27 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:166: T__55
 				{
 				mT__55(); 
 
 				}
 				break;
-			case 30 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:184: T__56
+			case 28 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:172: T__56
 				{
 				mT__56(); 
 
 				}
 				break;
-			case 31 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:190: T__57
+			case 29 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:178: T__57
 				{
 				mT__57(); 
 
 				}
 				break;
-			case 32 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:196: T__58
+			case 30 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:184: T__58
 				{
 				mT__58(); 
 
 				}
 				break;
-			case 33 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:202: T__59
+			case 31 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:190: T__59
 				{
 				mT__59(); 
 
 				}
 				break;
-			case 34 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:208: T__60
+			case 32 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:196: T__60
 				{
 				mT__60(); 
 
 				}
 				break;
-			case 35 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:214: T__61
+			case 33 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:202: T__61
 				{
 				mT__61(); 
 
 				}
 				break;
-			case 36 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:220: T__62
+			case 34 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:208: T__62
 				{
 				mT__62(); 
 
 				}
 				break;
-			case 37 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:226: T__63
+			case 35 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:214: T__63
 				{
 				mT__63(); 
 
 				}
 				break;
-			case 38 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:232: T__64
+			case 36 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:220: T__64
 				{
 				mT__64(); 
 
 				}
 				break;
-			case 39 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:238: T__65
+			case 37 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:226: T__65
 				{
 				mT__65(); 
 
 				}
 				break;
-			case 40 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:244: T__66
+			case 38 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:232: T__66
 				{
 				mT__66(); 
 
 				}
 				break;
-			case 41 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:250: T__67
+			case 39 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:238: T__67
 				{
 				mT__67(); 
 
 				}
 				break;
-			case 42 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:256: T__68
+			case 40 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:244: T__68
 				{
 				mT__68(); 
 
 				}
 				break;
-			case 43 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:262: T__69
+			case 41 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:250: T__69
 				{
 				mT__69(); 
 
 				}
 				break;
-			case 44 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:268: T__70
+			case 42 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:256: T__70
 				{
 				mT__70(); 
 
 				}
 				break;
-			case 45 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:274: T__71
+			case 43 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:262: T__71
 				{
 				mT__71(); 
 
 				}
 				break;
-			case 46 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:280: T__72
+			case 44 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:268: T__72
 				{
 				mT__72(); 
 
 				}
 				break;
-			case 47 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:286: T__73
+			case 45 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:274: T__73
 				{
 				mT__73(); 
 
 				}
 				break;
-			case 48 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:292: T__74
+			case 46 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:280: T__74
 				{
 				mT__74(); 
 
 				}
 				break;
-			case 49 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:298: T__75
+			case 47 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:286: T__75
 				{
 				mT__75(); 
 
 				}
 				break;
-			case 50 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:304: T__76
+			case 48 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:292: T__76
 				{
 				mT__76(); 
 
 				}
 				break;
-			case 51 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:310: T__77
+			case 49 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:298: T__77
 				{
 				mT__77(); 
 
 				}
 				break;
-			case 52 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:316: T__78
+			case 50 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:304: T__78
 				{
 				mT__78(); 
 
 				}
 				break;
-			case 53 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:322: T__79
+			case 51 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:310: T__79
 				{
 				mT__79(); 
 
 				}
 				break;
-			case 54 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:328: T__80
+			case 52 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:316: T__80
 				{
 				mT__80(); 
 
 				}
 				break;
-			case 55 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:334: T__81
+			case 53 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:322: T__81
 				{
 				mT__81(); 
 
 				}
 				break;
-			case 56 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:340: T__82
+			case 54 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:328: T__82
 				{
 				mT__82(); 
 
 				}
 				break;
-			case 57 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:346: T__83
+			case 55 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:334: T__83
 				{
 				mT__83(); 
 
 				}
 				break;
-			case 58 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:352: T__84
+			case 56 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:340: T__84
 				{
 				mT__84(); 
 
 				}
 				break;
-			case 59 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:358: T__85
+			case 57 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:346: T__85
 				{
 				mT__85(); 
 
 				}
 				break;
-			case 60 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:364: T__86
+			case 58 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:352: T__86
 				{
 				mT__86(); 
 
 				}
 				break;
-			case 61 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:370: T__87
+			case 59 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:358: T__87
 				{
 				mT__87(); 
 
 				}
 				break;
-			case 62 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:376: T__88
+			case 60 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:364: T__88
 				{
 				mT__88(); 
 
 				}
 				break;
-			case 63 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:382: T__89
+			case 61 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:370: T__89
 				{
 				mT__89(); 
 
 				}
 				break;
-			case 64 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:388: T__90
+			case 62 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:376: T__90
 				{
 				mT__90(); 
 
 				}
 				break;
-			case 65 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:394: T__91
+			case 63 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:382: T__91
 				{
 				mT__91(); 
 
 				}
 				break;
-			case 66 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:400: T__92
+			case 64 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:388: T__92
 				{
 				mT__92(); 
 
 				}
 				break;
-			case 67 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:406: T__93
+			case 65 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:394: T__93
 				{
 				mT__93(); 
 
 				}
 				break;
-			case 68 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:412: T__94
+			case 66 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:400: T__94
 				{
 				mT__94(); 
 
 				}
 				break;
-			case 69 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:418: T__95
+			case 67 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:406: T__95
 				{
 				mT__95(); 
 
 				}
 				break;
-			case 70 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:424: T__96
+			case 68 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:412: T__96
 				{
 				mT__96(); 
 
 				}
 				break;
-			case 71 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:430: T__97
+			case 69 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:418: T__97
 				{
 				mT__97(); 
 
 				}
 				break;
-			case 72 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:436: T__98
+			case 70 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:424: T__98
 				{
 				mT__98(); 
 
 				}
 				break;
+			case 71 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:430: T__99
+				{
+				mT__99(); 
+
+				}
+				break;
+			case 72 :
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:436: T__100
+				{
+				mT__100(); 
+
+				}
+				break;
 			case 73 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:442: IDENT
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:443: IDENT
 				{
 				mIDENT(); 
 
 				}
 				break;
 			case 74 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:448: INTEGER
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:449: INTEGER
 				{
 				mINTEGER(); 
 
 				}
 				break;
 			case 75 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:456: REAL
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:457: REAL
 				{
 				mREAL(); 
 
 				}
 				break;
 			case 76 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:461: CHARCONST
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:462: CHARCONST
 				{
 				mCHARCONST(); 
 
 				}
 				break;
 			case 77 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:471: STRING
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:472: STRING
 				{
 				mSTRING(); 
 
 				}
 				break;
 			case 78 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:478: COMMENT
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:479: COMMENT
 				{
 				mCOMMENT(); 
 
 				}
 				break;
 			case 79 :
-				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:486: WS
+				// /home/dominik/dev/java/OberonParser/src/dhbw/compilerbau/oberonparser/parser/Oberon.g:1:487: WS
 				{
 				mWS(); 
 
@@ -2880,7 +2882,7 @@ public class OberonLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "191:1: INTEGER : ( DIGIT ( DIGIT )* | DIGIT ( HEX_DIGIT )* 'H' );";
+			return "193:1: INTEGER : ( DIGIT ( DIGIT )* | DIGIT ( HEX_DIGIT )* 'H' );";
 		}
 	}
 
@@ -3218,7 +3220,7 @@ public class OberonLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | IDENT | INTEGER | REAL | CHARCONST | STRING | COMMENT | WS );";
+			return "1:1: Tokens : ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | IDENT | INTEGER | REAL | CHARCONST | STRING | COMMENT | WS );";
 		}
 	}
 

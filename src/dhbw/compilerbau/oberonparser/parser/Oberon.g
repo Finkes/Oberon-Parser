@@ -5,7 +5,7 @@ options {
   output=AST;
 }
 
-tokens{ASSIGN;DECLARE;BLOCK;PROCEDURE_BODY;F_PARAMS;F_PARAM;PROCEDURE;TYPE_DECL;ID;LENGTH;IMPORT_DECL;}
+tokens{ASSIGN;DECLARE;BLOCK;PROCEDURE_BODY;F_PARAMS;F_PARAM;PROCEDURE;TYPE_DECL;ID;LENGTH;IMPORT_DECL;CALL;FIELD_LIST;}
 
 @lexer::header  {package dhbw.compilerbau.oberonparser.parser; }
 @parser::header {package dhbw.compilerbau.oberonparser.parser; }
@@ -26,7 +26,7 @@ dec                   :     'DEC'^ '('! INTEGER (','! INTEGER)? ')'!;
 incl                  :     'INCL'^ '('! set ','! INTEGER ')'!;
 excl                  :     'EXCL'^ '('! set ','! INTEGER ')'!;
 copy                  :     'COPY'^ '('! qualident ','! qualident ')'!;
-neW                   :     'NEW'^ '('! qualident ')'! ;
+neW                   :     'NEW'^ '('! qualident? ')'! ;
 halt                  :     'HALT'^ '('! INTEGER ')'!;
 
 predefined            :     (abs|odd|cap|ash|len|maxMin|size|inc|dec|incl|excl|copy|neW|halt);
@@ -53,7 +53,7 @@ arrayType             :     'ARRAY' length (',' length)* 'OF' type
 length                :     constExpression;
 
 recordType            :     'RECORD' ('(' baseType ')')? fieldListSequence 'END' 
-                            -> ^('RECORD' baseType? fieldListSequence);
+                            -> ^('RECORD' baseType?  fieldListSequence);
 
 baseType              :     qualident;
 
@@ -61,7 +61,7 @@ fieldListSequence     :     fieldList (';'! fieldList)* ;
 
 fieldList             :     (identList ':'^ type)?;
 
-identList             :     identdef (',' identdef)*;
+identList             :     identdef (','! identdef)*;
 
 pointerType           :     'POINTER TO'^ type;
 
@@ -76,7 +76,7 @@ qualident             :     (options{ greedy=true;}:IDENT '.')? IDENT
 
 designator            :     qualident (options{ greedy=true;}:'.'! IDENT | '['! expList ']'! | '('! qualident ')'! | '^')*;
 
-expList               :     expression (',' expression)*;
+expList               :     expression (','! expression)*;
 
 expression            :     simpleExpression (relation^ simpleExpression)?
                             ;// -> ^(simpleExpression (relation simpleExpression)?);
@@ -93,16 +93,18 @@ mulOperator           :     '*'|'/'|'DIV'|'MOD'|'&';
 
 factor                :     number | CHARCONST | STRING | 'NIL' | set | designator actualParameters? | '('! expression^ ')'! | '~' factor;
 
-set                   :     '{' (element (',' element)* )? '}';
+set                   :     '{'! (element (','! element)* )? '}'!;
 
-element               :     expression ( '..' expression)?;
+element               :     expression ( '..'! expression)?;
 
 actualParameters      :     '('! expList? ')'!;
 
 statement             :     (predefined|statement2|ifStatement|caseStatement|whileStatement|repeatStatement|loopStatement|withStatement| 'EXIT' | 'RETURN' expression? )?;
-
+/*
 statement2            :     designator  ((':=' expression) | procedureCall) 
                             -> ^(ASSIGN designator expression? procedureCall?) ; //-> ^(assignment?  procedureCall?); //->  {$aaaa == null}? ^(ASSIGN designator assignment) -> ^(ASSIGN designator procedureCall) ;
+*/
+statement2            :     d=designator  ((':=' expression) -> ^(ASSIGN $d expression )|procedureCall -> ^(CALL $d procedureCall)) ;
 
 procedureCall         :     actualParameters?;
 
@@ -110,7 +112,7 @@ statementSequence     :     statement ( ';' statement)*
                             -> ^(BLOCK statement ( statement)*);
 
 ifStatement           :     'IF' expression 'THEN' s1=statementSequence ('ELSIF' expression 'THEN' s2=statementSequence)* ('ELSE' s3=statementSequence)? 'END' 
-                            -> ^('IF' expression? $s1? ^('ELSIF' expression?  $s2?)* ('ELSE' $s3?)?   );
+                            -> ^('IF' expression? $s1? ^('ELSIF' expression?  $s2?)* ^('ELSE' $s3?)?   );
 
 caseStatement         :     'case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END' 
                             -> ^('case' expression 'OF' casE ('|' casE)* ('ELSE' statementSequence)? 'END');

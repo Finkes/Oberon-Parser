@@ -19,43 +19,52 @@ public class ParserTest
 {
 	public static void main(String[] args) 
 	{
-		try
+		
+		for(int i=1;i<5;i++)
 		{
-			//load testfile from folder
-			FileInputStream fileInputStream = new FileInputStream(new File("OberonTestFiles/test1.oberon"));
-			
-			//create ANTLR input stream
-			ANTLRInputStream inputStream = new ANTLRInputStream(fileInputStream);
-			
-			//create lexer
-			OberonLexer lexer = new OberonLexer(inputStream);
-			
-			//Buffer for tokens
-			CommonTokenStream tokens = new CommonTokenStream(lexer);
-			
-			//create parser
-			OberonParser parser = new OberonParser(tokens);
-			
-			//start parser at it's first rule
-			module_return result = parser.module();
-			CommonTree tree = (CommonTree)result.getTree();
-			
-			//log tree to console
-			System.out.println(tree.toStringTree());
-			
-			DOTTreeGenerator genarator = new DOTTreeGenerator();
-			
-			PrintWriter writer = new PrintWriter(new File("graphviz/graph"));
-        	
-        	writer.write(genarator.toDOT(tree).toString());
-        	
-        	writer.close();
-			
+			try
+			{
+				//load testfile from folder
+				FileInputStream fileInputStream = new FileInputStream(new File("OberonTestFiles/test"+i+".oberon"));
+				
+				//create ANTLR input stream
+				ANTLRInputStream inputStream = new ANTLRInputStream(fileInputStream);
+				
+				//create lexer
+				OberonLexer lexer = new OberonLexer(inputStream);
+				
+				//Buffer for tokens
+				CommonTokenStream tokens = new CommonTokenStream(lexer);
+				
+				//create parser
+				OberonParser parser = new OberonParser(tokens);
+				
+				//start parser at it's first rule
+				module_return result = parser.module();
+				CommonTree tree = (CommonTree)result.getTree();
+				
+				//log tree to console
+				System.out.println(tree.toStringTree());
+				
+				DOTTreeGenerator genarator = new DOTTreeGenerator();
+				
+				PrintWriter writer = new PrintWriter(new File("graphviz/test"+i+".dot"));
+	        	
+	        	writer.write(genarator.toDOT(tree).toString());
+	        	
+	        	writer.close();
+	        	
+	        	System.out.println("test "+i+" successfull");
+				
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+				
+				System.out.println("test "+i+" failed");
+			}
 		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
+		
 	
 		
 

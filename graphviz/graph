@@ -7,848 +7,284 @@ digraph {
 	edge [arrowsize=.5, color="black", style="bold"]
 
   n0 [label="MODULE"];
-  n1 [label="test1"];
-  n2 [label="IMPORT"];
-  n2 [label="IMPORT"];
-  n3 [label="IMPORT_DECL"];
-  n3 [label="IMPORT_DECL"];
-  n4 [label="test"];
-  n5 [label="IMPORT_DECL"];
-  n5 [label="IMPORT_DECL"];
-  n6 [label="test2"];
-  n7 [label="TYPE"];
-  n7 [label="TYPE"];
-  n8 [label="TYPE_DECL"];
-  n8 [label="TYPE_DECL"];
-  n9 [label="Node"];
-  n10 [label="POINTER TO"];
-  n10 [label="POINTER TO"];
-  n11 [label="ID"];
-  n11 [label="ID"];
-  n12 [label="NodeDesc"];
-  n13 [label="TYPE_DECL"];
-  n13 [label="TYPE_DECL"];
-  n14 [label="NodeDesc"];
-  n15 [label="RECORD"];
-  n15 [label="RECORD"];
-  n16 [label=":"];
-  n16 [label=":"];
-  n17 [label="key"];
-  n18 [label="ID"];
-  n18 [label="ID"];
-  n19 [label="LONGINT"];
-  n20 [label=":"];
-  n20 [label=":"];
-  n21 [label="left"];
-  n22 [label=","];
-  n23 [label="right"];
-  n24 [label="ID"];
-  n24 [label="ID"];
-  n25 [label="Node"];
-  n26 [label="PROCEDURE"];
-  n26 [label="PROCEDURE"];
-  n27 [label="Insert"];
-  n28 [label="F_PARAMS"];
-  n28 [label="F_PARAMS"];
-  n29 [label="F_PARAM"];
-  n29 [label="F_PARAM"];
-  n30 [label="ID"];
-  n30 [label="ID"];
-  n31 [label="root"];
-  n32 [label="ID"];
-  n32 [label="ID"];
-  n33 [label="Node"];
-  n34 [label="F_PARAM"];
-  n34 [label="F_PARAM"];
-  n35 [label="ID"];
-  n35 [label="ID"];
-  n36 [label="key"];
-  n37 [label="ID"];
-  n37 [label="ID"];
-  n38 [label="LONGINT"];
-  n39 [label="PROCEDURE_BODY"];
-  n39 [label="PROCEDURE_BODY"];
-  n40 [label="BLOCK"];
-  n40 [label="BLOCK"];
-  n41 [label="IF"];
-  n41 [label="IF"];
-  n42 [label="="];
-  n42 [label="="];
-  n43 [label="ID"];
-  n43 [label="ID"];
-  n44 [label="root"];
-  n45 [label="NIL"];
-  n46 [label="BLOCK"];
-  n46 [label="BLOCK"];
-  n47 [label="NEW"];
-  n47 [label="NEW"];
-  n48 [label="ID"];
-  n48 [label="ID"];
-  n49 [label="root"];
-  n50 [label="ASSIGN"];
-  n50 [label="ASSIGN"];
-  n51 [label="ID"];
-  n51 [label="ID"];
-  n52 [label="root"];
-  n53 [label="key"];
-  n54 [label="ID"];
-  n54 [label="ID"];
-  n55 [label="key"];
-  n56 [label="ASSIGN"];
-  n56 [label="ASSIGN"];
-  n57 [label="ID"];
-  n57 [label="ID"];
-  n58 [label="root"];
-  n59 [label="left"];
-  n60 [label="NIL"];
-  n61 [label="ASSIGN"];
-  n61 [label="ASSIGN"];
-  n62 [label="ID"];
-  n62 [label="ID"];
-  n63 [label="root"];
-  n64 [label="right"];
-  n65 [label="NIL"];
-  n66 [label="ELSIF"];
-  n66 [label="ELSIF"];
-  n67 [label="="];
-  n67 [label="="];
+  n1 [label="Vererbung1"];
+  n2 [label="TYPE"];
+  n2 [label="TYPE"];
+  n3 [label="TYPE_DECL"];
+  n3 [label="TYPE_DECL"];
+  n4 [label="GraphischesObjekt"];
+  n5 [label="*"];
+  n6 [label="POINTER TO"];
+  n6 [label="POINTER TO"];
+  n7 [label="ID"];
+  n7 [label="ID"];
+  n8 [label="Graphisc...hreibung"];
+  n9 [label="TYPE_DECL"];
+  n9 [label="TYPE_DECL"];
+  n10 [label="Graphisc...hreibung"];
+  n11 [label="RECORD"];
+  n11 [label="RECORD"];
+  n12 [label=":"];
+  n12 [label=":"];
+  n13 [label="farbe"];
+  n14 [label="*"];
+  n15 [label="ID"];
+  n15 [label="ID"];
+  n16 [label="LONGINT"];
+  n17 [label="TYPE_DECL"];
+  n17 [label="TYPE_DECL"];
+  n18 [label="Punkt"];
+  n19 [label="*"];
+  n20 [label="POINTER TO"];
+  n20 [label="POINTER TO"];
+  n21 [label="ID"];
+  n21 [label="ID"];
+  n22 [label="PunktBeschreibung"];
+  n23 [label="TYPE_DECL"];
+  n23 [label="TYPE_DECL"];
+  n24 [label="PunktBeschreibung"];
+  n25 [label="RECORD"];
+  n25 [label="RECORD"];
+  n26 [label="ID"];
+  n26 [label="ID"];
+  n27 [label="GraphischesObjekt"];
+  n28 [label=":"];
+  n28 [label=":"];
+  n29 [label="x"];
+  n30 [label="*"];
+  n31 [label=","];
+  n32 [label="y"];
+  n33 [label="*"];
+  n34 [label="ID"];
+  n34 [label="ID"];
+  n35 [label="LONGINT"];
+  n36 [label="TYPE_DECL"];
+  n36 [label="TYPE_DECL"];
+  n37 [label="Linie"];
+  n38 [label="*"];
+  n39 [label="POINTER TO"];
+  n39 [label="POINTER TO"];
+  n40 [label="ID"];
+  n40 [label="ID"];
+  n41 [label="LinienBeschreibung"];
+  n42 [label="TYPE_DECL"];
+  n42 [label="TYPE_DECL"];
+  n43 [label="LinienBeschreibung"];
+  n44 [label="RECORD"];
+  n44 [label="RECORD"];
+  n45 [label="ID"];
+  n45 [label="ID"];
+  n46 [label="GraphischesObjekt"];
+  n47 [label=":"];
+  n47 [label=":"];
+  n48 [label="xStart"];
+  n49 [label="*"];
+  n50 [label=","];
+  n51 [label="yStart"];
+  n52 [label="*"];
+  n53 [label=","];
+  n54 [label="xEnde"];
+  n55 [label="*"];
+  n56 [label=","];
+  n57 [label="yEnde"];
+  n58 [label="*"];
+  n59 [label="ID"];
+  n59 [label="ID"];
+  n60 [label="LONGINT"];
+  n61 [label="VAR"];
+  n61 [label="VAR"];
+  n62 [label="DECLARE"];
+  n62 [label="DECLARE"];
+  n63 [label="punkt1"];
+  n64 [label="ID"];
+  n64 [label="ID"];
+  n65 [label="Punkt"];
+  n66 [label="DECLARE"];
+  n66 [label="DECLARE"];
+  n67 [label="linie1"];
   n68 [label="ID"];
   n68 [label="ID"];
-  n69 [label="root"];
-  n70 [label="NIL"];
-  n71 [label="BLOCK"];
-  n71 [label="BLOCK"];
-  n72 [label="ASSIGN"];
-  n72 [label="ASSIGN"];
-  n73 [label="ID"];
-  n73 [label="ID"];
-  n74 [label="Insert"];
+  n69 [label="Linie"];
+  n70 [label="BLOCK"];
+  n70 [label="BLOCK"];
+  n71 [label="NEW"];
+  n71 [label="NEW"];
+  n72 [label="ID"];
+  n72 [label="ID"];
+  n73 [label="punkt1"];
+  n74 [label="ASSIGN"];
+  n74 [label="ASSIGN"];
   n75 [label="ID"];
   n75 [label="ID"];
-  n76 [label="root"];
-  n77 [label="right"];
-  n78 [label=","];
-  n79 [label="ID"];
-  n79 [label="ID"];
-  n80 [label="key"];
-  n81 [label="ELSIF"];
-  n81 [label="ELSIF"];
-  n82 [label="="];
-  n82 [label="="];
-  n83 [label="ID"];
-  n83 [label="ID"];
-  n84 [label="root"];
-  n85 [label="NIL"];
-  n86 [label="BLOCK"];
-  n86 [label="BLOCK"];
-  n87 [label="ASSIGN"];
-  n87 [label="ASSIGN"];
-  n88 [label="ID"];
-  n88 [label="ID"];
-  n89 [label="Insert"];
-  n90 [label="ID"];
-  n90 [label="ID"];
-  n91 [label="root"];
-  n92 [label="right"];
-  n93 [label=","];
-  n94 [label="ID"];
-  n94 [label="ID"];
-  n95 [label="key"];
-  n96 [label="PROCEDURE"];
-  n96 [label="PROCEDURE"];
-  n97 [label="Search"];
-  n98 [label="F_PARAMS"];
-  n98 [label="F_PARAMS"];
-  n99 [label="F_PARAM"];
-  n99 [label="F_PARAM"];
-  n100 [label="ID"];
-  n100 [label="ID"];
-  n101 [label="root"];
+  n76 [label="punkt1"];
+  n77 [label="x"];
+  n78 [label="1"];
+  n79 [label="ASSIGN"];
+  n79 [label="ASSIGN"];
+  n80 [label="ID"];
+  n80 [label="ID"];
+  n81 [label="punkt1"];
+  n82 [label="y"];
+  n83 [label="1"];
+  n84 [label="ASSIGN"];
+  n84 [label="ASSIGN"];
+  n85 [label="ID"];
+  n85 [label="ID"];
+  n86 [label="punkt1"];
+  n87 [label="Zeichne"];
+  n88 [label="NEW"];
+  n88 [label="NEW"];
+  n89 [label="ID"];
+  n89 [label="ID"];
+  n90 [label="linie1"];
+  n91 [label="ASSIGN"];
+  n91 [label="ASSIGN"];
+  n92 [label="ID"];
+  n92 [label="ID"];
+  n93 [label="linie1"];
+  n94 [label="xStart"];
+  n95 [label="1"];
+  n96 [label="ASSIGN"];
+  n96 [label="ASSIGN"];
+  n97 [label="ID"];
+  n97 [label="ID"];
+  n98 [label="linie1"];
+  n99 [label="yStart"];
+  n100 [label="1"];
+  n101 [label="ASSIGN"];
+  n101 [label="ASSIGN"];
   n102 [label="ID"];
   n102 [label="ID"];
-  n103 [label="Node"];
-  n104 [label="F_PARAM"];
-  n104 [label="F_PARAM"];
-  n105 [label="ID"];
-  n105 [label="ID"];
-  n106 [label="key"];
+  n103 [label="linie1"];
+  n104 [label="xEnde"];
+  n105 [label="2"];
+  n106 [label="ASSIGN"];
+  n106 [label="ASSIGN"];
   n107 [label="ID"];
   n107 [label="ID"];
-  n108 [label="LONGINT"];
-  n109 [label="ID"];
-  n109 [label="ID"];
-  n110 [label="Node"];
-  n111 [label="PROCEDURE_BODY"];
-  n111 [label="PROCEDURE_BODY"];
-  n112 [label="BLOCK"];
-  n112 [label="BLOCK"];
-  n113 [label="IF"];
-  n113 [label="IF"];
-  n114 [label="OR"];
-  n114 [label="OR"];
-  n115 [label="="];
-  n115 [label="="];
-  n116 [label="ID"];
-  n116 [label="ID"];
-  n117 [label="root"];
-  n118 [label="NIL"];
-  n119 [label="="];
-  n119 [label="="];
-  n120 [label="ID"];
-  n120 [label="ID"];
-  n121 [label="root"];
-  n122 [label="key"];
-  n123 [label="ID"];
-  n123 [label="ID"];
-  n124 [label="key"];
-  n125 [label="BLOCK"];
-  n125 [label="BLOCK"];
-  n126 [label="RETURN"];
-  n127 [label="ID"];
-  n127 [label="ID"];
-  n128 [label="root"];
-  n129 [label="ELSIF"];
-  n129 [label="ELSIF"];
-  n130 [label="OR"];
-  n130 [label="OR"];
-  n131 [label="="];
-  n131 [label="="];
-  n132 [label="ID"];
-  n132 [label="ID"];
-  n133 [label="root"];
-  n134 [label="NIL"];
-  n135 [label="="];
-  n135 [label="="];
-  n136 [label="ID"];
-  n136 [label="ID"];
-  n137 [label="root"];
-  n138 [label="key"];
-  n139 [label="ID"];
-  n139 [label="ID"];
-  n140 [label="key"];
-  n141 [label="BLOCK"];
-  n141 [label="BLOCK"];
-  n142 [label="RETURN"];
-  n143 [label="ID"];
-  n143 [label="ID"];
-  n144 [label="Search"];
-  n145 [label="ID"];
-  n145 [label="ID"];
-  n146 [label="root"];
-  n147 [label="left"];
-  n148 [label=","];
-  n149 [label="ID"];
-  n149 [label="ID"];
-  n150 [label="key"];
-  n151 [label="ELSE"];
-  n152 [label="BLOCK"];
-  n152 [label="BLOCK"];
-  n153 [label="RETURN"];
-  n154 [label="ID"];
-  n154 [label="ID"];
-  n155 [label="Search"];
-  n156 [label="ID"];
-  n156 [label="ID"];
-  n157 [label="root"];
-  n158 [label="right"];
-  n159 [label=","];
-  n160 [label="ID"];
-  n160 [label="ID"];
-  n161 [label="key"];
-  n162 [label="PROCEDURE"];
-  n162 [label="PROCEDURE"];
-  n163 [label="Search"];
-  n164 [label="F_PARAMS"];
-  n164 [label="F_PARAMS"];
-  n165 [label="F_PARAM"];
-  n165 [label="F_PARAM"];
-  n166 [label="ID"];
-  n166 [label="ID"];
-  n167 [label="root"];
-  n168 [label="ID"];
-  n168 [label="ID"];
-  n169 [label="Node"];
-  n170 [label="F_PARAM"];
-  n170 [label="F_PARAM"];
-  n171 [label="ID"];
-  n171 [label="ID"];
-  n172 [label="key"];
-  n173 [label="ID"];
-  n173 [label="ID"];
-  n174 [label="LONGINT"];
-  n175 [label="ID"];
-  n175 [label="ID"];
-  n176 [label="Node"];
-  n177 [label="PROCEDURE_BODY"];
-  n177 [label="PROCEDURE_BODY"];
-  n178 [label="BLOCK"];
-  n178 [label="BLOCK"];
-  n179 [label="WHILE"];
-  n179 [label="WHILE"];
-  n180 [label="&"];
-  n180 [label="&"];
-  n181 [label="#"];
-  n181 [label="#"];
-  n182 [label="ID"];
-  n182 [label="ID"];
-  n183 [label="root"];
-  n184 [label="NIL"];
-  n185 [label="#"];
-  n185 [label="#"];
-  n186 [label="ID"];
-  n186 [label="ID"];
-  n187 [label="root"];
-  n188 [label="key"];
-  n189 [label="ID"];
-  n189 [label="ID"];
-  n190 [label="key"];
-  n191 [label="BLOCK"];
-  n191 [label="BLOCK"];
-  n192 [label="IF"];
-  n192 [label="IF"];
-  n193 [label="<"];
-  n193 [label="<"];
-  n194 [label="ID"];
-  n194 [label="ID"];
-  n195 [label="root"];
-  n196 [label="key"];
-  n197 [label="ID"];
-  n197 [label="ID"];
-  n198 [label="key"];
-  n199 [label="BLOCK"];
-  n199 [label="BLOCK"];
-  n200 [label="ASSIGN"];
-  n200 [label="ASSIGN"];
-  n201 [label="ID"];
-  n201 [label="ID"];
-  n202 [label="root"];
-  n203 [label="ID"];
-  n203 [label="ID"];
-  n204 [label="root"];
-  n205 [label="right"];
-  n206 [label="ELSE"];
-  n207 [label="BLOCK"];
-  n207 [label="BLOCK"];
-  n208 [label="ASSIGN"];
-  n208 [label="ASSIGN"];
-  n209 [label="ID"];
-  n209 [label="ID"];
-  n210 [label="root"];
-  n211 [label="ID"];
-  n211 [label="ID"];
-  n212 [label="root"];
-  n213 [label="left"];
-  n214 [label="RETURN"];
-  n215 [label="ID"];
-  n215 [label="ID"];
-  n216 [label="root"];
-  n217 [label="PROCEDURE"];
-  n217 [label="PROCEDURE"];
-  n218 [label="Delete"];
-  n219 [label="F_PARAMS"];
-  n219 [label="F_PARAMS"];
-  n220 [label="F_PARAM"];
-  n220 [label="F_PARAM"];
-  n221 [label="ID"];
-  n221 [label="ID"];
-  n222 [label="node"];
-  n223 [label="ID"];
-  n223 [label="ID"];
-  n224 [label="Node"];
-  n225 [label="PROCEDURE_BODY"];
-  n225 [label="PROCEDURE_BODY"];
-  n226 [label="BLOCK"];
-  n226 [label="BLOCK"];
-  n227 [label="IF"];
-  n227 [label="IF"];
-  n228 [label="="];
-  n228 [label="="];
-  n229 [label="ID"];
-  n229 [label="ID"];
-  n230 [label="node"];
-  n231 [label="left"];
-  n232 [label="NIL"];
-  n233 [label="BLOCK"];
-  n233 [label="BLOCK"];
-  n234 [label="ASSIGN"];
-  n234 [label="ASSIGN"];
-  n235 [label="ID"];
-  n235 [label="ID"];
-  n236 [label="node"];
-  n237 [label="ID"];
-  n237 [label="ID"];
-  n238 [label="node"];
-  n239 [label="right"];
-  n240 [label="ELSIF"];
-  n240 [label="ELSIF"];
-  n241 [label="="];
-  n241 [label="="];
-  n242 [label="ID"];
-  n242 [label="ID"];
-  n243 [label="node"];
-  n244 [label="left"];
-  n245 [label="NIL"];
-  n246 [label="BLOCK"];
-  n246 [label="BLOCK"];
-  n247 [label="ASSIGN"];
-  n247 [label="ASSIGN"];
-  n248 [label="ID"];
-  n248 [label="ID"];
-  n249 [label="node"];
-  n250 [label="ID"];
-  n250 [label="ID"];
-  n251 [label="node"];
-  n252 [label="left"];
-  n253 [label="ELSE"];
-  n254 [label="BLOCK"];
-  n254 [label="BLOCK"];
-  n255 [label="ASSIGN"];
-  n255 [label="ASSIGN"];
-  n256 [label="ID"];
-  n256 [label="ID"];
-  n257 [label="s"];
-  n258 [label="ID"];
-  n258 [label="ID"];
-  n259 [label="r"];
-  n260 [label="right"];
-  n261 [label="IF"];
-  n261 [label="IF"];
-  n262 [label="="];
-  n262 [label="="];
-  n263 [label="ID"];
-  n263 [label="ID"];
-  n264 [label="s"];
-  n265 [label="left"];
-  n266 [label="NIL"];
-  n267 [label="BLOCK"];
-  n267 [label="BLOCK"];
-  n268 [label="ASSIGN"];
-  n268 [label="ASSIGN"];
-  n269 [label="ID"];
-  n269 [label="ID"];
-  n270 [label="s"];
-  n271 [label="left"];
-  n272 [label="ID"];
-  n272 [label="ID"];
-  n273 [label="node"];
-  n274 [label="left"];
-  n275 [label="ASSIGN"];
-  n275 [label="ASSIGN"];
-  n276 [label="ID"];
-  n276 [label="ID"];
-  n277 [label="node"];
-  n278 [label="ID"];
-  n278 [label="ID"];
-  n279 [label="s"];
-  n280 [label="ELSE"];
-  n281 [label="BLOCK"];
-  n281 [label="BLOCK"];
-  n282 [label="ASSIGN"];
-  n282 [label="ASSIGN"];
-  n283 [label="ID"];
-  n283 [label="ID"];
-  n284 [label="t"];
-  n285 [label="ID"];
-  n285 [label="ID"];
-  n286 [label="s"];
-  n287 [label="left"];
-  n288 [label="WHILE"];
-  n288 [label="WHILE"];
-  n289 [label="#"];
-  n289 [label="#"];
-  n290 [label="ID"];
-  n290 [label="ID"];
-  n291 [label="t"];
-  n292 [label="left"];
-  n293 [label="NIL"];
-  n294 [label="BLOCK"];
-  n294 [label="BLOCK"];
-  n295 [label="ASSIGN"];
-  n295 [label="ASSIGN"];
-  n296 [label="ID"];
-  n296 [label="ID"];
-  n297 [label="s"];
-  n298 [label="ID"];
-  n298 [label="ID"];
-  n299 [label="t"];
-  n300 [label="ASSIGN"];
-  n300 [label="ASSIGN"];
-  n301 [label="ID"];
-  n301 [label="ID"];
-  n302 [label="t"];
-  n303 [label="ID"];
-  n303 [label="ID"];
-  n304 [label="t"];
-  n305 [label="left"];
-  n306 [label="ASSIGN"];
-  n306 [label="ASSIGN"];
-  n307 [label="ID"];
-  n307 [label="ID"];
-  n308 [label="s"];
-  n309 [label="left"];
-  n310 [label="ID"];
-  n310 [label="ID"];
-  n311 [label="t"];
-  n312 [label="right"];
-  n313 [label="ASSIGN"];
-  n313 [label="ASSIGN"];
-  n314 [label="ID"];
-  n314 [label="ID"];
-  n315 [label="t"];
-  n316 [label="right"];
-  n317 [label="ID"];
-  n317 [label="ID"];
-  n318 [label="node"];
-  n319 [label="right"];
-  n320 [label="ASSIGN"];
-  n320 [label="ASSIGN"];
-  n321 [label="ID"];
-  n321 [label="ID"];
-  n322 [label="t"];
-  n323 [label="left"];
-  n324 [label="ID"];
-  n324 [label="ID"];
-  n325 [label="node"];
-  n326 [label="left"];
-  n327 [label="ASSIGN"];
-  n327 [label="ASSIGN"];
-  n328 [label="ID"];
-  n328 [label="ID"];
-  n329 [label="node"];
-  n330 [label="ID"];
-  n330 [label="ID"];
-  n331 [label="t"];
+  n108 [label="linie1"];
+  n109 [label="yEnde"];
+  n110 [label="2"];
+  n111 [label="ASSIGN"];
+  n111 [label="ASSIGN"];
+  n112 [label="ID"];
+  n112 [label="ID"];
+  n113 [label="linie1"];
+  n114 [label="Zeichne"];
 
-  n0 -> n1 // "MODULE" -> "test1"
-  n0 -> n2 // "MODULE" -> "IMPORT"
-  n2 -> n3 // "IMPORT" -> "IMPORT_DECL"
-  n3 -> n4 // "IMPORT_DECL" -> "test"
-  n2 -> n5 // "IMPORT" -> "IMPORT_DECL"
-  n5 -> n6 // "IMPORT_DECL" -> "test2"
-  n0 -> n7 // "MODULE" -> "TYPE"
-  n7 -> n8 // "TYPE" -> "TYPE_DECL"
-  n8 -> n9 // "TYPE_DECL" -> "Node"
-  n8 -> n10 // "TYPE_DECL" -> "POINTER TO"
-  n10 -> n11 // "POINTER TO" -> "ID"
-  n11 -> n12 // "ID" -> "NodeDesc"
-  n7 -> n13 // "TYPE" -> "TYPE_DECL"
-  n13 -> n14 // "TYPE_DECL" -> "NodeDesc"
-  n13 -> n15 // "TYPE_DECL" -> "RECORD"
-  n15 -> n16 // "RECORD" -> ":"
-  n16 -> n17 // ":" -> "key"
-  n16 -> n18 // ":" -> "ID"
-  n18 -> n19 // "ID" -> "LONGINT"
-  n15 -> n20 // "RECORD" -> ":"
-  n20 -> n21 // ":" -> "left"
-  n20 -> n22 // ":" -> ","
-  n20 -> n23 // ":" -> "right"
-  n20 -> n24 // ":" -> "ID"
-  n24 -> n25 // "ID" -> "Node"
-  n0 -> n26 // "MODULE" -> "PROCEDURE"
-  n26 -> n27 // "PROCEDURE" -> "Insert"
-  n26 -> n28 // "PROCEDURE" -> "F_PARAMS"
-  n28 -> n29 // "F_PARAMS" -> "F_PARAM"
-  n29 -> n30 // "F_PARAM" -> "ID"
-  n30 -> n31 // "ID" -> "root"
-  n29 -> n32 // "F_PARAM" -> "ID"
-  n32 -> n33 // "ID" -> "Node"
-  n28 -> n34 // "F_PARAMS" -> "F_PARAM"
-  n34 -> n35 // "F_PARAM" -> "ID"
-  n35 -> n36 // "ID" -> "key"
-  n34 -> n37 // "F_PARAM" -> "ID"
-  n37 -> n38 // "ID" -> "LONGINT"
-  n26 -> n39 // "PROCEDURE" -> "PROCEDURE_BODY"
-  n39 -> n40 // "PROCEDURE_BODY" -> "BLOCK"
-  n40 -> n41 // "BLOCK" -> "IF"
-  n41 -> n42 // "IF" -> "="
-  n42 -> n43 // "=" -> "ID"
-  n43 -> n44 // "ID" -> "root"
-  n42 -> n45 // "=" -> "NIL"
-  n41 -> n46 // "IF" -> "BLOCK"
-  n46 -> n47 // "BLOCK" -> "NEW"
-  n47 -> n48 // "NEW" -> "ID"
-  n48 -> n49 // "ID" -> "root"
-  n46 -> n50 // "BLOCK" -> "ASSIGN"
-  n50 -> n51 // "ASSIGN" -> "ID"
-  n51 -> n52 // "ID" -> "root"
-  n51 -> n53 // "ID" -> "key"
-  n50 -> n54 // "ASSIGN" -> "ID"
-  n54 -> n55 // "ID" -> "key"
-  n46 -> n56 // "BLOCK" -> "ASSIGN"
-  n56 -> n57 // "ASSIGN" -> "ID"
-  n57 -> n58 // "ID" -> "root"
-  n57 -> n59 // "ID" -> "left"
-  n56 -> n60 // "ASSIGN" -> "NIL"
-  n46 -> n61 // "BLOCK" -> "ASSIGN"
-  n61 -> n62 // "ASSIGN" -> "ID"
-  n62 -> n63 // "ID" -> "root"
-  n62 -> n64 // "ID" -> "right"
-  n61 -> n65 // "ASSIGN" -> "NIL"
-  n41 -> n66 // "IF" -> "ELSIF"
-  n66 -> n67 // "ELSIF" -> "="
-  n67 -> n68 // "=" -> "ID"
-  n68 -> n69 // "ID" -> "root"
-  n67 -> n70 // "=" -> "NIL"
-  n66 -> n71 // "ELSIF" -> "BLOCK"
-  n71 -> n72 // "BLOCK" -> "ASSIGN"
-  n72 -> n73 // "ASSIGN" -> "ID"
-  n73 -> n74 // "ID" -> "Insert"
-  n72 -> n75 // "ASSIGN" -> "ID"
-  n75 -> n76 // "ID" -> "root"
-  n75 -> n77 // "ID" -> "right"
-  n72 -> n78 // "ASSIGN" -> ","
-  n72 -> n79 // "ASSIGN" -> "ID"
-  n79 -> n80 // "ID" -> "key"
-  n41 -> n81 // "IF" -> "ELSIF"
-  n81 -> n82 // "ELSIF" -> "="
-  n82 -> n83 // "=" -> "ID"
-  n83 -> n84 // "ID" -> "root"
-  n82 -> n85 // "=" -> "NIL"
-  n81 -> n86 // "ELSIF" -> "BLOCK"
-  n86 -> n87 // "BLOCK" -> "ASSIGN"
-  n87 -> n88 // "ASSIGN" -> "ID"
-  n88 -> n89 // "ID" -> "Insert"
-  n87 -> n90 // "ASSIGN" -> "ID"
-  n90 -> n91 // "ID" -> "root"
-  n90 -> n92 // "ID" -> "right"
-  n87 -> n93 // "ASSIGN" -> ","
-  n87 -> n94 // "ASSIGN" -> "ID"
-  n94 -> n95 // "ID" -> "key"
-  n0 -> n96 // "MODULE" -> "PROCEDURE"
-  n96 -> n97 // "PROCEDURE" -> "Search"
-  n96 -> n98 // "PROCEDURE" -> "F_PARAMS"
-  n98 -> n99 // "F_PARAMS" -> "F_PARAM"
-  n99 -> n100 // "F_PARAM" -> "ID"
-  n100 -> n101 // "ID" -> "root"
-  n99 -> n102 // "F_PARAM" -> "ID"
-  n102 -> n103 // "ID" -> "Node"
-  n98 -> n104 // "F_PARAMS" -> "F_PARAM"
-  n104 -> n105 // "F_PARAM" -> "ID"
-  n105 -> n106 // "ID" -> "key"
-  n104 -> n107 // "F_PARAM" -> "ID"
-  n107 -> n108 // "ID" -> "LONGINT"
-  n98 -> n109 // "F_PARAMS" -> "ID"
-  n109 -> n110 // "ID" -> "Node"
-  n96 -> n111 // "PROCEDURE" -> "PROCEDURE_BODY"
-  n111 -> n112 // "PROCEDURE_BODY" -> "BLOCK"
-  n112 -> n113 // "BLOCK" -> "IF"
-  n113 -> n114 // "IF" -> "OR"
-  n114 -> n115 // "OR" -> "="
-  n115 -> n116 // "=" -> "ID"
-  n116 -> n117 // "ID" -> "root"
-  n115 -> n118 // "=" -> "NIL"
-  n114 -> n119 // "OR" -> "="
-  n119 -> n120 // "=" -> "ID"
-  n120 -> n121 // "ID" -> "root"
-  n120 -> n122 // "ID" -> "key"
-  n119 -> n123 // "=" -> "ID"
-  n123 -> n124 // "ID" -> "key"
-  n113 -> n125 // "IF" -> "BLOCK"
-  n125 -> n126 // "BLOCK" -> "RETURN"
-  n125 -> n127 // "BLOCK" -> "ID"
-  n127 -> n128 // "ID" -> "root"
-  n113 -> n129 // "IF" -> "ELSIF"
-  n129 -> n130 // "ELSIF" -> "OR"
-  n130 -> n131 // "OR" -> "="
-  n131 -> n132 // "=" -> "ID"
-  n132 -> n133 // "ID" -> "root"
-  n131 -> n134 // "=" -> "NIL"
-  n130 -> n135 // "OR" -> "="
-  n135 -> n136 // "=" -> "ID"
-  n136 -> n137 // "ID" -> "root"
-  n136 -> n138 // "ID" -> "key"
-  n135 -> n139 // "=" -> "ID"
-  n139 -> n140 // "ID" -> "key"
-  n129 -> n141 // "ELSIF" -> "BLOCK"
-  n141 -> n142 // "BLOCK" -> "RETURN"
-  n141 -> n143 // "BLOCK" -> "ID"
-  n143 -> n144 // "ID" -> "Search"
-  n141 -> n145 // "BLOCK" -> "ID"
-  n145 -> n146 // "ID" -> "root"
-  n145 -> n147 // "ID" -> "left"
-  n141 -> n148 // "BLOCK" -> ","
-  n141 -> n149 // "BLOCK" -> "ID"
-  n149 -> n150 // "ID" -> "key"
-  n113 -> n151 // "IF" -> "ELSE"
-  n113 -> n152 // "IF" -> "BLOCK"
-  n152 -> n153 // "BLOCK" -> "RETURN"
-  n152 -> n154 // "BLOCK" -> "ID"
-  n154 -> n155 // "ID" -> "Search"
-  n152 -> n156 // "BLOCK" -> "ID"
-  n156 -> n157 // "ID" -> "root"
-  n156 -> n158 // "ID" -> "right"
-  n152 -> n159 // "BLOCK" -> ","
-  n152 -> n160 // "BLOCK" -> "ID"
-  n160 -> n161 // "ID" -> "key"
-  n0 -> n162 // "MODULE" -> "PROCEDURE"
-  n162 -> n163 // "PROCEDURE" -> "Search"
-  n162 -> n164 // "PROCEDURE" -> "F_PARAMS"
-  n164 -> n165 // "F_PARAMS" -> "F_PARAM"
-  n165 -> n166 // "F_PARAM" -> "ID"
-  n166 -> n167 // "ID" -> "root"
-  n165 -> n168 // "F_PARAM" -> "ID"
-  n168 -> n169 // "ID" -> "Node"
-  n164 -> n170 // "F_PARAMS" -> "F_PARAM"
-  n170 -> n171 // "F_PARAM" -> "ID"
-  n171 -> n172 // "ID" -> "key"
-  n170 -> n173 // "F_PARAM" -> "ID"
-  n173 -> n174 // "ID" -> "LONGINT"
-  n164 -> n175 // "F_PARAMS" -> "ID"
-  n175 -> n176 // "ID" -> "Node"
-  n162 -> n177 // "PROCEDURE" -> "PROCEDURE_BODY"
-  n177 -> n178 // "PROCEDURE_BODY" -> "BLOCK"
-  n178 -> n179 // "BLOCK" -> "WHILE"
-  n179 -> n180 // "WHILE" -> "&"
-  n180 -> n181 // "&" -> "#"
-  n181 -> n182 // "#" -> "ID"
-  n182 -> n183 // "ID" -> "root"
-  n181 -> n184 // "#" -> "NIL"
-  n180 -> n185 // "&" -> "#"
-  n185 -> n186 // "#" -> "ID"
-  n186 -> n187 // "ID" -> "root"
-  n186 -> n188 // "ID" -> "key"
-  n185 -> n189 // "#" -> "ID"
-  n189 -> n190 // "ID" -> "key"
-  n179 -> n191 // "WHILE" -> "BLOCK"
-  n191 -> n192 // "BLOCK" -> "IF"
-  n192 -> n193 // "IF" -> "<"
-  n193 -> n194 // "<" -> "ID"
-  n194 -> n195 // "ID" -> "root"
-  n194 -> n196 // "ID" -> "key"
-  n193 -> n197 // "<" -> "ID"
-  n197 -> n198 // "ID" -> "key"
-  n192 -> n199 // "IF" -> "BLOCK"
-  n199 -> n200 // "BLOCK" -> "ASSIGN"
-  n200 -> n201 // "ASSIGN" -> "ID"
-  n201 -> n202 // "ID" -> "root"
-  n200 -> n203 // "ASSIGN" -> "ID"
-  n203 -> n204 // "ID" -> "root"
-  n203 -> n205 // "ID" -> "right"
-  n192 -> n206 // "IF" -> "ELSE"
-  n192 -> n207 // "IF" -> "BLOCK"
-  n207 -> n208 // "BLOCK" -> "ASSIGN"
-  n208 -> n209 // "ASSIGN" -> "ID"
-  n209 -> n210 // "ID" -> "root"
-  n208 -> n211 // "ASSIGN" -> "ID"
-  n211 -> n212 // "ID" -> "root"
-  n211 -> n213 // "ID" -> "left"
-  n178 -> n214 // "BLOCK" -> "RETURN"
-  n178 -> n215 // "BLOCK" -> "ID"
-  n215 -> n216 // "ID" -> "root"
-  n0 -> n217 // "MODULE" -> "PROCEDURE"
-  n217 -> n218 // "PROCEDURE" -> "Delete"
-  n217 -> n219 // "PROCEDURE" -> "F_PARAMS"
-  n219 -> n220 // "F_PARAMS" -> "F_PARAM"
-  n220 -> n221 // "F_PARAM" -> "ID"
-  n221 -> n222 // "ID" -> "node"
-  n220 -> n223 // "F_PARAM" -> "ID"
-  n223 -> n224 // "ID" -> "Node"
-  n217 -> n225 // "PROCEDURE" -> "PROCEDURE_BODY"
-  n225 -> n226 // "PROCEDURE_BODY" -> "BLOCK"
-  n226 -> n227 // "BLOCK" -> "IF"
-  n227 -> n228 // "IF" -> "="
-  n228 -> n229 // "=" -> "ID"
-  n229 -> n230 // "ID" -> "node"
-  n229 -> n231 // "ID" -> "left"
-  n228 -> n232 // "=" -> "NIL"
-  n227 -> n233 // "IF" -> "BLOCK"
-  n233 -> n234 // "BLOCK" -> "ASSIGN"
-  n234 -> n235 // "ASSIGN" -> "ID"
-  n235 -> n236 // "ID" -> "node"
-  n234 -> n237 // "ASSIGN" -> "ID"
-  n237 -> n238 // "ID" -> "node"
-  n237 -> n239 // "ID" -> "right"
-  n227 -> n240 // "IF" -> "ELSIF"
-  n240 -> n241 // "ELSIF" -> "="
-  n241 -> n242 // "=" -> "ID"
-  n242 -> n243 // "ID" -> "node"
-  n242 -> n244 // "ID" -> "left"
-  n241 -> n245 // "=" -> "NIL"
-  n240 -> n246 // "ELSIF" -> "BLOCK"
-  n246 -> n247 // "BLOCK" -> "ASSIGN"
-  n247 -> n248 // "ASSIGN" -> "ID"
-  n248 -> n249 // "ID" -> "node"
-  n247 -> n250 // "ASSIGN" -> "ID"
-  n250 -> n251 // "ID" -> "node"
-  n250 -> n252 // "ID" -> "left"
-  n227 -> n253 // "IF" -> "ELSE"
-  n227 -> n254 // "IF" -> "BLOCK"
-  n254 -> n255 // "BLOCK" -> "ASSIGN"
-  n255 -> n256 // "ASSIGN" -> "ID"
-  n256 -> n257 // "ID" -> "s"
-  n255 -> n258 // "ASSIGN" -> "ID"
-  n258 -> n259 // "ID" -> "r"
-  n258 -> n260 // "ID" -> "right"
-  n254 -> n261 // "BLOCK" -> "IF"
-  n261 -> n262 // "IF" -> "="
-  n262 -> n263 // "=" -> "ID"
-  n263 -> n264 // "ID" -> "s"
-  n263 -> n265 // "ID" -> "left"
-  n262 -> n266 // "=" -> "NIL"
-  n261 -> n267 // "IF" -> "BLOCK"
-  n267 -> n268 // "BLOCK" -> "ASSIGN"
-  n268 -> n269 // "ASSIGN" -> "ID"
-  n269 -> n270 // "ID" -> "s"
-  n269 -> n271 // "ID" -> "left"
-  n268 -> n272 // "ASSIGN" -> "ID"
-  n272 -> n273 // "ID" -> "node"
-  n272 -> n274 // "ID" -> "left"
-  n267 -> n275 // "BLOCK" -> "ASSIGN"
-  n275 -> n276 // "ASSIGN" -> "ID"
-  n276 -> n277 // "ID" -> "node"
-  n275 -> n278 // "ASSIGN" -> "ID"
-  n278 -> n279 // "ID" -> "s"
-  n261 -> n280 // "IF" -> "ELSE"
-  n261 -> n281 // "IF" -> "BLOCK"
-  n281 -> n282 // "BLOCK" -> "ASSIGN"
-  n282 -> n283 // "ASSIGN" -> "ID"
-  n283 -> n284 // "ID" -> "t"
-  n282 -> n285 // "ASSIGN" -> "ID"
-  n285 -> n286 // "ID" -> "s"
-  n285 -> n287 // "ID" -> "left"
-  n281 -> n288 // "BLOCK" -> "WHILE"
-  n288 -> n289 // "WHILE" -> "#"
-  n289 -> n290 // "#" -> "ID"
-  n290 -> n291 // "ID" -> "t"
-  n290 -> n292 // "ID" -> "left"
-  n289 -> n293 // "#" -> "NIL"
-  n288 -> n294 // "WHILE" -> "BLOCK"
-  n294 -> n295 // "BLOCK" -> "ASSIGN"
-  n295 -> n296 // "ASSIGN" -> "ID"
-  n296 -> n297 // "ID" -> "s"
-  n295 -> n298 // "ASSIGN" -> "ID"
-  n298 -> n299 // "ID" -> "t"
-  n294 -> n300 // "BLOCK" -> "ASSIGN"
-  n300 -> n301 // "ASSIGN" -> "ID"
-  n301 -> n302 // "ID" -> "t"
-  n300 -> n303 // "ASSIGN" -> "ID"
-  n303 -> n304 // "ID" -> "t"
-  n303 -> n305 // "ID" -> "left"
-  n281 -> n306 // "BLOCK" -> "ASSIGN"
-  n306 -> n307 // "ASSIGN" -> "ID"
-  n307 -> n308 // "ID" -> "s"
-  n307 -> n309 // "ID" -> "left"
-  n306 -> n310 // "ASSIGN" -> "ID"
-  n310 -> n311 // "ID" -> "t"
-  n310 -> n312 // "ID" -> "right"
-  n281 -> n313 // "BLOCK" -> "ASSIGN"
-  n313 -> n314 // "ASSIGN" -> "ID"
-  n314 -> n315 // "ID" -> "t"
-  n314 -> n316 // "ID" -> "right"
-  n313 -> n317 // "ASSIGN" -> "ID"
-  n317 -> n318 // "ID" -> "node"
-  n317 -> n319 // "ID" -> "right"
-  n281 -> n320 // "BLOCK" -> "ASSIGN"
-  n320 -> n321 // "ASSIGN" -> "ID"
-  n321 -> n322 // "ID" -> "t"
-  n321 -> n323 // "ID" -> "left"
-  n320 -> n324 // "ASSIGN" -> "ID"
-  n324 -> n325 // "ID" -> "node"
-  n324 -> n326 // "ID" -> "left"
-  n281 -> n327 // "BLOCK" -> "ASSIGN"
-  n327 -> n328 // "ASSIGN" -> "ID"
-  n328 -> n329 // "ID" -> "node"
-  n327 -> n330 // "ASSIGN" -> "ID"
-  n330 -> n331 // "ID" -> "t"
+  n0 -> n1 // "MODULE" -> "Vererbung1"
+  n0 -> n2 // "MODULE" -> "TYPE"
+  n2 -> n3 // "TYPE" -> "TYPE_DECL"
+  n3 -> n4 // "TYPE_DECL" -> "GraphischesObjekt"
+  n3 -> n5 // "TYPE_DECL" -> "*"
+  n3 -> n6 // "TYPE_DECL" -> "POINTER TO"
+  n6 -> n7 // "POINTER TO" -> "ID"
+  n7 -> n8 // "ID" -> "Graphisc...hreibung"
+  n2 -> n9 // "TYPE" -> "TYPE_DECL"
+  n9 -> n10 // "TYPE_DECL" -> "Graphisc...hreibung"
+  n9 -> n11 // "TYPE_DECL" -> "RECORD"
+  n11 -> n12 // "RECORD" -> ":"
+  n12 -> n13 // ":" -> "farbe"
+  n12 -> n14 // ":" -> "*"
+  n12 -> n15 // ":" -> "ID"
+  n15 -> n16 // "ID" -> "LONGINT"
+  n2 -> n17 // "TYPE" -> "TYPE_DECL"
+  n17 -> n18 // "TYPE_DECL" -> "Punkt"
+  n17 -> n19 // "TYPE_DECL" -> "*"
+  n17 -> n20 // "TYPE_DECL" -> "POINTER TO"
+  n20 -> n21 // "POINTER TO" -> "ID"
+  n21 -> n22 // "ID" -> "PunktBeschreibung"
+  n2 -> n23 // "TYPE" -> "TYPE_DECL"
+  n23 -> n24 // "TYPE_DECL" -> "PunktBeschreibung"
+  n23 -> n25 // "TYPE_DECL" -> "RECORD"
+  n25 -> n26 // "RECORD" -> "ID"
+  n26 -> n27 // "ID" -> "GraphischesObjekt"
+  n25 -> n28 // "RECORD" -> ":"
+  n28 -> n29 // ":" -> "x"
+  n28 -> n30 // ":" -> "*"
+  n28 -> n31 // ":" -> ","
+  n28 -> n32 // ":" -> "y"
+  n28 -> n33 // ":" -> "*"
+  n28 -> n34 // ":" -> "ID"
+  n34 -> n35 // "ID" -> "LONGINT"
+  n2 -> n36 // "TYPE" -> "TYPE_DECL"
+  n36 -> n37 // "TYPE_DECL" -> "Linie"
+  n36 -> n38 // "TYPE_DECL" -> "*"
+  n36 -> n39 // "TYPE_DECL" -> "POINTER TO"
+  n39 -> n40 // "POINTER TO" -> "ID"
+  n40 -> n41 // "ID" -> "LinienBeschreibung"
+  n2 -> n42 // "TYPE" -> "TYPE_DECL"
+  n42 -> n43 // "TYPE_DECL" -> "LinienBeschreibung"
+  n42 -> n44 // "TYPE_DECL" -> "RECORD"
+  n44 -> n45 // "RECORD" -> "ID"
+  n45 -> n46 // "ID" -> "GraphischesObjekt"
+  n44 -> n47 // "RECORD" -> ":"
+  n47 -> n48 // ":" -> "xStart"
+  n47 -> n49 // ":" -> "*"
+  n47 -> n50 // ":" -> ","
+  n47 -> n51 // ":" -> "yStart"
+  n47 -> n52 // ":" -> "*"
+  n47 -> n53 // ":" -> ","
+  n47 -> n54 // ":" -> "xEnde"
+  n47 -> n55 // ":" -> "*"
+  n47 -> n56 // ":" -> ","
+  n47 -> n57 // ":" -> "yEnde"
+  n47 -> n58 // ":" -> "*"
+  n47 -> n59 // ":" -> "ID"
+  n59 -> n60 // "ID" -> "LONGINT"
+  n0 -> n61 // "MODULE" -> "VAR"
+  n61 -> n62 // "VAR" -> "DECLARE"
+  n62 -> n63 // "DECLARE" -> "punkt1"
+  n62 -> n64 // "DECLARE" -> "ID"
+  n64 -> n65 // "ID" -> "Punkt"
+  n61 -> n66 // "VAR" -> "DECLARE"
+  n66 -> n67 // "DECLARE" -> "linie1"
+  n66 -> n68 // "DECLARE" -> "ID"
+  n68 -> n69 // "ID" -> "Linie"
+  n0 -> n70 // "MODULE" -> "BLOCK"
+  n70 -> n71 // "BLOCK" -> "NEW"
+  n71 -> n72 // "NEW" -> "ID"
+  n72 -> n73 // "ID" -> "punkt1"
+  n70 -> n74 // "BLOCK" -> "ASSIGN"
+  n74 -> n75 // "ASSIGN" -> "ID"
+  n75 -> n76 // "ID" -> "punkt1"
+  n75 -> n77 // "ID" -> "x"
+  n74 -> n78 // "ASSIGN" -> "1"
+  n70 -> n79 // "BLOCK" -> "ASSIGN"
+  n79 -> n80 // "ASSIGN" -> "ID"
+  n80 -> n81 // "ID" -> "punkt1"
+  n80 -> n82 // "ID" -> "y"
+  n79 -> n83 // "ASSIGN" -> "1"
+  n70 -> n84 // "BLOCK" -> "ASSIGN"
+  n84 -> n85 // "ASSIGN" -> "ID"
+  n85 -> n86 // "ID" -> "punkt1"
+  n85 -> n87 // "ID" -> "Zeichne"
+  n70 -> n88 // "BLOCK" -> "NEW"
+  n88 -> n89 // "NEW" -> "ID"
+  n89 -> n90 // "ID" -> "linie1"
+  n70 -> n91 // "BLOCK" -> "ASSIGN"
+  n91 -> n92 // "ASSIGN" -> "ID"
+  n92 -> n93 // "ID" -> "linie1"
+  n92 -> n94 // "ID" -> "xStart"
+  n91 -> n95 // "ASSIGN" -> "1"
+  n70 -> n96 // "BLOCK" -> "ASSIGN"
+  n96 -> n97 // "ASSIGN" -> "ID"
+  n97 -> n98 // "ID" -> "linie1"
+  n97 -> n99 // "ID" -> "yStart"
+  n96 -> n100 // "ASSIGN" -> "1"
+  n70 -> n101 // "BLOCK" -> "ASSIGN"
+  n101 -> n102 // "ASSIGN" -> "ID"
+  n102 -> n103 // "ID" -> "linie1"
+  n102 -> n104 // "ID" -> "xEnde"
+  n101 -> n105 // "ASSIGN" -> "2"
+  n70 -> n106 // "BLOCK" -> "ASSIGN"
+  n106 -> n107 // "ASSIGN" -> "ID"
+  n107 -> n108 // "ID" -> "linie1"
+  n107 -> n109 // "ID" -> "yEnde"
+  n106 -> n110 // "ASSIGN" -> "2"
+  n70 -> n111 // "BLOCK" -> "ASSIGN"
+  n111 -> n112 // "ASSIGN" -> "ID"
+  n112 -> n113 // "ID" -> "linie1"
+  n112 -> n114 // "ID" -> "Zeichne"
 
 }
